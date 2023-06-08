@@ -3,3 +3,4 @@
 
 프로젝트 사용 폰트타입
 https://github.com/jakebae87/119/issues/5#issuecomment-1579789183
+https://noonnu.cc/font_page/1053
