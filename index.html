@@ -5,11 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>레이아웃 잡기</title>
-    
+
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/global.css">
+
+    @import url(https://fonts.googleapis.com/css?family=Varela+Round);
 </head>
 
 <body>
@@ -22,14 +24,13 @@
             <!-- 검색창 -->
             <form class="search">
                 <fieldset>
-                    <legend class="visually-hidden">검색</legend>
+                    <!-- <legend class="visually-hidden">검색</legend> -->
                     <div class="search_box">
                         <input type="text" maxlength="225" tabindex="1" />
 
                         <!-- <button type="submit" tabindex="2">돋보기 이미지</button> -->
-
                         <button type="submit">
-                            <img src="./image/magnifying-glass-30.png" alt="돋보기 이미지">
+                            <img src="./image/header/magnifying-glass-30.png" alt="돋보기 이미지">
                         </button>
                     </div>
                 </fieldset>
@@ -83,7 +84,72 @@
 
     <!-- 메인 컨텐츠들 -->
     <main>
-        메인
+        <!-- 프로모션 이미지 슬라이드 -->
+        <ul class="slides">
+            <input type="radio" name="radio-btn" id="img-1" checked />
+            <li class="slide-container">
+                <div class="slide">
+                    <img src="./image/main/prom_img1.jpg" />
+                </div>
+                <div class="nav">
+                    <label for="img-5" class="prev">&#x2039;</label>
+                    <label for="img-2" class="next">&#x203a;</label>
+                </div>
+            </li>
+
+            <input type="radio" name="radio-btn" id="img-2" />
+            <li class="slide-container">
+                <div class="slide">
+                    <img src="./image/main/prom_img2.jpg" />
+                </div>
+                <div class="nav">
+                    <label for="img-1" class="prev">&#x2039;</label>
+                    <label for="img-3" class="next">&#x203a;</label>
+                </div>
+            </li>
+
+            <input type="radio" name="radio-btn" id="img-3" />
+            <li class="slide-container">
+                <div class="slide">
+                    <img
+                        src="./image/main/prom_img3.jpg" />
+                </div>
+                <div class="nav">
+                    <label for="img-2" class="prev">&#x2039;</label>
+                    <label for="img-4" class="next">&#x203a;</label>
+                </div>
+            </li>
+
+            <input type="radio" name="radio-btn" id="img-4" />
+            <li class="slide-container">
+                <div class="slide">
+                    <img src="./image/main/prom_img4.jpg" />
+                </div>
+                <div class="nav">
+                    <label for="img-3" class="prev">&#x2039;</label>
+                    <label for="img-5" class="next">&#x203a;</label>
+                </div>
+            </li>
+
+            <input type="radio" name="radio-btn" id="img-5" />
+            <li class="slide-container">
+                <div class="slide">
+                    <img src="./image/main/prom_img5.jpg" />
+                </div>
+                <div class="nav">
+                    <label for="img-4" class="prev">&#x2039;</label>
+                    <label for="img-1" class="next">&#x203a;</label>
+                </div>
+            </li>
+
+            <li class="nav-dots">
+                <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+                <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+                <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+                <label for="img-4" class="nav-dot" id="img-dot-4"></label>
+                <label for="img-5" class="nav-dot" id="img-dot-5"></label>
+            </li>
+        </ul>
     </main>
 
     <!-- 하단 푸터 -->
@@ -97,7 +163,7 @@
                     <li>address:XX시 XX구 XX동 XXX</li>
                 </ul>
             </div>
-            
+
             <div class="child2">
                 <span>POLICY</span>
                 <ul>
@@ -108,7 +174,7 @@
                     <li><a href="#">제휴입점문의</a></li>
                 </ul>
             </div>
-            
+
             <div class="child3">
                 <span>C/S CENTER</span>
                 <ul>
@@ -117,7 +183,7 @@
                     <li>address</li>
                 </ul>
             </div>
-            
+
             <div class="child4">
                 <span>SNS SERVICE</span>
                 <ul>

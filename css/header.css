@@ -37,7 +37,7 @@ fieldset {
     /* flex: 6; */
 }
 
-.visually-hidden {
+/* .visually-hidden {
     position: absolute !important;
     height: 1px;
     width: 1px;
@@ -45,7 +45,7 @@ fieldset {
     clip: rect(1px 1px 1px 1px);
     clip: rect(1px, 1px, 1px, 1px);
     white-space: nowrap;
-}
+} */
 
 .top_menu {
     right: 0;
@@ -68,7 +68,7 @@ fieldset {
 } */
 
 .search_box {
-    width: 520px;
+    width: 500px;
     height: 40px;
     border: 2px solid rgb(25, 50, 100);
     border-radius: 25px;
@@ -87,8 +87,9 @@ fieldset {
     border-radius: 25px;
     
     outline: none;
-    font-size: 18px;
+    font-size: initial;
 
+    margin-left: 10px;
     /* padding-left: 12px; */
     /* padding-right: 12px; */
 }
