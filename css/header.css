@@ -1,0 +1,164 @@
+header {
+    position: fixed;
+
+    margin: auto;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 110px;
+    z-index: 9999;
+    background-color: white;
+    
+    /* width: 1080px; */
+}
+
+fieldset {
+    border: none;
+}
+
+/* 최상단 영역 */
+.header_top {
+    display: flex;
+    align-items: center;
+    height: 55px;
+    margin-left: 16px;
+}
+
+.header_logo {
+    color: rgb(25, 50, 100);
+    font-size: 32px;
+    font-weight: bold;
+
+    /* flex: 2; */
+}
+
+.search {
+    /* flex: 6; */
+}
+
+.visually-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+.top_menu {
+    right: 0;
+    /* position: absolute; */
+    /* top: 0; */
+    /* flex: 2; */
+}
+
+.link_text {
+    font-size: 16px;
+    /* display: flex; */
+    /* justify-content: flex-end; */
+    /* margin-left: 5px; */
+}
+
+/* .img_logo {
+    margin-bottom: 12px;
+    width: 220px;
+    height: 65px;
+} */
+
+.search_box {
+    width: 520px;
+    height: 40px;
+    border: 2px solid rgb(25, 50, 100);
+    border-radius: 25px;
+    
+    display: flex;
+    align-items: center;
+
+    margin-left: 16px;
+    margin-top: 5px;
+}
+
+.search_box input {
+    flex: 9;
+    height: 35px;
+    border: none;
+    border-radius: 25px;
+    
+    outline: none;
+    font-size: 18px;
+
+    /* padding-left: 12px; */
+    /* padding-right: 12px; */
+}
+
+.search_box button {
+    flex: 1;
+    height: 30px;
+
+    margin: 0;
+    padding: 0;
+
+    background-color: white;
+
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    /* background: #03cf5d; */
+    /* color: #ffffff; */
+}
+
+/* 네비게이션 바 */
+.nav_menu {
+    width: 100%;
+    height: 55px;
+    background-color: rgb(25, 50, 100);
+    line-height: 55px;
+    text-align: center;
+    /* float: left; */
+    /* align-items: center; */
+    /* font: 22px "malgun gothic"; */
+}
+
+.nav_menu>ul>li {
+    float: left;
+    width: 140px;
+    /* position: relative; */
+}
+
+/* 카테고리 텍스트 */
+.nav_menu>ul>li>a {
+    color: aliceblue;
+    font-size: 22px;
+    /* font-weight: bold; */
+}
+
+/* 카테고리 드롭다운 */
+.nav_menu>ul>li>ul {
+    width: 140px;
+    display: none;
+    background-color: rgb(25, 50, 100);
+    position: absolute;
+    /* font: 22px "malgun gothic"; */
+    /* font-weight:lighter; */
+    
+}
+
+.nav_menu>ul>li:hover>ul {
+    display: block;
+}
+
+/* 드롭다운 텍스트 */
+.nav_menu>ul>li>ul>li>a {
+    font-size: 16px;
+    color: aliceblue;
+}
+
+.nav_menu>ul>li:nth-of-type(1)>ul>li:nth-of-type(2) {
+    border-bottom: 1px solid gray;
+}
+
+.nav_menu>ul>li:nth-of-type(1)>ul>li:nth-of-type(4) {
+    border-bottom: 1px solid gray;
+}

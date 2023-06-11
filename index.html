@@ -2,48 +2,132 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Petmily</title>
-
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>레이아웃 잡기</title>
+    
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/global.css">
 </head>
 
 <body>
-
     <header>
+        <div class="header_top">
+            <!-- 로고 -->
+            <!-- <a href="/"><img src="이미지 경로" class="img_logo" /></a> -->
+            <a href="#" class="header_logo">Petmily</a>
 
-        <div>
-            <a href="#" class="logo">Petmily</a>
+            <!-- 검색창 -->
+            <form class="search">
+                <fieldset>
+                    <legend class="visually-hidden">검색</legend>
+                    <div class="search_box">
+                        <input type="text" maxlength="225" tabindex="1" />
+
+                        <!-- <button type="submit" tabindex="2">돋보기 이미지</button> -->
+
+                        <button type="submit">
+                            <img src="./image/magnifying-glass-30.png" alt="돋보기 이미지">
+                        </button>
+                    </div>
+                </fieldset>
+            </form>
+
+            <!-- 최상단 메뉴 -->
+            <div class="top_menu">
+                <a href="#" class="link_text">로그인</a>
+                <a href="#" class="link_text">회원가입</a>
+                <a href="#" class="link_text">장바구니</a>
+            </div>
         </div>
 
-        <nav>
-            <ul>
-                <li><a href="#">상품</a></li>
-                <li><a href="#">커뮤니티</a></li>
-                <li><a href="#">이벤트</a></li>
-                <li><a href="#">할인 상품</a></li>
-            </ul>
-        </nav>
 
+        <!-- 카테고리 네비게이션 메뉴 -->
+        <nav>
+            <div class="nav_menu">
+                <ul>
+                    <li><a href="#">상품</a>
+                        <ul>
+                            <li><a href="#">NEW</a></li>
+                            <li><a href="#">BEST</a></li>
+                            <li><a href="#">강아지</a></li>
+                            <li><a href="#">고양이</a></li>
+                            <li><a href="#">사료</a></li>
+                            <li><a href="#">간식/영양제</a></li>
+                            <li><a href="#">위생</a></li>
+                            <li><a href="#">미용/케어</a></li>
+                            <li><a href="#">리빙</a></li>
+                            <li><a href="#">산책/놀이</a></li>
+                            <li><a href="#">의류/악세사리</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">커뮤니티</a>
+                        <ul>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">상품문의</a></li>
+                            <li><a href="#">상품후기</a></li>
+                            <li><a href="#">자주묻는질문</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">이벤트</a></li>
+
+                    <li><a href="#">할인 상품</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
+    <!-- 메인 컨텐츠들 -->
     <main>
-
+        메인
     </main>
 
+    <!-- 하단 푸터 -->
     <footer>
-
-        <p>
-            <span id='footer_logo'>Petmily</span><br><br>
-            <span>저자 : 123123</span><br>
-            <span>이메일 : 123123@gmail.com</span><br>
-            <span>Copyright 2023. 123123. All Rights Reserved.</span>
-        </p>
-
+        <div class="parent">
+            <div class="child1">
+                <span class="footer_logo">Petmily</span>
+                <ul>
+                    <li>Tel:XXX-XXX-XXXX</li>
+                    <li>email:Email@mail.com</li>
+                    <li>address:XX시 XX구 XX동 XXX</li>
+                </ul>
+            </div>
+            
+            <div class="child2">
+                <span>POLICY</span>
+                <ul>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">이용안내</a></li>
+                    <li><a href="#">반품,환불규정</a></li>
+                    <li><a href="#">제휴입점문의</a></li>
+                </ul>
+            </div>
+            
+            <div class="child3">
+                <span>C/S CENTER</span>
+                <ul>
+                    <li>tel</li>
+                    <li>email</li>
+                    <li>address</li>
+                </ul>
+            </div>
+            
+            <div class="child4">
+                <span>SNS SERVICE</span>
+                <ul>
+                    <li>tel</li>
+                    <li>email</li>
+                    <li>address</li>
+                </ul>
+            </div>
+        </div>
     </footer>
-
 </body>
 
 </html>
