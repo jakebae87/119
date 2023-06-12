@@ -4,202 +4,198 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>레이아웃 잡기</title>
+    <title>Petmily</title>
 
-    <link rel="stylesheet" href="./css/header.css">
+    <!-- <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/global.css">
-
-    @import url(https://fonts.googleapis.com/css?family=Varela+Round);
+    <link rel="stylesheet" href="./css/global.css"> -->
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <header>
-        <div class="header_top">
-            <!-- 로고 -->
-            <!-- <a href="/"><img src="이미지 경로" class="img_logo" /></a> -->
-            <a href="#" class="header_logo">Petmily</a>
+    <div class="wrap">
+        <header>
+            <div class="header-wrap1">
+                <div class="header_logo">
+                    <h1>
+                        <a href="index.html">Petmily</a>
+                    </h1>
+                </div>
 
-            <!-- 검색창 -->
-            <form class="search">
-                <fieldset>
-                    <!-- <legend class="visually-hidden">검색</legend> -->
-                    <div class="search_box">
-                        <input type="text" maxlength="225" tabindex="1" />
+                <div class="search-box">
+                    <form>
+                        <fieldset>
+                            <input type="text" maxlength="20" />
+                            <button type="submit">
+                                <img src="./image/main_page/magnifying-glass-30.png" alt="돋보기 이미지">
+                            </button>
+                        </fieldset>
+                    </form>
+                </div>
 
-                        <!-- <button type="submit" tabindex="2">돋보기 이미지</button> -->
-                        <button type="submit">
-                            <img src="./image/header/magnifying-glass-30.png" alt="돋보기 이미지">
-                        </button>
-                    </div>
-                </fieldset>
-            </form>
-
-            <!-- 최상단 메뉴 -->
-            <div class="top_menu">
-                <a href="#" class="link_text">로그인</a>
-                <a href="#" class="link_text">회원가입</a>
-                <a href="#" class="link_text">장바구니</a>
+                <div class="user-menu">
+                    <a href="#" class="link_text">로그인</a>
+                    <a href="#" class="link_text">회원가입</a>
+                    <a href="#" class="link_text">장바구니</a>
+                </div>
             </div>
-        </div>
 
+            <div class="header-wrap2">
+                <nav>
+                    <ul class="main-menu">
+                        <li><a href="#">상품</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">NEW</a></li>
+                                <li><a href="#">BEST</a></li>
+                                <li><a href="#">강아지</a></li>
+                                <li><a href="#">고양이</a></li>
+                                <li><a href="#">사료</a></li>
+                                <li><a href="#">간식/영양제</a></li>
+                                <li><a href="#">위생</a></li>
+                                <li><a href="#">미용/케어</a></li>
+                                <li><a href="#">리빙</a></li>
+                                <li><a href="#">산책/놀이</a></li>
+                                <li><a href="#">의류/악세사리</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">커뮤니티</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">상품문의</a></li>
+                                <li><a href="#">상품후기</a></li>
+                                <li><a href="#">자주묻는질문</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">유통기한 할인</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-        <!-- 카테고리 네비게이션 메뉴 -->
-        <nav>
-            <div class="nav_menu">
-                <ul>
-                    <li><a href="#">상품</a>
-                        <ul>
-                            <li><a href="#">NEW</a></li>
-                            <li><a href="#">BEST</a></li>
-                            <li><a href="#">강아지</a></li>
-                            <li><a href="#">고양이</a></li>
-                            <li><a href="#">사료</a></li>
-                            <li><a href="#">간식/영양제</a></li>
-                            <li><a href="#">위생</a></li>
-                            <li><a href="#">미용/케어</a></li>
-                            <li><a href="#">리빙</a></li>
-                            <li><a href="#">산책/놀이</a></li>
-                            <li><a href="#">의류/악세사리</a></li>
-                        </ul>
+        <main>
+            <div class="main-container1">
+                <ul class="slides">
+                    <input type="radio" name="radio-btn" id="img-1" checked />
+                    <li class="slide-container">
+                        <div class="slide">
+                            <img src="./image/main_page/prom_img1.jpg" />
+                        </div>
+                        <div class="nav">
+                            <label for="img-5" class="prev">&#x2039;</label>
+                            <label for="img-2" class="next">&#x203a;</label>
+                        </div>
                     </li>
 
-                    <li><a href="#">커뮤니티</a>
-                        <ul>
-                            <li><a href="#">공지사항</a></li>
-                            <li><a href="#">상품문의</a></li>
-                            <li><a href="#">상품후기</a></li>
-                            <li><a href="#">자주묻는질문</a></li>
-                        </ul>
+                    <input type="radio" name="radio-btn" id="img-2" />
+                    <li class="slide-container">
+                        <div class="slide">
+                            <img src="./image/main_page/prom_img2.jpg" />
+                        </div>
+                        <div class="nav">
+                            <label for="img-1" class="prev">&#x2039;</label>
+                            <label for="img-3" class="next">&#x203a;</label>
+                        </div>
                     </li>
 
-                    <li><a href="#">이벤트</a></li>
+                    <input type="radio" name="radio-btn" id="img-3" />
+                    <li class="slide-container">
+                        <div class="slide">
+                            <img src="./image/main_page/prom_img3.jpg" />
+                        </div>
+                        <div class="nav">
+                            <label for="img-2" class="prev">&#x2039;</label>
+                            <label for="img-4" class="next">&#x203a;</label>
+                        </div>
+                    </li>
 
-                    <li><a href="#">유통기한 할인</a></li>
+                    <input type="radio" name="radio-btn" id="img-4" />
+                    <li class="slide-container">
+                        <div class="slide">
+                            <img src="./image/main_page/prom_img4.jpg" />
+                        </div>
+                        <div class="nav">
+                            <label for="img-3" class="prev">&#x2039;</label>
+                            <label for="img-5" class="next">&#x203a;</label>
+                        </div>
+                    </li>
+
+                    <input type="radio" name="radio-btn" id="img-5" />
+                    <li class="slide-container">
+                        <div class="slide">
+                            <img src="./image/main_page/prom_img5.jpg" />
+                        </div>
+                        <div class="nav">
+                            <label for="img-4" class="prev">&#x2039;</label>
+                            <label for="img-1" class="next">&#x203a;</label>
+                        </div>
+                    </li>
+
+                    <li class="nav-dots">
+                        <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+                        <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+                        <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+                        <label for="img-4" class="nav-dot" id="img-dot-4"></label>
+                        <label for="img-5" class="nav-dot" id="img-dot-5"></label>
+                    </li>
                 </ul>
             </div>
-        </nav>
-    </header>
+        </main>
 
-    <!-- 메인 컨텐츠들 -->
-    <main>
-        <!-- 프로모션 이미지 슬라이드 -->
-        <div>
-            <ul class="slides">
-                <input type="radio" name="radio-btn" id="img-1" checked />
-                <li class="slide-container">
-                    <div class="slide">
-                        <img src="./image/main/prom_img1.jpg" />
-                    </div>
-                    <div class="nav">
-                        <label for="img-5" class="prev">&#x2039;</label>
-                        <label for="img-2" class="next">&#x203a;</label>
-                    </div>
-                </li>
+        <footer>
+            <div class="footer-wrap">
+                <div class="tail-info">
+                    <ul>
+                        <li class="tail-logo">Petmily</li>
+                        <li>
+                            <p>
+                                Tel:XXX-XXX-XXXX
+                                <br>
+                                email:Email@mail.com
+                                <br>
+                                ddress:XX시 XX구 XX동 XXX
+                            </p>
+                        </li>
+                    </ul>
+                </div>
 
-                <input type="radio" name="radio-btn" id="img-2" />
-                <li class="slide-container">
-                    <div class="slide">
-                        <img src="./image/main/prom_img2.jpg" />
-                    </div>
-                    <div class="nav">
-                        <label for="img-1" class="prev">&#x2039;</label>
-                        <label for="img-3" class="next">&#x203a;</label>
-                    </div>
-                </li>
+                <div class="tail-cate">
+                    <div class="tail-cate1"></div>
+                    <div class="tail-cate2"></div>
+                    <div class="tail-cate3"></div>
+                    <ul>
+                        <li class="cate-top">POLICY</li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">이용안내</a></li>
+                        <li><a href="#">반품,환불규정</a></li>
+                        <li><a href="#">제휴입점문의</a></li>
+                    </ul>
 
-                <input type="radio" name="radio-btn" id="img-3" />
-                <li class="slide-container">
-                    <div class="slide">
-                        <img src="./image/main/prom_img3.jpg" />
-                    </div>
-                    <div class="nav">
-                        <label for="img-2" class="prev">&#x2039;</label>
-                        <label for="img-4" class="next">&#x203a;</label>
-                    </div>
-                </li>
+                    <ul>
+                        <li class="cate-top">C/S CENTER</li>
+                        <li>
+                            <p>
+                                mon-fri<br>
+                                lunch<br>
+                            </p>
+                        </li>
+                    </ul>
 
-                <input type="radio" name="radio-btn" id="img-4" />
-                <li class="slide-container">
-                    <div class="slide">
-                        <img src="./image/main/prom_img4.jpg" />
-                    </div>
-                    <div class="nav">
-                        <label for="img-3" class="prev">&#x2039;</label>
-                        <label for="img-5" class="next">&#x203a;</label>
-                    </div>
-                </li>
-
-                <input type="radio" name="radio-btn" id="img-5" />
-                <li class="slide-container">
-                    <div class="slide">
-                        <img src="./image/main/prom_img5.jpg" />
-                    </div>
-                    <div class="nav">
-                        <label for="img-4" class="prev">&#x2039;</label>
-                        <label for="img-1" class="next">&#x203a;</label>
-                    </div>
-                </li>
-
-                <li class="nav-dots">
-                    <label for="img-1" class="nav-dot" id="img-dot-1"></label>
-                    <label for="img-2" class="nav-dot" id="img-dot-2"></label>
-                    <label for="img-3" class="nav-dot" id="img-dot-3"></label>
-                    <label for="img-4" class="nav-dot" id="img-dot-4"></label>
-                    <label for="img-5" class="nav-dot" id="img-dot-5"></label>
-                </li>
-            </ul>
-        </div>
-
-        <!-- 신상품 목록 -->
-        <div>
-            신상품
-        </div>
-    </main>
-
-    <!-- 하단 푸터 -->
-    <footer>
-        <div class="parent">
-            <div class="child1">
-                <span class="footer_logo">Petmily</span>
-                <ul>
-                    <li>Tel:XXX-XXX-XXXX</li>
-                    <li>email:Email@mail.com</li>
-                    <li>address:XX시 XX구 XX동 XXX</li>
-                </ul>
+                    <ul>
+                        <li class="cate-top">SNS SERVICE</li>
+                        <li>
+                            <a href="#">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
+        </footer>
+    </div>
 
-            <div class="child2">
-                <span>POLICY</span>
-                <ul>
-                    <li><a href="#">이용약관</a></li>
-                    <li><a href="#">개인정보처리방침</a></li>
-                    <li><a href="#">이용안내</a></li>
-                    <li><a href="#">반품,환불규정</a></li>
-                    <li><a href="#">제휴입점문의</a></li>
-                </ul>
-            </div>
-
-            <div class="child3">
-                <span>C/S CENTER</span>
-                <ul>
-                    <li>tel</li>
-                    <li>email</li>
-                    <li>address</li>
-                </ul>
-            </div>
-
-            <div class="child4">
-                <span>SNS SERVICE</span>
-                <ul>
-                    <li>tel</li>
-                    <li>email</li>
-                    <li>address</li>
-                </ul>
-            </div>
-        </div>
-    </footer>
 </body>
 
 </html>
