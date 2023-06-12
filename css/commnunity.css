@@ -33,13 +33,13 @@ hr {
 }
 
 li {
-    text-align: center;
     display: inline-block;
     border: 1px black solid;
     margin-right: 50px;
 }
 
 li a {
+    text-align: center;
     background-color: rgb(218, 229, 238);
     display: inline-block;
     width: 150px;
@@ -54,6 +54,19 @@ li a:nth-of-type(n):hover {
 }
 
 /* ======================글 목록====================== */
+
+.attr1 {
+    width: 200px;
+}
+
+.attr2 {
+    width: 50px;
+}
+
+.attr3 {
+    width: 80px;
+}
+
 .board_listpackage {
     width: 1120px;
     margin: auto;
