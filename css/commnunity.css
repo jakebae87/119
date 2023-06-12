@@ -12,6 +12,7 @@ ul {
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 
@@ -30,6 +31,9 @@ hr {
 .subTitle_listpackage {
     width: 1120px;
     margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
 li {
@@ -49,6 +53,24 @@ li a {
 
 /* 부제목 마우스오버 효과 */
 li a:nth-of-type(n):hover {
+    background-color: rgb(25, 50, 100);
+    color: white;
+}
+
+/* 글쓰기 a태그 설정 */
+.board_write {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: rgb(218, 229, 238);
+    border: 1px black solid;
+    margin: 16px 0;
+}
+
+/* 부제목 마우스오버 효과 */
+.board_write:hover {
     background-color: rgb(25, 50, 100);
     color: white;
 }

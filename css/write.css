@@ -1,0 +1,55 @@
+body {
+    width: 1120px;
+    text-align: center;
+    margin: auto;
+}
+
+hr {
+    width: 1120px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* ======================게시글 선택, 평점, 등록====================== */
+
+.selectStarRegist {
+    width: 1120px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.selectStarRegist select {
+    font-size: 16px;
+    width: 35%;
+    height: 40px;
+    text-align: center;
+}
+
+/* 별 평점 */
+.productRating {
+    width: 15%;
+    border: 1px solid black;
+    line-height: 40px;
+}
+
+a {
+    display: inline-block;
+    align-items: flex-end;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: rgb(218, 229, 238);
+    border: 1px black solid;
+    margin-left: 300px;
+}
+
+a:hover {
+    background-color: rgb(25, 50, 100);
+    color: white;
+}
