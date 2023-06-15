@@ -57,7 +57,7 @@ li a:nth-of-type(n):hover {
     color: white;
 }
 
-/* 글쓰기 a태그 설정 */
+/* 등록 버튼 설정 */
 .board_write {
     display: inline-block;
     width: 150px;
