@@ -1,0 +1,48 @@
+footer {
+    height: 250px;
+    color:aliceblue;
+    background-color: rgb(25, 50, 100);
+    
+    bottom: 0;
+    display: flex;
+}
+
+footer>div {
+    padding: 50px 50px;
+}
+
+footer>div:nth-of-type(1) {
+    width: 55%;
+}
+
+footer>div:nth-of-type(2) {
+    width: 45%;
+}
+
+footer>div:nth-of-type(2)>ul {
+    float: left;
+    padding: 0 30px;
+}
+
+footer>div>ul>li:nth-of-type(1) {
+    padding-bottom: 16px;
+}
+
+footer>div>ul>li>a {
+    color: aliceblue;
+}
+
+footer>div>ul>li:not(:nth-of-type(1)) {
+    font-size: 0.8em;
+    padding-bottom: 5px;
+}
+
+footer>div:nth-of-type(1)>ul>li:nth-of-type(1) {
+    color: rgb(220, 200, 30);
+    font-size: 32px;
+    font-weight: bold;
+}
+
+footer>div:nth-of-type(2)>ul>li:nth-of-type(1) {
+    font-weight: bold;
+}

@@ -1,0 +1,231 @@
+header {
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+    top: 0;
+    position: fixed;
+    /* position: sticky; */
+}
+
+
+/* ==================== headerTop ==================== */
+.headerTOP {
+    height: 50px;
+    align-items: center;
+    display: flex;
+}
+
+.headerTOP .topLogo {
+    width: 15%;
+    text-align: center;
+}
+
+.headerTOP .topLogo span {
+    text-indent: -9999em;
+    display: inline-block;
+}
+
+.headerTOP .topLogo img {
+    width: 140px;
+    outline: none;
+}
+
+.headerTOP .searchBox {
+    width: 50%;
+}
+
+.headerTOP .searchBox form {
+    width: 500px;
+}
+
+.headerTOP .searchBox fieldset {
+    box-sizing: border-box;
+    border: 3px solid rgb(25, 50, 100);
+    border-radius: 15px;
+    display: flex;
+}
+
+.headerTOP .searchBox input {
+    font-size: initial;
+    border: none;
+    outline: none;
+    margin-left: 0.8em;
+    flex: 9;
+}
+
+.headerTOP .searchBox button {
+    border-radius: 15px;
+    background-color: white;
+    border: none;
+    flex: 1;
+    cursor: pointer;
+}
+
+.headerTOP .userMenu {
+    width: 35%;
+    text-align: right;
+    padding: 0 3%;
+}
+
+.headerTOP .userMenu a {
+    color: rgb(25, 50, 100);
+    font-weight: bold;
+}
+
+
+/* ==================== headerBottom ==================== */
+.headerBottom a {
+    /* padding: 0 30px; */
+    box-sizing: border-box;
+    color: aliceblue;
+}
+
+.mainMenu {
+    /* margin-bottom: 20px; */
+    background-color: rgb(25, 50, 100);
+}
+
+.mainMenu::after {
+    content: "";
+    clear: left;
+    display: block;
+}
+
+.mainMenu>li {
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    
+    float: left;
+    position: relative;
+}
+
+.subMenu {
+    width: 100%;
+    left: 0;
+    background-color: rgb(25, 50, 100);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.15s ease-in;
+}
+
+.subMenu>li {
+    height: 40px;
+    line-height: 40px;
+}
+
+.mainMenu>li:nth-of-type(2) li:nth-of-type(2),
+.mainMenu>li:nth-of-type(2) li:nth-of-type(4) {
+    box-sizing: border-box;
+    border-bottom: solid 1px gray;
+}
+
+
+/* ==================== headerBottom hover ==================== */
+.mainMenu>li:hover .subMenu {
+    font-size: .9em;
+    opacity: 1;
+    visibility: visible;
+}
+
+.subMenu>li>a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==================== hamburger menu ==================== */
+.mainMenu>li:nth-of-type(1) {
+    /* position: absolute; */
+    width: 100px;
+}
+
+.sideMenu {
+    width: 700px;
+    height: calc(100%-100px);
+    left: -700px;
+    background-color: rgb(25, 50, 100);
+    
+    padding-left: 100px;
+    z-index: 1;
+    transition: all 300ms;
+    box-sizing: border-box;
+    position: fixed;
+    /* top: 0px; */
+}
+
+.sideMenu>li {
+    float: left;
+}
+
+.sideMenu>li>ul {
+    padding: 0 30px;
+}
+
+.sideMenu>li>ul li {
+    font-size: 0.9em;
+    height: 40px;
+}
+
+.sideMenu>li>ul li:hover {
+    color: aliceblue;
+    text-decoration: underline;
+}
+
+
+/* ==================== hamburger menu effect setting ==================== */
+#sideBtn {
+    display: none;
+}
+
+#sideBtn+label {
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    margin: calc(25px/2) auto;
+
+    z-index: 2;
+    display: block;
+    position: relative;
+}
+
+#sideBtn+label>span {
+    width: 100%;
+    height: 5px;
+    background: aliceblue;
+    border-radius: 5px;
+
+    transition: all 200ms;
+    display: block;
+    position: absolute;
+}
+
+#sideBtn:checked+label>span:nth-child(1) {
+    top: 50%;
+    transform: translate(0, -50%);
+    transform: rotate(45deg);
+}
+
+#sideBtn+label>span:nth-child(2) {
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+#sideBtn:checked+label>span:nth-child(2) {
+    opacity: 0;
+}
+
+#sideBtn+label>span:nth-child(3) {
+    bottom: 0;
+}
+
+#sideBtn:checked+label>span:nth-child(3) {
+    top: 50%;
+    transform: translate(0, -50%);
+    transform: rotate(-45deg);
+}
+
+#sideBtn:checked+label+.sideMenu {
+    left: 0;
+}
