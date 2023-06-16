@@ -1,0 +1,67 @@
+main {
+    width: 1120px;
+    margin: auto;
+    font-size: 16px;
+}
+
+hr {
+    width: 100%
+}
+
+.title,
+.title div {
+    text-align: center;
+}
+
+/* ======================게시글 선택, 평점, 등록====================== */
+
+.selectStarRegist {
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.selectStarRegist select {
+    width: 35%;
+    text-align: center;
+}
+
+/* 별 평점 */
+.productRating {
+    width: 15%;
+    border: 1px solid black;
+    line-height: 40px;
+    margin-right: 30%;
+}
+
+/* 글 등록 버튼 */
+/* 목록 버튼 */
+#registButton input,
+#bottomBoard input {
+    width: 150px;
+    height: 40px;
+    background-color: rgb(218, 229, 238);
+    border: 1px black solid;
+}
+
+/* 목록 버튼 */
+#bottomBoard {
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* 마우스오버 효과 */
+#registButton input:hover,
+#bottomBoard input:hover {
+    background-color: rgb(25, 50, 100);
+    color: white;
+}
+
+/* 내용 입력 부분 */
+main form input {
+    margin-bottom: 10px;
+    width: 50%;
+    height: 40px;
+}

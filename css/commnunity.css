@@ -1,0 +1,187 @@
+.subTitle_listpackage ul {
+    list-style: none;
+    margin-left: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.subTitle_listpackage ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* ======================제목====================== */
+.title {
+    width: 1120px;
+    margin: auto;
+}
+
+hr {
+    width: 1120px;
+}
+
+/* ======================부제목====================== */
+
+.subTitle_listpackage {
+    width: 1120px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.subTitle_listpackage ul li {
+    display: inline-block;
+    border: 1px black solid;
+    margin-right: 50px;
+}
+
+.subTitle_listpackage ul li a {
+    text-align: center;
+    background-color: rgb(218, 229, 238);
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+}
+
+/* 부제목 마우스오버 효과 */
+.subTitle_listpackage ul li a:nth-of-type(n):hover {
+    background-color: rgb(25, 50, 100);
+    color: white;
+}
+
+/* 등록 버튼 설정 */
+.board_write {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: rgb(218, 229, 238);
+    border: 1px black solid;
+    margin: 16px 0;
+}
+
+/* 부제목 마우스오버 효과 */
+.board_write:hover {
+    background-color: rgb(25, 50, 100);
+    color: white;
+}
+
+/* ======================글 목록====================== */
+
+.attr1 {
+    width: 200px;
+}
+
+.attr2 {
+    width: 50px;
+}
+
+.attr3 {
+    width: 80px;
+}
+
+.board_listpackage {
+    width: 1120px;
+    margin: auto;
+}
+
+.board_listpackage table {
+    margin-top: 60px;
+    text-align: center;
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-left: 0;
+    border-right: 0;
+    white-space: norwap;
+}
+
+.board_listpackage table tr {
+    border-top: 1px solid black;
+}
+
+.board_listpackage table th {
+    font-size: 25px;
+    padding: 20px;
+}
+
+/* 제목 왼쪽 정렬 */
+.board_listpackage table tr td:nth-of-type(1) {
+    text-align: left;
+}
+
+.board_listpackage table tr td {
+    padding: 20px;
+}
+
+/* ======================글 검색====================== */
+.search {
+    width: 1120px;
+    margin: auto;
+    text-align: center;
+    padding: 60px;
+}
+
+/* 검색기간, 검색범위 너비 */
+.search select:nth-of-type(n) {
+    width: 25%;
+}
+
+/* 검색어 너비 */
+.searchInput input:nth-of-type(1) {
+    width: 40%;
+}
+
+/* 검색버튼 너비  */
+.searchInput input:nth-of-type(2) {
+    width: 10%;
+}
+
+/* 검색기간, 검색범위의 텍스트 설정 */
+.search select {
+    font-size: 16px;
+    width: 20%;
+    height: 40px;
+    text-align: center;
+}
+
+/* 검색어 입력, 검색 버튼 설정*/
+.searchInput {
+    margin-top: 10px;
+}
+
+.searchInput>input {
+    width: 30%;
+    height: 40px;
+    font-size: 16px;
+}
+
+.searchInput>input+input {
+    width: 10%;
+    font-size: 16px;
+}
+
+/* ======================페이지네이션====================== */
+
+.pagination {
+    font-size: 20px;
+    width: 1120px;
+    margin: auto;
+    text-align: center;
+    padding: 40px;
+}
+
+.pagination a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+}
