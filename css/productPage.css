@@ -13,58 +13,21 @@ main {
 }
 
 
-/* ==================== introduce ==================== */
-.introduceWrap {
-    width: 100%;
-    padding: 50px 0;
-    
-    display: flex;
-}
-
-.introduce {
-    width: calc(100%/4);
-}
-
-.introduce>div {
-    padding: 0 20px;
-}
-
-.introduce span {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.introduce a {
-    font-size: 32px;
-    color: silver;
-    font-weight: bold;
-}
-
-.introduce p {
-    padding: 10px 0;
-}
-
-.introduce a:hover {
-    color: black;
-}
-
-
 /* ==================== product list area ==================== */
 .productList {
-    width: calc(100%*3/4);
+    margin: 40px 0;
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-
-    margin: 0;
 }
 
 
 /* ==================== individual product area ==================== */
 .product {
     width: calc(100%/3.3);
+    margin-bottom: 40px;
 }
 
 .product>div {
@@ -76,7 +39,7 @@ main {
 
 .product>a img {
     width: 100%;
-    height: 220px;
+    height: 300px;
 
     box-sizing: border-box;
     border: 1px solid silver;
@@ -98,4 +61,27 @@ main {
     width: 30px;
     height: 30px;
     margin: 2.5px 0;
+}
+
+
+/* ==================== Classification with product category ==================== */
+.productClassification ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.productClassification li {
+    width: fit-content;
+    height: 50px;
+    line-height: 50px;
+}
+
+.productClassification a {
+    text-align: center;
+    font-weight: bold;
+    color: silver;
+}
+
+.productClassification a[href=""] {
+    color: black;
 }
