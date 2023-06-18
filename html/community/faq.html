@@ -2,86 +2,38 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Petmily</title>
+
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+
     <link rel="stylesheet" href="../../css/commnunity.css">
+
 </head>
 
 <body>
-    <div class="title">
-        <h2>자주묻는질문</h2>
-    </div>
-    <hr>
-    <div class="subTitle_listpackage">
-        <ul>
-            <li><a href="/html/community/notice.html">공지사항</a></li>
-            <li><a href="/html/community/inquiry.html">상품문의</a></li>
-            <li><a href="#">상품후기</a></li>
-            <li><a href="/html/community/faq.html">자주묻는질문</a></li>
-        </ul>
-    </div>
-    <div class="board_listpackage">
-        <table>
-            <colgroup>
-                <col class="attr1">
-                <col class="attr2">
-                <col class="attr3">
-            </colgroup>
-            <tr>
-                <th>제목</th>
-                <th>글쓴이</th>
-                <th>작성일</th>
-            </tr>
-            <tr>
-                <td><a href="#">[환불/반품] 반품하려면 어떻게 하나요?</a></td>
-                <td>펫밀리</td>
-                <td>2023-05-11</td>
-            </tr>
-            <tr>
-                <td><a href="#">[결제/배송] 배송기간은 얼마나 되나요?</a></td>
-                <td>펫밀리</td>
-                <td>2023-04-25</td>
-            </tr>
-            <tr>
-                <td><a href="#">[회원가입/정보] 비회원도 주문가능 하나요?</a></td>
-                <td>펫밀리</td>
-                <td>2023-01-05</td>
-            </tr>
-            <tr>
-                <td><a href="#">[회원가입/정보] 회원가입은 어떻게 하나요?</a></td>
-                <td>펫밀리</td>
-                <td>2022-12-29</td>
-            </tr>
-            <tr>
-                <td><a href="#">[교환/환불/반품] 주문취소는 어떻게 하나요?</a></td>
-                <td>펫밀리</td>
-                <td>2022-12-11</td>
-            </tr>
-        </table>
-    </div>
+    <header>
+        <div class="headerTOP">
+            <div class="topLogo">
+                <span>Petmily</span>
+                <a href="../../index.html">
+                    <img src="../../image/Petmily_logo.png" alt="Petmily_logo">
+                </a>
+            </div>
 
-    <div class="search">
-        <form action="#">
-            <div>
-                <select name="searchPeriod">
-                    <option value="week">일주일</option>
-                    <option value="month">한달</option>
-                    <option value="firstQuarter">세달</option>
-                    <option value="all">전체</option>
-                </select>
-                <select name="searchCriteria">
-                    <option value="subject">제목</option>
-                    <option value="content">내용</option>
-                    <option value="writer">글쓴이</option>
-                </select>
+            <div class="searchBox">
+                <form action="../../html/category/cate_search.html" method="get">
+                    <fieldset>
+                        <input type="text" maxlength="20" placeholder="검색어 입력" />
+                        <button type="submit">
+                            <img src="../../image/magnifying-glass-30.png" alt="돋보기 이미지">
+                        </button>
+                    </fieldset>
+                </form>
             </div>
-            <div class="searchInput">
-                <input type="text">
-                <input type="submit" value="검색">
-            </div>
-        </form>
-    </div>
 
             <div class="userMenu">
                 <a href="#">로그인</a>

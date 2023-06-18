@@ -1,4 +1,4 @@
-ul {
+.subTitle_listpackage ul {
     list-style: none;
     margin-left: 0;
     padding: 0;
@@ -29,13 +29,13 @@ ul {
     align-items: flex-end;
 }
 
-li {
+.subTitle_listpackage ul li {
     display: inline-block;
     border: 1px black solid;
     margin-right: 50px;
 }
 
-li a {
+.subTitle_listpackage ul li a {
     text-align: center;
     background-color: rgb(218, 229, 238);
     display: inline-block;
@@ -45,7 +45,7 @@ li a {
 }
 
 /* 부제목 마우스오버 효과 */
-li a:nth-of-type(n):hover {
+.subTitle_listpackage ul li a:nth-of-type(n):hover {
     background-color: rgb(25, 50, 100);
     color: white;
 }
@@ -86,7 +86,7 @@ li a:nth-of-type(n):hover {
     margin: auto;
 }
 
-table {
+.board_listpackage table {
     margin-top: 60px;
     text-align: center;
     width: 100%;
@@ -97,21 +97,21 @@ table {
     white-space: norwap;
 }
 
-table tr {
+.board_listpackage table tr {
     border-top: 1px solid black;
 }
 
-table th {
+.board_listpackage table th {
     font-size: 25px;
     padding: 20px;
 }
 
 /* 제목 왼쪽 정렬 */
-table tr td:nth-of-type(1) {
+.board_listpackage table tr td:nth-of-type(1) {
     text-align: left;
 }
 
-table tr td {
+.board_listpackage table tr td {
     padding: 20px;
 }
 
