@@ -10,20 +10,12 @@ ul {
     text-decoration: none;
 }
 
-a {
-    text-decoration: none;
-    color: black;
-}
-
 
 /* ======================제목====================== */
 .title {
     width: 1120px;
-    margin: auto;
-}
-
-hr {
-    width: 1120px;
+    margin: 30px auto;
+    text-align: center;
 }
 
 /* ======================부제목====================== */
@@ -31,6 +23,7 @@ hr {
 .subTitle_listpackage {
     width: 1120px;
     margin: auto;
+    padding-top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -66,7 +59,6 @@ li a:nth-of-type(n):hover {
     text-align: center;
     background-color: rgb(218, 229, 238);
     border: 1px black solid;
-    margin: 16px 0;
 }
 
 /* 부제목 마우스오버 효과 */
