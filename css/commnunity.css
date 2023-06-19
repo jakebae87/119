@@ -73,12 +73,10 @@
     width: 200px;
 }
 
-.attr2 {
-    width: 50px;
-}
-
-.attr3 {
-    width: 80px;
+.attr2,
+.attr3,
+.attr4 {
+    width: 30px;
 }
 
 .board_listpackage {
@@ -94,7 +92,7 @@
     border-collapse: collapse;
     border-left: 0;
     border-right: 0;
-    white-space: norwap;
+    white-space: nowrap;
 }
 
 .board_listpackage table tr {
@@ -104,6 +102,34 @@
 .board_listpackage table th {
     font-size: 25px;
     padding: 20px;
+}
+
+/* ======================글 제목 리스트 구조 설정====================== */
+.titleBox ul {
+    display: flex;
+}
+
+/* 상품후기 제목 사진 */
+.titleBox ul>li {
+    align-self: left;
+}
+
+/* 상품후기 상품명과 글제목 */
+.titleBox ul>li+li {
+    align-self: center;
+    margin-left: 30px;
+}
+
+/* 상품후기 사진 */
+.board_listpackage table tr td div img {
+    width: 100px;
+    height: 100px;
+    border: 1px outset;
+}
+
+/* 상품후기 사진 hover effect */
+.board_listpackage table tr td div img:hover {
+    transform: scale(1.4);
 }
 
 /* 제목 왼쪽 정렬 */

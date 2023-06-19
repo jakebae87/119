@@ -46,7 +46,7 @@ main {
 
 /* 목록 버튼 */
 #bottomBoard {
-    margin-top: 20px;
+    margin: 20px 0;
     text-align: left;
 }
 

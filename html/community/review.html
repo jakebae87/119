@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../../css/footer.css">
 
     <link rel="stylesheet" href="../../css/commnunity.css">
+    <!--Fontawesome script-->
+    <script src="https://kit.fontawesome.com/f060eab6a5.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -126,7 +128,7 @@
                 </ul>
             </div>
             <div>
-                <a class="board_write" href="/html/board/writeInquiry.html">글쓰기</a>
+                <a class="board_write" href="/html/board/writeReview.html">글쓰기</a>
             </div>
         </div>
 
@@ -158,34 +160,170 @@
                     <col class="attr1">
                     <col class="attr2">
                     <col class="attr3">
+                    <col class="attr4">
                 </colgroup>
                 <tr>
                     <th>제목</th>
+                    <th>평점</th>
                     <th>글쓴이</th>
                     <th>작성일</th>
                 </tr>
                 <tr>
-                    <td><a href="#">유통기한 확인요청</a></td>
+                    <td>
+                        <div class="titleBox">
+                            <ul>
+                                <li>
+                                    <img src="../../image/products/food_image1.jpg" alt="데이스포 장영양제 250g">
+                                </li>
+                                <li>
+                                    <strong>
+                                        <p id="productName" name="productName">데이스포 장영양제 250g</p>
+                                    </strong>
+                                    <div>
+                                    <a href="#">우리아이가 잘 먹어요</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="productRating">
+                            <i class="fa-solid fa-star" style="color: #f60404;"></i>
+                            <i class="fa-solid fa-star" style="color: #f60404;"></i>
+                            <i class="fa-solid fa-star" style="color: #f60404;"></i>
+                            <i class="fa-regular fa-star" style="color: #fa0000;"></i>
+                            <i class="fa-regular fa-star" style="color: #fa0000;"></i>
+
+                            <!-- 속인 빈 별표 -->
+                            <!-- <i class="fa-regular fa-star" style="color: #fa0000;"></i> -->
+                        </div>
+                    </td>
                     <td>배**</td>
                     <td>2023-05-11</td>
                 </tr>
                 <tr>
-                    <td><a href="#">사이즈가 궁금해요</a></td>
+                    <td>
+                        <div class="titleBox">
+                            <ul>
+                                <li>
+                                    <img src="../../image/products/food_image2.jpg" alt="애견비책 오리 연어 화식사료 120g x 10">
+                                </li>
+                                <li>
+                                    <strong>
+                                        <p id="productName" name="productName">애견비책 오리 연어 화식사료 120g x 10</p>
+                                    </strong>
+                                    <a href="#">가성비가 안좋아요</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="productRating">
+                            <i class="fa-solid fa-star" style="color: #f60404;"></i>
+                            <i class="fa-regular fa-star" style="color: #fa0000;"></i>
+                            <i class="fa-regular fa-star" style="color: #fa0000;"></i>
+                            <i class="fa-regular fa-star" style="color: #fa0000;"></i>
+                            <i class="fa-regular fa-star" style="color: #fa0000;"></i>
+
+                            <!-- 속인 빈 별표 -->
+                            <!-- <i class="fa-regular fa-star" style="color: #fa0000;"></i> -->
+                        </div>
+                    </td>
                     <td>김**</td>
                     <td>2023-04-25</td>
                 </tr>
                 <tr>
-                    <td><a href="#">배송 언제 되나요?</a></td>
+                    <td>
+                        <div class="titleBox">
+                            <ul>
+                                <li>
+                                    <img src="../../image/products/food_image3.jpg"
+                                        alt="NPABC-844-A-반려동물 사각캔 닭고기+소고기 100gx24">
+                                </li>
+                                <li>
+                                    <strong>
+                                        <p id="productName" name="productName">NPABC-844-A-반려동물 사각캔 닭고기+소고기 100gx24</p>
+                                    </strong>
+                                    <a href="#">닭가슴살 부족할 때, 내가 먹어도 꿀맛임</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="productRating">
+                            <i class="fa-solid fa-star" style="color: #f60404;"></i>
+                            <i class="fa-solid fa-star" style="color: #f60404;"></i>
+                            <i class="fa-solid fa-star" style="color: #f60404;"></i>
+                            <i class="fa-regular fa-star" style="color: #fa0000;"></i>
+                            <i class="fa-regular fa-star" style="color: #fa0000;"></i>
+
+                            <!-- 속인 빈 별표 -->
+                            <!-- <i class="fa-regular fa-star" style="color: #fa0000;"></i> -->
+                        </div>
+                    </td>
                     <td>최**</td>
                     <td>2023-01-05</td>
                 </tr>
                 <tr>
-                    <td><a href="#">유통기한 확인 해주세요</a></td>
+                    <td>
+                        <div class="titleBox">
+                            <ul>
+                                <li>
+                                    <img src="../../image/products/food_image4.jpg" alt="기둥 컴팩트 애견배변판 배변용품 반려동물 애완">
+                                </li>
+                                <li>
+                                    <strong>
+                                        <p id="productName" name="productName">기둥 컴팩트 애견배변판 배변용품 반려동물 애완</p>
+                                    </strong>
+                                    <a href="#">배변 교육시키는데 너무 좋네요</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="productRating">
+                            <i class="fa-solid fa-star" style="color: #f60404;"></i>
+                            <i class="fa-solid fa-star" style="color: #f60404;"></i>
+                            <i class="fa-solid fa-star" style="color: #f60404;"></i>
+                            <i class="fa-solid fa-star" style="color: #f60404;"></i>
+                            <i class="fa-regular fa-star" style="color: #fa0000;"></i>
+
+                            <!-- 속인 빈 별표 -->
+                            <!-- <i class="fa-regular fa-star" style="color: #fa0000;"></i> -->
+                        </div>
+                    </td>
                     <td>은**</td>
                     <td>2022-12-29</td>
                 </tr>
                 <tr>
-                    <td><a href="#">우리 강아지가 먹어도 될까요?</a></td>
+                    <td>
+                        <div class="titleBox">
+                            <ul>
+                                <li>
+                                    <img src="../../image/products/food_image5.jpg"
+                                        alt="gooby 메모리폼 스텝인 하네스 편안한 강아지 가슴줄">
+                                </li>
+                                <li>
+                                    <strong>
+                                        <p id="productName" name="productName">gooby 메모리폼 스텝인 하네스 편안한 강아지 가슴줄</p>
+                                    </strong>
+                                    <a href="#">산책 필수템!</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="productRating">
+                            <i class="fa-solid fa-star" style="color: #f60404;"></i>
+                            <i class="fa-solid fa-star" style="color: #f60404;"></i>
+                            <i class="fa-solid fa-star" style="color: #f60404;"></i>
+                            <i class="fa-solid fa-star" style="color: #f60404;"></i>
+                            <i class="fa-regular fa-star" style="color: #fa0000;"></i>
+
+                            <!-- 속인 빈 별표 -->
+                            <!-- <i class="fa-regular fa-star" style="color: #fa0000;"></i> -->
+                        </div>
+                    </td>
                     <td>박**</td>
                     <td>2022-12-11</td>
                 </tr>
