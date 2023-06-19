@@ -1,0 +1,129 @@
+/* main */
+main {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/* 장바구니 */
+.titleArea {
+  margin-top: 90px;
+  margin-left: 25px;
+}
+
+/* 주문진행도 */
+.cartProcess {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.cartProcess ul {
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 40px;
+  background-color: gray;
+}
+
+.cartProcess ul li {
+  display: inline-block;
+  width: 25%;
+  height: 40px;
+  vertical-align: middle;
+  color: white;
+}
+
+.cartProcess ul li:nth-child(1) {
+  background-color: rgb(16, 40, 102);
+}
+
+/* 장바구니에 담긴 상품*/
+.cartProduct {
+  height: 200px;
+  text-align: center;
+}
+.cartProduct > p {
+  display: inline-block;
+  font-weight: bold;
+}
+
+/* 장바구니 상품 상세 */
+.cartInfo {
+  width: 100%;
+  border: 1px solid gray;
+  border-collapse: collapse;
+}
+
+.cartInfo tbody td {
+  height: 50px;
+}
+
+/* 총 가격 */
+/* .cartPrice {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.productPrice,
+.deliveryPrice,
+.allPrice {
+  display: inline-block;
+  margin-right: 100px;
+}
+
+.productPrice div,
+.deliveryPrice div,
+.allPrice div {
+  display: inline-block;
+} */
+
+/* 주문버튼 */
+.cartOrder {
+  text-align: center;
+  height: 40px;
+}
+
+.allOrder,
+.selectOrder,
+.returnShop {
+  display: inline-block;
+  font-size: 12px;
+  text-decoration: none;
+  width: 120px;
+  line-height: 40px;
+}
+
+.allOrder {
+  background-color: rgb(16, 40, 102);
+  color: white;
+}
+
+.selectOrder,
+.returnShop {
+  background-color: gray;
+}
+
+/* 이용안내 */
+.Guide {
+  border: 1px solid;
+  margin: 10px 0;
+  font-size: 1em;
+}
+
+.Guide h3 {
+  background-color: rgba(128, 128, 128, 0.3);
+  padding: 1%;
+}
+
+.cartGuideInner {
+  padding: 0 9px 12px;
+}
+
+.cartGuideInner h4 {
+  margin-top: 10px;
+}
+
+.cartGuide,
+.payGuide {
+  list-style: none;
+}

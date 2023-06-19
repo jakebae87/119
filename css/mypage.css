@@ -1,0 +1,115 @@
+/* main */
+main {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/* 부제목 */
+.titleArea {
+  margin-top: 20px;
+  margin-left: 25px;
+}
+
+.titleArea > div {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.titleArea li h3,
+.titleArea li h5 {
+  display: inline-block;
+}
+
+/* 주문/배송현황 */
+.myOrder {
+  width: 100%;
+  margin-bottom: 100px;
+  border: 1px solid;
+  position: relative;
+}
+
+.myOrder > div {
+  display: inline-block;
+  width: 19%;
+  text-align: center;
+}
+
+/* > 기호 */
+.beforePay::after {
+  content: ">";
+  font-size: 50px;
+  position: absolute;
+  color: gainsboro;
+  left: 17%;
+  top: 10%;
+}
+
+.setDelivery::after {
+  content: ">";
+  font-size: 50px;
+  position: absolute;
+  color: gainsboro;
+  left: 37%;
+  top: 10%;
+}
+
+.delivering::after {
+  content: ">";
+  font-size: 50px;
+  position: absolute;
+  color: gainsboro;
+  left: 56%;
+  top: 10%;
+}
+.delivered::after {
+  content: "|";
+  font-size: 60px;
+  position: absolute;
+  color: gray;
+  left: 77%;
+  top: 5%;
+}
+
+/* 주문 현황 왼쪽 숫자 */
+.myOrder > div > div > span {
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.myOrder > div > div + div {
+  margin-top: 10px;
+}
+
+.cancelExchangeRefund > ul {
+  list-style: none;
+}
+
+/* 주문 현황 글씨 */
+.myOrder > div > div + div,
+.cancelExchangeRefund > ul span {
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.cancelExchangeRefund li {
+  margin: 10px;
+}
+/* 장바구니 */
+.myCart {
+  width: 100%;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+/* 장바구니 상품 상세 */
+.cartInfo {
+  width: 100%;
+  border: 1px solid gray;
+  border-collapse: collapse;
+}
+
+.cartInfo tbody td {
+  height: 50px;
+}
