@@ -1,43 +1,37 @@
-/* main */
-main {
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
-  min-height: 0;
-}
-
 /* 상품상세페이지 */
 .productPage {
+  width: 1120px;
+  margin: 50px auto;
   display: flex;
-  justify-content: space-between;
-  margin-top: 50px;
-}
-
-.productImage {
-  background: url();
-  flex-grow: 1;
-  background-color: yellowgreen;
-  margin-right: 30px;
-}
-
-.productInfo {
-  display: inline-block;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: left;
+  justify-content: space-evenly;
   height: 500px;
-  width: 50%;
-  margin-bottom: 0;
-  white-space: nowrap;
-}
-.productInfo > div {
-  border-top: 1px solid gray;
 }
 
-.productInfo > div > span {
-  line-height: 75px;
-  padding: 0 10px;
+/* 상품이미지 */
+.productImage {
+  background: url(../image/product1.jpg) no-repeat;
+  width: 500px;
+  flex-grow: 1;
+  /* background-color: yellowgreen; */
+}
+
+/* 상품 정보 */
+.productInfo {
+  width: 500px;
+  text-align: center;
+}
+
+.productInfo th,
+.productInfo td {
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.productInfo th {
+  width: 30%;
+}
+
+.productInfo td {
+  width: 70%;
 }
 
 .shopcartButton {
@@ -45,16 +39,18 @@ main {
   line-height: 60px;
 }
 
+.orderButton {
+  width: 560px;
+}
+
 .buySoon,
 .buyCart {
   display: inline-block;
+  width: 150px;
+  line-height: 50px;
   text-align: center;
-  font-size: 12px;
-  text-decoration: none;
-  color: white;
-  width: 100px;
-  line-height: 40px;
   background-color: rgb(16, 40, 102);
+  color: white;
 }
 
 .buyCart {

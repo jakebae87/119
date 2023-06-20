@@ -1,14 +1,7 @@
-/* main */
-main {
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
 /* 부제목 */
 .titleArea {
-  margin-top: 20px;
-  margin-left: 25px;
+  width: 1120px;
+  margin: 20px auto;
 }
 
 .titleArea > div {
@@ -24,7 +17,8 @@ main {
 
 /* 주문/배송현황 */
 .myOrder {
-  width: 100%;
+  width: 1120px;
+  margin: auto;
   margin-bottom: 100px;
   border: 1px solid;
   position: relative;
@@ -98,7 +92,8 @@ main {
 }
 /* 장바구니 */
 .myCart {
-  width: 100%;
+  width: 1120px;
+  margin: auto;
   margin-bottom: 100px;
   text-align: center;
 }

@@ -1,20 +1,14 @@
-/* main */
-main {
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-/* 장바구니 */
+/* 장바구니 제목 */
 .titleArea {
-  margin-top: 90px;
-  margin-left: 25px;
+  width: 1120px;
+  margin: 30px auto 20px;
 }
 
 /* 주문진행도 */
 .cartProcess {
+  width: 1120px;
+  margin: auto;
   text-align: center;
-  margin-top: 5px;
 }
 
 .cartProcess ul {
@@ -39,7 +33,9 @@ main {
 
 /* 장바구니에 담긴 상품*/
 .cartProduct {
-  height: 200px;
+  width: 1120px;
+  margin: auto;
+  height: 150px;
   text-align: center;
 }
 .cartProduct > p {
@@ -105,8 +101,9 @@ main {
 
 /* 이용안내 */
 .Guide {
+  width: 1120px;
+  margin: 30px auto 20px;
   border: 1px solid;
-  margin: 10px 0;
   font-size: 1em;
 }
 
