@@ -28,7 +28,7 @@ main .currentPage {
 
 /* ======================커뮤니티 리스트====================== */
 
-.subTitle_listpackage ul {
+.commnunityList ul {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,14 +36,14 @@ main .currentPage {
     white-space: nowrap;
 }
 
-.subTitle_listpackage ul li {
+.commnunityList ul li {
     display: inline-block;
     border: 1px black solid;
     border-radius: 6px;
     margin: 0 30px;
 }
 
-.subTitle_listpackage ul li a {
+.commnunityList ul li a {
     text-align: center;
     display: inline-block;
     width: 150px;
@@ -53,8 +53,8 @@ main .currentPage {
     color: white;
 }
 
-/* 등록 버튼 설정 */
-.board_write {
+/* 글쓰기 버튼 설정 */
+.board_write a {
     display: inline-block;
     width: 150px;
     height: 50px;
@@ -66,7 +66,7 @@ main .currentPage {
     border-radius: 6px;
 }
 
-/* ======================글 목록====================== */
+/* ======================게시글 테이블 설정====================== */
 
 .attr1 {
     width: 200px;
@@ -78,12 +78,12 @@ main .currentPage {
     width: 30px;
 }
 
-.board_listpackage {
+.boardList {
     width: 1120px;
     margin: auto;
 }
 
-.board_listpackage table {
+.boardList table {
     margin-top: 60px;
     text-align: center;
     width: 100%;
@@ -94,11 +94,11 @@ main .currentPage {
     white-space: nowrap;
 }
 
-.board_listpackage table tr {
+.boardList table tr {
     border-top: 1px solid black;
 }
 
-.board_listpackage table th {
+.boardList table th {
     font-size: 25px;
     padding: 20px;
 }
@@ -120,27 +120,27 @@ main .currentPage {
 }
 
 /* 상품후기 사진 */
-.board_listpackage table tr td div img {
+.boardList table tr td div img {
     width: 100px;
     height: 100px;
     border: 1px outset;
 }
 
 /* 상품후기 사진 hover effect */
-.board_listpackage table tr td div img:hover {
+.boardList table tr td div img:hover {
     transform: scale(1.4);
 }
 
 /* 제목 왼쪽 정렬 */
-.board_listpackage table tr td:nth-of-type(1) {
+.boardList table tr td:nth-of-type(1) {
     text-align: left;
 }
 
-.board_listpackage table tr td {
+.boardList table tr td {
     padding: 20px;
 }
 
-/* ======================글 검색====================== */
+/* ======================상품문의/상품후기 검색====================== */
 .search {
     width: 1120px;
     margin: auto;
@@ -148,9 +148,14 @@ main .currentPage {
     padding: 60px;
 }
 
+.search form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 /* 검색기간, 검색범위 너비 */
-.search select:nth-of-type(n),
-.searchReview select:nth-of-type(n) {
+.search select:nth-of-type(n) {
     width: 25%;
 }
 
@@ -165,8 +170,7 @@ main .currentPage {
 }
 
 /* 검색기간, 검색범위의 텍스트 설정 */
-.search select,
-.searchReview select {
+.search select {
     font-size: 16px;
     width: 20%;
     height: 40px;
@@ -174,10 +178,6 @@ main .currentPage {
 }
 
 /* 검색어 입력, 검색 버튼 설정*/
-.searchInput {
-    margin-top: 10px;
-}
-
 .searchInput>input {
     width: 30%;
     height: 40px;
@@ -187,13 +187,6 @@ main .currentPage {
 .searchInput>input+input {
     width: 10%;
     font-size: 16px;
-}
-
-/* ======================리뷰 검색====================== */
-
-.searchReview {
-    width: 1120px;
-    margin: 30px auto;
 }
 
 /* ======================페이지네이션====================== */
