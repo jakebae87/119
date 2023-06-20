@@ -1,13 +1,13 @@
 /* 부제목 */
 .titleArea {
   width: 1120px;
-  margin: 20px auto;
+  margin: 30px auto 20px;
 }
 
 .titleArea > div {
   text-align: center;
   font-size: 2em;
-  margin-bottom: 30px;
+  margin: 30px auto 20px;
 }
 
 .titleArea li h3,
