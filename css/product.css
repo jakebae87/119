@@ -16,7 +16,7 @@ main {
 .productImage {
   background: url();
   flex-grow: 1;
-  background-color: red;
+  background-color: yellowgreen;
   margin-right: 30px;
 }
 

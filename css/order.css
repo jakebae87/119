@@ -127,6 +127,10 @@ textarea {
   margin-right: 5px;
 }
 
+.deliveryInfo textarea {
+  width: 60vw;
+}
+
 .emailAlert {
   padding: 0;
   margin: 0;

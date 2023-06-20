@@ -91,11 +91,11 @@ main {
   text-decoration: none;
   width: 120px;
   line-height: 40px;
+  color: white;
 }
 
 .allOrder {
   background-color: rgb(16, 40, 102);
-  color: white;
 }
 
 .selectOrder,
