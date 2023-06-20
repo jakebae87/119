@@ -1,0 +1,28 @@
+main {
+    width: 1120px;
+    margin: auto;
+}
+
+/* ==================== category title ==================== */
+.cateTitle {
+    margin: 10px 0;
+    padding: 50px 0;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.scrollBox {
+    width: 80%;
+    height: 500px;
+    /* padding: 20px 20px; */
+    box-sizing: border-box;
+    border: solid 1px silver;
+    overflow-y: scroll;
+
+    
+}
+
+.scrollBox p {
+    padding: 20px 20px;
+}

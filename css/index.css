@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
 #mainWrap {
     width: 1120px;
     margin: auto;
@@ -43,12 +50,12 @@
 .slideBtn label {
     width: 200px;
     height: 100%;
-    line-height: 380px;
+    line-height: 500px;
     cursor: pointer;
 
-    color: #FFF;
+    color: white;
     background-color: silver;
-    font-size: 156pt;
+    font-size: 150px;
     text-align: center;
     
     display: none;
