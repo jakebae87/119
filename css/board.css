@@ -4,13 +4,11 @@ main {
     font-size: 16px;
 }
 
-hr {
-    width: 100%
-}
 
 .title,
 .title div {
     text-align: center;
+    margin: 30px auto;
 }
 
 /* ======================게시글 선택, 평점, 등록====================== */
@@ -48,7 +46,7 @@ hr {
 
 /* 목록 버튼 */
 #bottomBoard {
-    margin-top: 20px;
+    margin: 20px 0;
     text-align: left;
 }
 

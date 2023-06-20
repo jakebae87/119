@@ -2,16 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Petmily</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비밀번호찾기</title>
 
     <link rel="stylesheet" href="../../css/global.css">
     <link rel="stylesheet" href="../../css/header.css">
     <link rel="stylesheet" href="../../css/footer.css">
-
-    <link rel="stylesheet" href="../../css/commnunity.css">
-
+    <link rel="stylesheet" href="../../css/findPW.css">
 </head>
 
 <body>
@@ -25,7 +24,7 @@
             </div>
 
             <div class="searchBox">
-                <form action="../../html/category/cate_search.html" method="get">
+                <form action="../category/cate_search.html" method="get">
                     <fieldset>
                         <input type="text" maxlength="20" placeholder="검색어 입력" />
                         <button type="submit">
@@ -36,8 +35,8 @@
             </div>
 
             <div class="userMenu">
-                <a href="#">로그인</a>
-                <a href="#">회원가입</a>
+                <a href="../user/login.html">로그인</a>
+                <a href="../user/signup.html">회원가입</a>
                 <a href="#">장바구니</a>
             </div>
         </div>
@@ -74,14 +73,14 @@
                                 <ul>
                                     <li><a href="../../html/community/notice.html">공지사항</a></li>
                                     <li><a href="../../html/community/inquiry.html">상품문의</a></li>
-                                    <li><a href="../../html/community/review.html">상품후기</a></li>
+                                    <li><a href="#">상품후기</a></li>
                                     <li><a href="../../html/community/faq.html">자주묻는질문</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
 
-                    <li><a href="../../html/category/cate_all.html">전체상품</a>
+                    <li><a href="../../html/category/cate_feed.html">전체상품</a>
                         <ul class="subMenu">
                             <li><a href="../../html/category/cate_new.html">신상품</a></li>
                             <li><a href="../../html/category/cate_best.html">인기상품</a></li>
@@ -101,7 +100,7 @@
                         <ul class="subMenu">
                             <li><a href="../../html/community/notice.html">공지사항</a></li>
                             <li><a href="../../html/community/inquiry.html">상품문의</a></li>
-                            <li><a href="../../html/community/review.html">상품후기</a></li>
+                            <li><a href="#">상품후기</a></li>
                             <li><a href="../../html/community/faq.html">자주묻는질문</a></li>
                         </ul>
                     </li>
@@ -113,90 +112,13 @@
     </header>
 
     <main>
-        <div class="title">
-            <h2>상품문의</h2>
-        </div>
-        <div class="subTitle_listpackage">
-            <div>
-                <ul>
-                    <li><a href="/html/community/notice.html">공지사항</a></li>
-                    <li><a href="/html/community/inquiry.html">상품문의</a></li>
-                    <li><a href="/html/community/review.html">상품후기</a></li>
-                    <li><a href="/html/community/faq.html">자주묻는질문</a></li>
-                </ul>
-            </div>
-            <div>
-                <a class="board_write" href="/html/board/writeInquiry.html">글쓰기</a>
-            </div>
-        </div>
-        <div class="board_listpackage">
-            <table>
-                <colgroup>
-                    <col class="attr1">
-                    <col class="attr2">
-                    <col class="attr3">
-                </colgroup>
-                <tr>
-                    <th>제목</th>
-                    <th>글쓴이</th>
-                    <th>작성일</th>
-                </tr>
-                <tr>
-                    <td><a href="#">유통기한 확인요청</a></td>
-                    <td>배**</td>
-                    <td>2023-05-11</td>
-                </tr>
-                <tr>
-                    <td><a href="#">사이즈가 궁금해요</a></td>
-                    <td>김**</td>
-                    <td>2023-04-25</td>
-                </tr>
-                <tr>
-                    <td><a href="#">배송 언제 되나요?</a></td>
-                    <td>최**</td>
-                    <td>2023-01-05</td>
-                </tr>
-                <tr>
-                    <td><a href="#">유통기한 확인 해주세요</a></td>
-                    <td>은**</td>
-                    <td>2022-12-29</td>
-                </tr>
-                <tr>
-                    <td><a href="#">우리 강아지가 먹어도 될까요?</a></td>
-                    <td>박**</td>
-                    <td>2022-12-11</td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="search">
-            <form action="#">
-                <div>
-                    <select name="searchPeriod">
-                        <option value="week">일주일</option>
-                        <option value="month">한달</option>
-                        <option value="firstQuarter">세달</option>
-                        <option value="all">전체</option>
-                    </select>
-                    <select name="searchCriteria">
-                        <option value="subject">제목</option>
-                        <option value="content">내용</option>
-                        <option value="writer">글쓴이</option>
-                    </select>
-                </div>
-                <div class="searchInput">
-                    <input type="text">
-                    <input type="submit" value="검색">
-                </div>
+        <div class="find_PW">
+            <h2>비밀번호찾기</h2>
+            <form method="post" action="" id="findPW-form">
+                <input type="text" class="findpw" name="userName" placeholder="아이디">
+                <input type="email" class="findpw" name="userEmail" placeholder="이메일">
+                <input type="submit" class="findBtn" value="비밀번호찾기">
             </form>
-        </div>
-
-        <div class="pagination">
-            <a href="#">&laquo;</a>
-            <a href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">&raquo;</a>
         </div>
     </main>
 
@@ -229,13 +151,13 @@
             </ul>
 
             <!-- <ul>
-                    <li>SNS SERVICE</li>
-                    <li>
-                        <a href="#">Kakao</a>
-                        <a href="#">Instagram</a>
-                        <a href="#">Youtube</a>
-                    </li>
-                </ul> -->
+                <li>SNS SERVICE</li>
+                <li>
+                    <a href="#">Kakao</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Youtube</a>
+                </li>
+            </ul> -->
         </div>
     </footer>
 </body>
