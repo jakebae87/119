@@ -58,17 +58,20 @@ main .currentPage {
 
 /* 글쓰기 버튼 설정 */
 .board_write {
-    width: 150px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
+    display: inline-block;
     border: 1px black solid;
-    background-color: rgb(25, 50, 100);
     border-radius: 6px;
+    margin: 0 30px;
 }
 
 .board_write a {
-    color: white;
+    text-align: center;
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    background-color: rgb(25, 50, 100);
+    color: white
 }
 
 /* ======================커뮤니티 리스트 끝====================== */

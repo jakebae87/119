@@ -94,14 +94,11 @@ p {
 }
 
 #bottomBoard input {
+    text-align: center;
+    display: inline-block;
     width: 150px;
-    height: 40px;
-    background-color: rgb(218, 229, 238);
-    border: 1px black solid;
-    margin-top: 40px;
-}
-
-#bottomBoard input:hover {
+    height: 50px;
+    line-height: 50px;
     background-color: rgb(25, 50, 100);
     color: white;
 }
