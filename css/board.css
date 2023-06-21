@@ -32,6 +32,12 @@ main {
 .selectStarRegist select {
     width: 35%;
     text-align: center;
+    justify-content: center;
+}
+
+main div form{
+    display: flex;
+    flex-direction: column;
 }
 
 /* 별 평점 */

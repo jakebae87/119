@@ -19,17 +19,6 @@ main {
 }
 
 
-
-/* ======================현재 페이지 이름====================== */
-main .currentPage {
-    margin: 40px auto;
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-}
-
-
-
 /* ======================커뮤니티 리스트====================== */
 .commnunityList ul {
     display: flex;
