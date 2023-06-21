@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../../css/header.css">
     <link rel="stylesheet" href="../../css/footer.css">
 
-    <link rel="stylesheet" href="../../css/commnunity.css">
+    <link rel="stylesheet" href="../../css/commnunityDetail.css">
 
 </head>
 
@@ -113,88 +113,68 @@
     </header>
 
     <main>
-        <div class="currentPage">
-            <h2>상품문의</h2>
+        <div class="title">
+            <h2>공지사항</h2>
         </div>
-        <div class="commnunityList">
-            <ul>
-                <li><a href="../../html/community/notice.html">공지사항</a></li>
-                <li><a href="../../html/community/inquiry.html">상품문의</a></li>
-                <li><a href="../../html/community/review.html">상품후기</a></li>
-                <li><a href="../../html/community/faq.html">자주묻는질문</a></li>
-            </ul>
-        </div>
-        <div class="boardList">
-            <table>
+
+        <div class="board_listpackage">
+            <table style="border: 1;">
                 <colgroup>
                     <col class="attr1">
                     <col class="attr2">
-                    <col class="attr3">
                 </colgroup>
-                <tr>
-                    <th>제목</th>
-                    <th>글쓴이</th>
-                    <th>작성일</th>
-                </tr>
-                <tr>
-                    <td><a href="#">유통기한 확인요청</a></td>
-                    <td>배**</td>
-                    <td>2023-05-11</td>
-                </tr>
-                <tr>
-                    <td><a href="#">사이즈가 궁금해요</a></td>
-                    <td>김**</td>
-                    <td>2023-04-25</td>
-                </tr>
-                <tr>
-                    <td><a href="#">배송 언제 되나요?</a></td>
-                    <td>최**</td>
-                    <td>2023-01-05</td>
-                </tr>
-                <tr>
-                    <td><a href="#">유통기한 확인 해주세요</a></td>
-                    <td>은**</td>
-                    <td>2022-12-29</td>
-                </tr>
-                <tr>
-                    <td><a href="#">우리 강아지가 먹어도 될까요?</a></td>
-                    <td>박**</td>
-                    <td>2022-12-11</td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <th scope="row">제목</th>
+                        <td>휴무 및 배송지연 안내</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">작성자</th>
+                        <td><span>펫밀리</span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <ul class="dateAndHits">
+                                <li>
+                                    <strong>작성일</strong>&nbsp;&nbsp;
+                                    <span>2023-05-11</span>
+                                </li>
+                                <li>
+                                    <strong>조회수</strong>&nbsp;&nbsp;
+                                    <span class="hits">11</span>
+                                </li>
+                            </ul>
+                            <hr>
+                            <div class="content">
+                                <div>
+                                    <p>상품을 인도받은 날로부터 7일 이내에 한해</p>
+
+                                    <p>계약에 관한 청약철회가 가능합니다.</p>
+
+                                    <p>펫밀리 고객센터(☎1644-9603), 카카오톡 상담톡(@펫밀리) 또는 홈페이지 Q&A게시판에 반품접수를 해주시면</p>
+
+                                    <p>수거 접수를 도와드리고 있습니다.</p>
+
+                                    <p>반품 상품이 도착 후 자체 검수가 완료되면 환불처리를 해드립니다.</p>
+
+
+                                    <p>단순변심으로 인하여 반품을 하시는 경우에는</p>
+
+                                    <p>상품 등의 반환에 필요한 비용을 고객님이 부담하셔야 합니다.</p>
+
+
+                                    <p>* 단, 제품은 개봉하시지 않은 새상품 상태일 경우에만 반품이 가능하오며</p>
+
+                                    <p>사용하신 제품은 단순변심, 사용감 불만족으로 인한 반품이 불가합니다.</p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
-        </div>
-
-        <div class="search">
-            <form action="#">
-                <div class="searchConditions">
-                    <select name="searchPeriod">
-                        <option value="week">일주일</option>
-                        <option value="month">한달</option>
-                        <option value="firstQuarter">세달</option>
-                        <option value="all">전체</option>
-                    </select>
-                    <select name="searchCriteria">
-                        <option value="subject">제목</option>
-                        <option value="content">내용</option>
-                        <option value="writer">글쓴이</option>
-                    </select>
-                </div>
-                <div class="searchInput">
-                    <input type="text">
-                    <input type="submit" value="검색">
-                </div>
-                <div class="board_write">
-                    <a href="/html/board/writeInquiry.html">글쓰기</a>
-                </div>
-            </form>
-        </div>
-
-        <div class="pagination">
-            <a href="#">&laquo;</a>
-            <a href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">&raquo;</a>
+            <div id="bottomBoard">
+                <input type="button" value="목록" onclick="location.href='/html/community/faq.html'">
+            </div>
         </div>
     </main>
 

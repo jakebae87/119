@@ -168,12 +168,13 @@ header {
 }
 
 .sideMenu>li>ul {
-    padding: 0 30px;
+    width: 150px;
 }
 
 .sideMenu>li>ul li {
     font-size: 0.9em;
     height: 40px;
+    line-height: 40px;
 }
 
 .sideMenu>li>ul li:hover {

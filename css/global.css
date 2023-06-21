@@ -18,13 +18,28 @@ body {
 header,
 main,
 footer {
-    min-width: 1300px;
+    min-width: 1200px;
 }
 
 main {
     min-height: calc(100vh - 350px);
     /* 100vh - header(100px) - footer(250px) */
 }
+
+
+/* ==================== category title ==================== */
+.cateTitle {
+    margin: 10px 0;
+    padding: 50px 0;
+    font-size: 2em;
+    text-align: center;
+    font-weight: bold;
+}
+
+main hr {
+    border: solid 1px rgb(25, 50, 100);
+}
+
 
 /* ==================== pagination ==================== */
 .pagination {
