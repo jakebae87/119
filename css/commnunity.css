@@ -6,15 +6,18 @@
     font-style: normal;
 }
 
-:visited {
+main :visited {
     color: black;
     text-decoration: none;
 }
+
+
 
 /* ======================메인 태그 전체 중앙 정렬====================== */
 main {
     margin: 0 auto;
 }
+
 
 
 /* ======================현재 페이지 이름====================== */
@@ -26,8 +29,8 @@ main .currentPage {
 }
 
 
-/* ======================커뮤니티 리스트====================== */
 
+/* ======================커뮤니티 리스트====================== */
 .commnunityList ul {
     display: flex;
     justify-content: center;
@@ -54,17 +57,23 @@ main .currentPage {
 }
 
 /* 글쓰기 버튼 설정 */
-.board_write a {
-    display: inline-block;
+.board_write {
     width: 150px;
     height: 50px;
     line-height: 50px;
     text-align: center;
     border: 1px black solid;
     background-color: rgb(25, 50, 100);
-    color: white;
     border-radius: 6px;
 }
+
+.board_write a {
+    color: white;
+}
+
+/* ======================커뮤니티 리스트 끝====================== */
+
+
 
 /* ======================게시글 테이블 설정====================== */
 
@@ -103,7 +112,11 @@ main .currentPage {
     padding: 20px;
 }
 
-/* ======================글 제목 리스트 구조 설정====================== */
+/* ======================게시글 테이블 설정 끝====================== */
+
+
+
+/* ======================게시글 제목 리스트 구조 설정====================== */
 .titleBox ul {
     display: flex;
 }
@@ -140,6 +153,10 @@ main .currentPage {
     padding: 20px;
 }
 
+/* ======================글 제목 리스트 구조 설정 끝====================== */
+
+
+
 /* ======================상품문의/상품후기 검색====================== */
 .search {
     width: 1120px;
@@ -153,6 +170,22 @@ main .currentPage {
     flex-direction: column;
     gap: 10px;
 }
+
+.searchInput {
+    display: flex;
+    justify-content: center;
+}
+
+.board_write {
+    align-self: flex-end;
+}
+
+
+/* ======================상품문의/상품후기 검색 끝====================== */
+
+
+
+/* ======================상품문의/상품후기 사이즈(너비)====================== */
 
 /* 검색기간, 검색범위 너비 */
 .search select:nth-of-type(n) {
@@ -169,6 +202,10 @@ main .currentPage {
     width: 10%;
 }
 
+/* ======================상품문의/상품후기 사이즈(너비) 끝====================== */
+
+
+
 /* 검색기간, 검색범위의 텍스트 설정 */
 .search select {
     font-size: 16px;
@@ -177,13 +214,14 @@ main .currentPage {
     text-align: center;
 }
 
-/* 검색어 입력, 검색 버튼 설정*/
+/* 검색어 입력 설정*/
 .searchInput>input {
     width: 30%;
     height: 40px;
     font-size: 16px;
 }
 
+/* 검색 버튼 설정 */
 .searchInput>input+input {
     width: 10%;
     font-size: 16px;
