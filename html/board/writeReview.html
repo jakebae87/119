@@ -146,7 +146,11 @@
             <div>
                 <form action="#" id="submitBoard">
                     <input id="title" name="title" type="text" placeholder="제목을 입력하세요." maxlength="100" required>
-                    <input type="file" id="fileUpload" name="fileUpload" multiple>
+
+                    <!-- 이미지 파일만 첨부할 수 있도록 accept 속성을 활용함 -->
+                    <input type="file" id="fileUpload" name="fileUpload" multiple
+                        accept="image/gif,image/jpeg,image/png">
+
                     <!--썸네일 참고(https://sinna94.tistory.com/entry/JavaScript-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%97%85%EB%A1%9C%EB%93%9C-%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0-%EB%A7%8C%EB%93%A4%EA%B8%B0)-->
                     <textarea id="contents" name="contents" rows="30" cols="100"></textarea>
                 </form>
