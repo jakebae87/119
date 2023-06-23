@@ -113,11 +113,10 @@
 
     <main>
       <div class="titleArea">
-        <div>MY PAGE</div>
         <ul type="square">
+          <h1>마이 페이지</h1>
           <li>
-            <h3>주문</h3>
-            <h5>(최근 3개월 기준)</h5>
+            <div>주문처리 현황<span>(최근 3개월 기준)</span></div>
           </li>
         </ul>
       </div>
@@ -164,6 +163,42 @@
         </div>
       </div>
 
+      <div class="shopMain">
+        <a href="" class="orderList">
+          <div class="orderListImg">
+            <img src="../../image/mypage/order.png" alt="" />
+          </div>
+          <strong></strong>
+          <span>주문내역 조회</span>
+          <p>고객님께서 주문하신 상품의 주문내역을 확인하실 수 있습니다.</p>
+        </a>
+        <a href="" class="profile">
+          <div class="orderListImg">
+            <img src="../../image/mypage/profile.png" alt="" />
+          </div>
+          <strong></strong>
+          <span>회원 정보</span>
+          <p>회원이신 고객님의 개인정보를 관리하는 공간입니다.</p>
+        </a>
+        <a href="" class="board">
+          <div class="orderListImg">
+            <img src="../../image/mypage/board.png" alt="" />
+          </div>
+          <strong></strong>
+          <span>게시글 관리</span>
+          <p>고객님께서 작성하신 게시물을 관리하는 공간입니다.</p>
+        </a>
+        <a href="" class="cart">
+          <div class="orderListImg">
+            <img src="../../image/mypage/cart.png" alt="" />
+          </div>
+          <strong></strong>
+          <span>장바구니</span>
+          <p>장바구니에 등록하신 상품의 목록을 보여드립니다.</p>
+        </a>
+      </div>
+
+      <!-- 
       <div class="titleArea">
         <ul type="square">
           <li>
@@ -172,13 +207,13 @@
         </ul>
       </div>
       <div class="myCart">
-        <table class="cartInfo" border="1">
+        <table class="cartInfo">
           <colgroup>
             <col style="width: 100px" />
-            <col style="width: 200px" />
+            <col style="width: 180px" />
             <col style="width: auto" />
             <col style="width: 150px" />
-            <col style="width: 90px" />
+            <col style="width: 120px" />
             <col style="width: 130px" />
           </colgroup>
           <thead>
@@ -190,15 +225,19 @@
               <th scope="col">상품정보</th>
               <th scope="col">판매가</th>
               <th scope="col">수량</th>
-              <th scope="col">가격</th>
+              <th scope="col">합계</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <!-- <th scope="col">
-                  <input type="checkbox" />
-                </th> -->
-              <td colspan="6">장바구니에 담긴 상품이 없습니다.</td>
+              <td><input type="checkbox" /></td>
+              <td>
+                <div class="cartImage"><img src="../../image/product1.jpg" alt="" /></div>
+              </td>
+              <td><span>강아지 사료</span></td>
+              <td><span>34,000원</span></td>
+              <td><span>2</span></td>
+              <td><span>68,000원</span></td>
             </tr>
           </tbody>
           <tfoot>
@@ -213,7 +252,7 @@
             </tr>
           </tfoot>
         </table>
-      </div>
+      </div> -->
     </main>
 
     <footer>

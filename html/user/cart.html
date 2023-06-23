@@ -115,7 +115,7 @@
       <div class="titleArea">
         <ul type="square">
           <li>
-            <h3>장바구니</h3>
+            <h1>장바구니</h1>
           </li>
         </ul>
       </div>
@@ -129,13 +129,13 @@
       </div>
       <div class="cartMain">
         <div class="cartProduct">
-          <table class="cartInfo" border="1">
+          <table class="cartInfo">
             <colgroup>
               <col style="width: 100px" />
-              <col style="width: 200px" />
+              <col style="width: 180px" />
               <col style="width: auto" />
               <col style="width: 150px" />
-              <col style="width: 90px" />
+              <col style="width: 120px" />
               <col style="width: 130px" />
             </colgroup>
             <thead>
@@ -147,34 +147,43 @@
                 <th scope="col">상품정보</th>
                 <th scope="col">판매가</th>
                 <th scope="col">수량</th>
-                <th scope="col">가격</th>
+                <th scope="col">합계</th>
+                <th scope="col">선택</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <!-- <th scope="col">
-                  <input type="checkbox" />
-                </th> -->
-                <td colspan="6">장바구니에 담긴 상품이 없습니다.</td>
+                <td><input type="checkbox" /></td>
+                <td>
+                  <div class="cartImage"><img src="../../image/product1.jpg" alt="product1Img" /></div>
+                </td>
+                <td><span>강아지 사료</span></td>
+                <td><span>34,000원</span></td>
+                <td><span>2</span></td>
+                <td><span>68,000원</span></td>
+                <td>
+                  <button type="submit" id="order" name="order" onClick="location.href='./order.html'">주문하기</button>
+                  <button type="button" id="deleteCartProduct" name="deleteCartProduct">삭제</button>
+                </td>
               </tr>
             </tbody>
             <tfoot>
               <tr>
-                <th colspan="6">
+                <th colspan="7">
                   <span>상품구매금액</span>
-                  <strong><span>0</span></strong>
-                  <span>+ 배송비 3000 = </span>
+                  <strong><span class="productPrice">0</span></strong>
+                  <span class="deliveryPrice">+ 배송비 3000 = </span>
                   <span>합계 : </span>
-                  <strong><span>0</span>원</strong>
+                  <strong><span class="cartPrice">0</span>원</strong>
                 </th>
               </tr>
             </tfoot>
           </table>
         </div>
         <div class="cartOrder">
-          <a class="allOrder" href="#">전체상품주문</a>
-          <a class="selectOrder" href="#">선택상품주문</a>
-          <a class="returnShop" href="#">쇼핑계속하기</a>
+          <a class="allOrder" href="../user/order.html">전체상품주문</a>
+          <a class="selectOrder" href="../user/order.html">선택상품주문</a>
+          <a class="returnShop" href="../../index.html">쇼핑계속하기</a>
         </div>
         <div class="Guide">
           <h3>이용안내</h3>

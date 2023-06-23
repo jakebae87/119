@@ -12,7 +12,6 @@
   background: url(../image/product1.jpg) no-repeat;
   width: 500px;
   flex-grow: 1;
-  /* background-color: yellowgreen; */
 }
 
 /* 상품 정보 */
@@ -34,13 +33,10 @@
   width: 70%;
 }
 
-.shopcartButton {
+#quantity {
+  border: none;
+  width: 100px;
   text-align: center;
-  line-height: 60px;
-}
-
-.orderButton {
-  width: 560px;
 }
 
 .buySoon,

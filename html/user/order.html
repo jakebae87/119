@@ -113,30 +113,23 @@
 
     <main>
       <div class="titleArea">
-        <div>주문</div>
+        <h1>주문</h1>
         <ul type="square" class="listTitle">
           <li>
-            <h3>장바구니</h3>
+            <h3>주문상품</h3>
           </li>
-        </ul>
-      </div>
-      <div class="cartProcess">
-        <ul>
-          <li>장바구니</li>
-          <li>주문서작성</li>
-          <li>결제완료</li>
-          <li>주문완료</li>
         </ul>
       </div>
       <div class="orderListArea">
         <div>
-          <table class="cartInfo" border="1">
+          <table class="cartInfo">
             <colgroup>
               <col style="width: 100px" />
-              <col style="width: 200px" />
+              <col style="width: 180px" />
               <col style="width: auto" />
               <col style="width: 150px" />
-              <col style="width: 90px" />
+              <col style="width: 120px" />
+              <col style="width: 130px" />
               <col style="width: 130px" />
             </colgroup>
             <thead>
@@ -148,25 +141,31 @@
                 <th scope="col">상품정보</th>
                 <th scope="col">판매가</th>
                 <th scope="col">수량</th>
-                <th scope="col">가격</th>
+                <th scope="col">합계</th>
+                <th scope="col">선택</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <!-- <th scope="col">
-                  <input type="checkbox" />
-                </th> -->
-                <td colspan="6">장바구니에 담긴 상품이 없습니다.</td>
+                <td><input type="checkbox" /></td>
+                <td>
+                  <div class="cartImage"><img src="../../image/product1.jpg" alt="product1Img" /></div>
+                </td>
+                <td><span>강아지 사료</span></td>
+                <td><span>34,000원</span></td>
+                <td><span>2</span></td>
+                <td><span>68,000원</span></td>
+                <td><button type="button" id="deleteCartProduct" name="deleteCartProduct">삭제</button></td>
               </tr>
             </tbody>
             <tfoot>
               <tr>
-                <th colspan="6">
+                <th colspan="7">
                   <span>상품구매금액</span>
-                  <strong><span>0</span></strong>
+                  <strong><span>68,000</span></strong>
                   <span>+ 배송비 3000 = </span>
                   <span>합계 : </span>
-                  <strong><span>0</span>원</strong>
+                  <strong><span>71,000</span>원</strong>
                 </th>
               </tr>
             </tfoot>
@@ -306,9 +305,9 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><span>0</span>원</td>
+                  <td><span>71,000</span>원</td>
                   <td>-<span>0</span>원</td>
-                  <td>+<span>0</span>원</td>
+                  <td><span>71,000</span>원</td>
                 </tr>
               </tbody>
             </table>
@@ -316,7 +315,6 @@
         </div>
 
         <div class="payArea">
-          <!--onClick="location.href='./cart.html'"  -->
           <button type="submit" class="productPay">결제하기</button>
         </div>
       </form>
