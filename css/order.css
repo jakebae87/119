@@ -92,12 +92,12 @@
 }
 
 /* 주문정보 */
-form {
+#orderForm {
   width: 1120px;
   margin: auto;
 }
 
-form th {
+#orderForm th {
   width: 10vw;
 }
 
