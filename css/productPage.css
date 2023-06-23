@@ -50,6 +50,14 @@ main {
     font-size: 0.8em;
 }
 
+.productComments span {
+    color: red;
+}
+
+.discount {
+    text-decoration: line-through;
+    color: gray;
+}
 
 /* ==================== goto cart image ==================== */
 .gotoCart>a img {

@@ -113,8 +113,8 @@
     </header>
 
     <main>
-        <div class="currentPage">
-            <h2>상품문의</h2>
+        <div class="cateTitle">
+            <h1>상품문의</h1>
         </div>
         <div class="commnunityList">
             <ul>
@@ -164,7 +164,7 @@
             </table>
         </div>
 
-        <div class="search">
+        <!-- <div class="search">
             <form action="#">
                 <div class="searchConditions">
                     <select name="searchPeriod">
@@ -182,9 +182,38 @@
                 <div class="searchInput">
                     <input type="text">
                     <input type="submit" value="검색">
+                    <div class="board_write">
+                        <a href="/html/board/writeInquiry.html">글쓰기</a>
+                    </div>
                 </div>
-                <div class="board_write">
-                    <a href="/html/board/writeInquiry.html">글쓰기</a>
+            </form>
+        </div> -->
+
+        <div class="search">
+            <form action="#">
+                <div class="searchConditions">
+                    <div>
+                        <select name="searchPeriod">
+                            <option value="week">일주일</option>
+                            <option value="month">한달</option>
+                            <option value="firstQuarter">세달</option>
+                            <option value="all">전체</option>
+                        </select>
+                        <select name="searchCriteria">
+                            <option value="subject">제목</option>
+                            <option value="content">내용</option>
+                            <option value="writer">글쓴이</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="searchInput">
+                    <div>
+                        <input type="text">
+                        <input type="submit" value="검색">
+                    </div>
+                    <div class="board_write">
+                        <a href="/html/board/writeInquiry.html">글쓰기</a>
+                    </div>
                 </div>
             </form>
         </div>
@@ -200,8 +229,8 @@
 
     <footer>
         <div>
+            <h1>Petmily</h1>
             <ul>
-                <li>Petmily</li>
                 <li>Tel : XXX-XXX-XXXX</li>
                 <li>Email : Email@mail.com</li>
                 <li>Address : XX시 XX구 XX동 XXX</li>
@@ -210,20 +239,26 @@
         </div>
 
         <div>
-            <ul>
-                <li>POLICY</li>
-                <li><a href="../../html/policy/ToS.html">이용약관</a></li>
-                <li><a href="../../html/policy/privacy.html">개인정보처리방침</a></li>
-                <li><a href="../../html/policy/guide.html">이용안내</a></li>
-                <li><a href="../../html/policy/refund.html">반품,환불규정</a></li>
-            </ul>
+            <div>
+                <h3>POLICY</h3>
+                <ul>
+                    <li></li>
+                    <li><a href="../../html/policy/ToS.html">이용약관</a></li>
+                    <li><a href="../../html/policy/privacy.html">개인정보처리방침</a></li>
+                    <li><a href="../../html/policy/guide.html">이용안내</a></li>
+                    <li><a href="../../html/policy/refund.html">반품, 환불규정</a></li>
+                </ul>
+            </div>
 
-            <ul>
-                <li>C/S CENTER</li>
-                <li>MON-FRIㅣ09:30 - 17:00</li>
-                <li>LUNCH ㅣ 12:30 - 13:30</li>
-                <li>SAT, SUN, HOLIDAY OFF</li>
-            </ul>
+            <div>
+                <h3>C/S CENTER</h3>
+                <ul>
+                    <li></li>
+                    <li>MON-FRIㅣ09:30 - 17:00</li>
+                    <li>LUNCH ㅣ 12:30 - 13:30</li>
+                    <li>SAT, SUN, HOLIDAY OFF</li>
+                </ul>
+            </div>
         </div>
     </footer>
 </body>
