@@ -11,10 +11,11 @@ main {
 
 .sign_up {
     width: 700px;
-    height: 700px;
+    height: 600px;
     padding: 40px;
     box-sizing: border-box;
     margin: auto;
+    text-align: center;
 
 }
 
@@ -38,17 +39,19 @@ main div>select {
     height: 48px;
     padding: 0 10px;
     box-sizing: border-box;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     border-radius: 6px;
     background-color: #F8F8F8;
+    margin-left: 10px;
 }
 
 .birth {
     display: inline-block;
-    width: 200px;
+    width: 150px;
     height: 48px;
     border-radius: 6px;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
+    margin-left: 10px;
 }
 
 .signup::placeholder {
@@ -56,21 +59,29 @@ main div>select {
 }
 
 .signupBtn {
-    width: 100%;
+    width: 500px;
     height: 48px;
     color: #ffffff;
     font-size: 16px;
     background-color: rgb(25, 50, 100);
-    margin-top: 20px;
     border-radius: 6px;
+    display: inline-block;
+    text-align: center;
 }
 
 .number {
-    width: 200px;
+    width: 150px;
     height: 48px;
     padding: 0 10px;
     box-sizing: border-box;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     border-radius: 6px;
     background-color: #F8F8F8;
+    margin-left: 10px;
+}
+
+.table {
+    text-align: left;
+    font-style: bold;
+
 }

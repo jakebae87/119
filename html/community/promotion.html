@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Petmily</title>
+
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="../../css/event.css">
+</head>
+
+<body>
+    <header>
+        <div class="headerTOP">
+            <div class="topLogo">
+                <span>Petmily</span>
+                <a href="../../index.html">
+                    <img src="../../image/Petmily_logo.png" alt="Petmily_logo">
+                </a>
+            </div>
+
+            <div class="searchBox">
+                <form action="../../html/category/cate_search.html" method="get">
+                    <fieldset>
+                        <input type="text" maxlength="20" placeholder="검색어 입력" />
+                        <button type="submit">
+                            <img src="../../image/magnifying-glass-30.png" alt="돋보기 이미지">
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="userMenu">
+                <a href="../../html/user/login.html">로그인</a>
+                <a href="../../html/user/signup.html">회원가입</a>
+                <a href="../../html/user/cart.html">장바구니</a>
+            </div>
+        </div>
+
+        <div class="headerBottom">
+            <nav>
+                <ul class="mainMenu">
+                    <li>
+                        <input type="checkbox" id="sideBtn" />
+                        <label for="sideBtn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </label>
+
+                        <ul class="sideMenu">
+                            <li>
+                                <ul>
+                                    <li><a href="../../html/category/cate_new.html">신상품</a></li>
+                                    <li><a href="../../html/category/cate_best.html">인기상품</a></li>
+                                    <li><a href="../../html/category/cate_dog.html">강아지</a></li>
+                                    <li><a href="../../html/category/cate_cat.html">고양이</a></li>
+                                    <li><a href="../../html/category/cate_feed.html">사료</a></li>
+                                    <li><a href="../../html/category/cate_snackNutrient.html">간식/영양제</a></li>
+                                    <li><a href="../../html/category/cate_hygiene.html">위생</a></li>
+                                    <li><a href="../../html/category/cate_beautyCare.html">미용/케어</a></li>
+                                    <li><a href="../../html/category/cate_living.html">리빙</a></li>
+                                    <li><a href="../../html/category/cate_walkPlay.html">산책/놀이</a></li>
+                                    <li><a href="../../html/category/cate_clothesAccessorie.html">의류/악세사리</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <ul>
+                                    <li><a href="../../html/community/notice.html">공지사항</a></li>
+                                    <li><a href="../../html/community/inquiry.html">상품문의</a></li>
+                                    <li><a href="../../html/community/review.html">상품후기</a></li>
+                                    <li><a href="../../html/community/faq.html">자주묻는질문</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><a href="../../html/category/cate_feed.html">전체상품</a>
+                        <ul class="subMenu">
+                            <li><a href="../../html/category/cate_new.html">신상품</a></li>
+                            <li><a href="../../html/category/cate_best.html">인기상품</a></li>
+                            <li><a href="../../html/category/cate_dog.html">강아지</a></li>
+                            <li><a href="../../html/category/cate_cat.html">고양이</a></li>
+                            <li><a href="../../html/category/cate_feed.html">사료</a></li>
+                            <li><a href="../../html/category/cate_snackNutrient.html">간식/영양제</a></li>
+                            <li><a href="../../html/category/cate_hygiene.html">위생</a></li>
+                            <li><a href="../../html/category/cate_beautyCare.html">미용/케어</a></li>
+                            <li><a href="../../html/category/cate_living.html">리빙</a></li>
+                            <li><a href="../../html/category/cate_walkPlay.html">산책/놀이</a></li>
+                            <li><a href="../../html/category/cate_clothesAccessorie.html">의류/악세사리</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="../../html/community/notice.html">커뮤니티</a>
+                        <ul class="subMenu">
+                            <li><a href="../../html/community/notice.html">공지사항</a></li>
+                            <li><a href="../../html/community/inquiry.html">상품문의</a></li>
+                            <li><a href="../../html/community/review.html">상품후기</a></li>
+                            <li><a href="../../html/community/faq.html">자주묻는질문</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../html/community/event.html">이벤트</a></li>
+                    <li><a href="../../html/category/cate_discount.html">유통기한 할인</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="cateTitle">
+            <h1>프로모션</h1>
+        </div>
+        <hr>
+
+        <div id="eventTop">
+            <span>펫밀리의 이벤트와 혜택을 알아보세요!</span>
+
+            <form action="#">
+                <select name="searchPeriod">
+                    <option value="all">전체목록</option>
+                    <option value="onGoing">진행중</option>
+                    <option value="closed">마감</option>
+                </select>
+            </form>
+        </div>
+
+        <div id="eventList">
+            <div class="events onGoing">
+                <div>
+                    <a href="#"><img src="../../image/event/event_photo.jpg" alt="사진">
+                    </a>
+
+                    <div>
+                        <p class="eventTitle">펫밀리 포토리뷰 이벤트</p>
+                        <p class="eventContent">매일 5명에게 5만원 상당의 펫밀리 제품을 드립니다</p>
+
+                        <div class="eventInfo">
+                            <span>
+                                진행중
+                            </span>
+                            <h5>2023. XX. XX. ~ 2023. XX. XX.</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="events onGoing">
+                <div>
+                    <a href="#"><img src="../../image/event/event_survay.jpg" alt="사진">
+                    </a>
+
+                    <div>
+                        <p class="eventTitle">펫밀리 설문 이벤트</p>
+                        <p class="eventContent">1분이면 끝나는 설문 이벤트! 의견을 남겨주시면 선물을 드립니다</p>
+
+                        <div class="eventInfo">
+                            <span>
+                                진행중
+                            </span>
+                            <h5>2023. XX. XX. ~ 2023. XX. XX.</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="events onGoing">
+                <div>
+                    <a href="#"><img src="../../image/event/event_dogs.jpg" alt="사진">
+                    </a>
+
+                    <div>
+                        <p class="eventTitle">개린이날 기념 UP TO 78%</p>
+                        <p class="eventContent">강아지 산책/놀이 및 간식관련 제품들을 최대 78%까지 할인된 가격으로 만나보세요</p>
+
+                        <div class="eventInfo">
+                            <span>
+                                진행중
+                            </span>
+                            <h5>2023. XX. XX. ~ 2023. XX. XX.</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="events closed">
+                <div>
+                    <a href="#"><img src="../../image/event/event_bestReview.jpg" alt="사진">
+                    </a>
+
+                    <div>
+                        <p class="eventTitle">베스트리뷰 이벤트</p>
+                        <p class="eventContent">커뮤니티 상품후기의 베스트 리뷰왕에게 상품을 드립니다!</p>
+
+                        <div class="eventInfo">
+                            <span>
+                                마감
+                            </span>
+                            <h5>2023. XX. XX. ~ 2023. XX. XX.</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <h1>Petmily</h1>
+            <ul>
+                <li>Tel : XXX-XXX-XXXX</li>
+                <li>Email : Email@mail.com</li>
+                <li>Address : XX시 XX구 XX동 XXX</li>
+                <li>CEO : Jeonghyeon BaeㅣSora KimㅣHuisang EunㅣSeungho Choi</li>
+            </ul>
+        </div>
+
+        <div>
+            <div>
+                <h3>POLICY</h3>
+                <ul>
+                    <li></li>
+                    <li><a href="../../html/policy/ToS.html">이용약관</a></li>
+                    <li><a href="../../html/policy/privacy.html">개인정보처리방침</a></li>
+                    <li><a href="../../html/policy/guide.html">이용안내</a></li>
+                    <li><a href="../../html/policy/refund.html">반품, 환불규정</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>C/S CENTER</h3>
+                <ul>
+                    <li></li>
+                    <li>MON-FRIㅣ09:30 - 17:00</li>
+                    <li>LUNCH ㅣ 12:30 - 13:30</li>
+                    <li>SAT, SUN, HOLIDAY OFF</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

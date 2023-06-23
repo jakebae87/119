@@ -4,16 +4,6 @@ main {
 }
 
 
-/* ==================== category title ==================== */
-.cateTitle {
-    margin: 10px 0;
-    padding: 50px 0;
-    text-align: center;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-
 /* ==================== product list area ==================== */
 .productList {
     margin: 40px 0;
@@ -46,6 +36,10 @@ main {
     border: 1px solid silver;
 }
 
+.productName a {
+    color: rgb(25, 50, 100);
+}
+
 .productName,
 .productPrice {
     padding: 2.5px 0;
@@ -56,6 +50,14 @@ main {
     font-size: 0.8em;
 }
 
+.productComments span {
+    color: red;
+}
+
+.discount {
+    text-decoration: line-through;
+    color: gray;
+}
 
 /* ==================== goto cart image ==================== */
 .gotoCart>a img {
