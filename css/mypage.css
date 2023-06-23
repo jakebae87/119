@@ -9,32 +9,20 @@
   margin: 60px auto;
 }
 
-<<<<<<< HEAD
 .titleArea div {
   font-weight: bold;
 }
 
 .titleArea div span {
   font-weight: normal;
-=======
-.titleArea li h3,
-.titleArea li h5 {
-  display: inline-block;
-  margin-bottom: 10px;
->>>>>>> main
 }
 
 /* 주문/배송현황 */
 .myOrder {
   width: 1120px;
   margin: auto;
-<<<<<<< HEAD
   margin-bottom: 30px;
   border: 1px solid silver;
-=======
-  margin-bottom: 100px;
-  border: 1px solid;
->>>>>>> main
   position: relative;
 }
 
@@ -104,7 +92,6 @@
 .cancelExchangeRefund li {
   margin: 10px;
 }
-<<<<<<< HEAD
 
 /* 하단 배너 */
 .shopMain {
@@ -116,12 +103,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-=======
-/* 장바구니 */
-.myCart {
-  width: 1120px;
-  margin: 0 auto 100px;
->>>>>>> main
   text-align: center;
 }
 
@@ -143,7 +124,6 @@
   justify-content: space-evenly;
 }
 
-<<<<<<< HEAD
 .orderListImg img {
   width: 65px;
   height: 60px;
@@ -159,19 +139,4 @@
 
 .cart img {
   padding-right: 10px;
-=======
-.cartInfo tbody,
-.cartInfo tfoot {
-  border-top: 1px solid black;
 }
-
-.cartImage img {
-  width: 100px;
-}
-
-.cartInfo tbody td {
-  height: 50px;
->>>>>>> main
-}
-
-/* 장바구니 카테고리 버튼 */
