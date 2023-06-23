@@ -38,6 +38,8 @@
 }
 
 .board_listpackage table tr td {
+  text-decoration: none;
+  color: black;
   padding: 20px;
 }
 
@@ -76,17 +78,23 @@
 
 /* 검색어 입력, 검색 버튼 설정*/
 .searchInput {
+  display: flex;
+  width: 560px;
+  justify-content: center;
+  align-content: center;
   margin-top: 10px;
 }
 
-.searchInput > input {
-  width: 30%;
+.searchInput input {
+  flex: 7;
   height: 40px;
   font-size: 16px;
+  box-sizing: border-box;
+  margin: auto;
 }
 
-.searchInput > input + input {
-  width: 10%;
+.searchInput input + input {
+  flex: 3;
   font-size: 16px;
 }
 
