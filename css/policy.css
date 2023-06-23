@@ -3,6 +3,14 @@ main {
     margin: auto;
 }
 
+main h2 {
+    margin: 15px 20px;
+}
+
+main h3 {
+    margin: 20px 0 10px 0;
+}
+
 .scrollBox {
     height: 700px;
     padding: 20px 20px;
@@ -40,12 +48,3 @@ main {
 .nonScrollBox p {
     margin-bottom: 20px;
 }
-
-main h2 {
-    margin: 15px 20px;
-}
-
-main h3 {
-    margin: 20px 0 10px 0;
-}
-

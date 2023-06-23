@@ -154,6 +154,7 @@ input#img5:checked~.slideDotList label#imgDot5 {
 
 .introduce p {
     padding: 10px 0;
+    word-break: keep-all;
 }
 
 .introduce a:hover {
