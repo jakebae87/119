@@ -16,12 +16,13 @@ header {
 /* ==================== headerTop ==================== */
 .headerTOP {
     height: 50px;
+    margin: 0 30px;
     align-items: center;
     display: flex;
 }
 
 .headerTOP .topLogo {
-    width: 15%;
+    margin-right: 30px;
     text-align: center;
 }
 
@@ -36,10 +37,6 @@ header {
 }
 
 .headerTOP .searchBox {
-    width: 50%;
-}
-
-.headerTOP .searchBox form {
     width: 500px;
 }
 
@@ -67,9 +64,7 @@ header {
 }
 
 .headerTOP .userMenu {
-    width: 35%;
-    text-align: right;
-    padding: 0 3%;
+    margin-left: auto;
 }
 
 .headerTOP .userMenu a {
