@@ -6,72 +6,37 @@
     font-style: normal;
 }
 
-/* ======================제목====================== */
-.title {
-    width: 1120px;
-    margin: 30px auto;
-    text-align: center;
-}
-
-/* 부제목 마우스오버 효과 */
-.subTitle_listpackage ul li a:nth-of-type(n):hover {
-    background-color: rgb(25, 50, 100);
-    color: white;
-}
-
-/* 등록 버튼 설정 */
-.board_write {
-    display: inline-block;
-    width: 150px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    background-color: rgb(218, 229, 238);
-    border: 1px black solid;
-}
-
-/* 부제목 마우스오버 효과 */
-.board_write:hover {
-    background-color: rgb(25, 50, 100);
-    color: white;
-}
 
 /* ======================글 목록====================== */
 
-.attr1 {
-    width: 200px;
-}
-
-.attr2 {
-    width: auto;
-}
-
-.board_listpackage {
+.boardPackage {
     width: 1120px;
     margin: auto;
+    display: flex;
+    flex-direction: column;
 }
 
-.board_listpackage table {
-    margin-top: 60px;
+.boardPackage table {
     text-align: center;
-    width: 100%;
     border: 1px solid black;
     border-collapse: collapse;
     white-space: nowrap;
 }
 
-.board_listpackage table tr {
-    border-top: 1px solid black;
-}
-
-
-/* 제목 왼쪽 정렬 */
-.board_listpackage table tr td:nth-of-type(1) {
-    text-align: left;
-}
-
-.board_listpackage table tr td {
+.boardPackage table tr {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
     padding: 20px;
+}
+
+.boardPackage table tr th {
+    width: 15%;
+}
+
+.boardPackage table tr td {
+    align-items: center;
+    width: 20%;
 }
 
 .dateAndHits {
@@ -86,13 +51,14 @@
 }
 
 .content {
-    padding: 50px;
+    line-height: 20px;
 }
 
 p {
-    margin-right: 10px;
+    margin : 10px;
 }
 
+/* 목록 버튼 설정 */
 #bottomBoard input {
     text-align: center;
     display: inline-block;
@@ -101,4 +67,11 @@ p {
     line-height: 50px;
     background-color: rgb(25, 50, 100);
     color: white;
+    border-radius: 6px;
+}
+
+/* 목록 버튼 */
+#bottomBoard {
+    margin: 20px 0;
+    text-align: center;
 }
