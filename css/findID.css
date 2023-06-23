@@ -11,19 +11,18 @@ main {
 
 .find_ID {
     width: 400px;
-    height: 350px;
-    padding: 40px;
+    padding: 0 40px 60px 40px;
     box-sizing: border-box;
     float: initial;
     margin: auto;
 }
 
-.find_ID>h2 {
-    font-size: 24px;
+/* .find_ID>h1 {
     color: rgb(25, 50, 100);
-    margin-bottom: 20px;
+    margin: 10px 0;
+    padding: 30px 0;
     text-align: center;
-}
+} */
 
 .findid {
     width: 100%;
@@ -47,5 +46,5 @@ main {
     font-size: 16px;
     background-color: rgb(25, 50, 100);
     border-radius: 6px;
-    margin-top: 20px;
+    margin-top: 10px;
 }

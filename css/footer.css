@@ -17,7 +17,8 @@ footer {
     align-items: start;
 }
 
-footer h1, h3 {
+footer h1,
+footer h3 {
     height: 50px;
     margin: 10px 0;
 
