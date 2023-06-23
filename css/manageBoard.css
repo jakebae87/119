@@ -1,0 +1,114 @@
+/* 제목 */
+.title {
+  width: 1120px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+/* 게시글 목록 */
+.attr1,
+.attr2,
+.attr3 {
+  width: 30px;
+}
+
+.board_listpackage {
+  width: 1120px;
+  margin: auto;
+}
+
+.board_listpackage table {
+  margin-top: 60px;
+  text-align: center;
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-left: 0;
+  border-right: 0;
+  white-space: nowrap;
+}
+
+.board_listpackage table tr {
+  border-top: 1px solid black;
+}
+
+.board_listpackage table th {
+  font-size: 25px;
+  padding: 20px;
+}
+
+.board_listpackage table tr td {
+  padding: 20px;
+}
+
+/* 게시글 검색 */
+.search {
+  width: 1120px;
+  margin: auto;
+  text-align: center;
+  padding: 60px;
+}
+
+/* 검색기간, 검색범위 너비 */
+.search select:nth-of-type(n),
+.searchReview select:nth-of-type(n) {
+  width: 25%;
+}
+
+/* 검색어 너비 */
+.searchInput input:nth-of-type(1) {
+  width: 40%;
+}
+
+/* 검색버튼 너비  */
+.searchInput input:nth-of-type(2) {
+  width: 10%;
+}
+
+/* 검색기간, 검색범위의 텍스트 설정 */
+.search select,
+.searchReview select {
+  font-size: 16px;
+  width: 20%;
+  height: 40px;
+  text-align: center;
+}
+
+/* 검색어 입력, 검색 버튼 설정*/
+.searchInput {
+  margin-top: 10px;
+}
+
+.searchInput > input {
+  width: 30%;
+  height: 40px;
+  font-size: 16px;
+}
+
+.searchInput > input + input {
+  width: 10%;
+  font-size: 16px;
+}
+
+/* ======================리뷰 검색====================== */
+
+.searchReview {
+  width: 1120px;
+  margin: 30px auto;
+}
+
+/* ======================페이지네이션====================== */
+
+.pagination {
+  font-size: 20px;
+  width: 1120px;
+  margin: auto;
+  text-align: center;
+  padding: 40px;
+}
+
+.pagination a {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+}

@@ -22,7 +22,7 @@
   width: 1120px;
   margin: auto;
   margin-bottom: 30px;
-  border: 1px solid;
+  border: 1px solid silver;
   position: relative;
 }
 
@@ -110,11 +110,13 @@
 .profile,
 .board,
 .cart {
-  width: 200px;
+  width: 210px;
   height: 220px;
   padding: 10px;
   border: 1px solid silver;
   box-sizing: border-box;
+  text-decoration: none;
+  color: black;
   white-space: wrap;
 
   display: flex;
@@ -127,29 +129,14 @@
   height: 60px;
 }
 
-/* 장바구니 */
-/* .myCart {
-  width: 1120px;
-  margin: 0 auto 100px;
-  text-align: center;
-} */
-
-/* 장바구니 상품 상세 */
-/* .cartInfo {
-  width: 100%;
-  border: 1px solid gray;
-  border-collapse: collapse;
+.orderList img {
+  padding-left: 16px;
 }
 
-.cartInfo tbody,
-.cartInfo tfoot {
-  border-top: 1px solid black;
+.board img {
+  padding-left: 15px;
 }
 
-.cartImage img {
-  width: 100px;
+.cart img {
+  padding-right: 10px;
 }
-
-.cartInfo tbody td {
-  height: 50px;
-} */
