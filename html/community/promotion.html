@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../../css/global.css">
     <link rel="stylesheet" href="../../css/header.css">
     <link rel="stylesheet" href="../../css/footer.css">
-    <link rel="stylesheet" href="../../css/productPage.css">
+    <link rel="stylesheet" href="../../css/event.css">
 </head>
 
 <body>
@@ -112,143 +112,95 @@
 
     <main>
         <div class="cateTitle">
-            <h1>인기상품</h1>
+            <h1>프로모션</h1>
         </div>
         <hr>
 
-        <div class="productList">
-            <div class="product">
-                <a href="../../html/category/cate_productDetail.html"><img
-                        src="https://img0.yna.co.kr/etc/inner/KR/2017/02/01/AKR20170201107900030_01_i_P2.jpg"
-                        alt="사진"></a>
+        <div id="eventTop">
+            <span>펫밀리의 이벤트와 혜택을 알아보세요!</span>
+
+            <form action="#">
+                <select name="searchPeriod">
+                    <option value="all">전체목록</option>
+                    <option value="onGoing">진행중</option>
+                    <option value="closed">마감</option>
+                </select>
+            </form>
+        </div>
+
+        <div id="eventList">
+            <div class="events onGoing">
                 <div>
+                    <a href="#"><img src="../../image/event/event_photo.jpg" alt="사진">
+                    </a>
+
                     <div>
-                        <p class="productName"><a href="../../html/category/cate_productDetail.html">티저 토이</a></p>
-                        <p class="productComments">재미있는 장난감을 구매하세요</p>
-                        <p class="productPrice">16,600원</p>
-                    </div>
-                    <div class="gotoCart">
-                        <a href="../../html/user/cart.html"><img src="../../image/cart.png" alt="사진"></a>
+                        <p class="eventTitle">펫밀리 포토리뷰 이벤트</p>
+                        <p class="eventContent">매일 5명에게 5만원 상당의 펫밀리 제품을 드립니다</p>
+
+                        <div class="eventInfo">
+                            <span>
+                                진행중
+                            </span>
+                            <h5>2023. XX. XX. ~ 2023. XX. XX.</h5>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="product">
-                <a href="../../html/category/cate_productDetail.html"><img
-                        src="https://img0.yna.co.kr/etc/inner/KR/2017/02/01/AKR20170201107900030_01_i_P2.jpg"
-                        alt="사진"></a>
+
+            <div class="events onGoing">
                 <div>
+                    <a href="#"><img src="../../image/event/event_survay.jpg" alt="사진">
+                    </a>
+
                     <div>
-                        <p class="productName"><a href="../../html/category/cate_productDetail.html">티저 토이</a></p>
-                        <p class="productComments">재미있는 장난감을 구매하세요</p>
-                        <p class="productPrice">16,600원</p>
-                    </div>
-                    <div class="gotoCart">
-                        <a href="../../html/user/cart.html"><img src="../../image/cart.png" alt="사진"></a>
+                        <p class="eventTitle">펫밀리 설문 이벤트</p>
+                        <p class="eventContent">1분이면 끝나는 설문 이벤트! 의견을 남겨주시면 선물을 드립니다</p>
+
+                        <div class="eventInfo">
+                            <span>
+                                진행중
+                            </span>
+                            <h5>2023. XX. XX. ~ 2023. XX. XX.</h5>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="product">
-                <a href="../../html/category/cate_productDetail.html"><img
-                        src="https://img0.yna.co.kr/etc/inner/KR/2017/02/01/AKR20170201107900030_01_i_P2.jpg"
-                        alt="사진"></a>
+
+            <div class="events onGoing">
                 <div>
+                    <a href="#"><img src="../../image/event/event_dogs.jpg" alt="사진">
+                    </a>
+
                     <div>
-                        <p class="productName"><a href="../../html/category/cate_productDetail.html">티저 토이</a></p>
-                        <p class="productComments">재미있는 장난감을 구매하세요</p>
-                        <p class="productPrice">16,600원</p>
-                    </div>
-                    <div class="gotoCart">
-                        <a href="../../html/user/cart.html"><img src="../../image/cart.png" alt="사진"></a>
+                        <p class="eventTitle">개린이날 기념 UP TO 78%</p>
+                        <p class="eventContent">강아지 산책/놀이 및 간식관련 제품들을 최대 78%까지 할인된 가격으로 만나보세요</p>
+
+                        <div class="eventInfo">
+                            <span>
+                                진행중
+                            </span>
+                            <h5>2023. XX. XX. ~ 2023. XX. XX.</h5>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="product">
-                <a href="../../html/category/cate_productDetail.html"><img
-                        src="https://img0.yna.co.kr/etc/inner/KR/2017/02/01/AKR20170201107900030_01_i_P2.jpg"
-                        alt="사진"></a>
+
+            <div class="events closed">
                 <div>
+                    <a href="#"><img src="../../image/event/event_bestReview.jpg" alt="사진">
+                    </a>
+
                     <div>
-                        <p class="productName"><a href="../../html/category/cate_productDetail.html">티저 토이</a></p>
-                        <p class="productComments">재미있는 장난감을 구매하세요</p>
-                        <p class="productPrice">16,600원</p>
-                    </div>
-                    <div class="gotoCart">
-                        <a href="../../html/user/cart.html"><img src="../../image/cart.png" alt="사진"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="product">
-                <a href="../../html/category/cate_productDetail.html"><img
-                        src="https://img0.yna.co.kr/etc/inner/KR/2017/02/01/AKR20170201107900030_01_i_P2.jpg"
-                        alt="사진"></a>
-                <div>
-                    <div>
-                        <p class="productName"><a href="../../html/category/cate_productDetail.html">티저 토이</a></p>
-                        <p class="productComments">재미있는 장난감을 구매하세요</p>
-                        <p class="productPrice">16,600원</p>
-                    </div>
-                    <div class="gotoCart">
-                        <a href="../../html/user/cart.html"><img src="../../image/cart.png" alt="사진"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="product">
-                <a href="../../html/category/cate_productDetail.html"><img
-                        src="https://img0.yna.co.kr/etc/inner/KR/2017/02/01/AKR20170201107900030_01_i_P2.jpg"
-                        alt="사진"></a>
-                <div>
-                    <div>
-                        <p class="productName"><a href="../../html/category/cate_productDetail.html">티저 토이</a></p>
-                        <p class="productComments">재미있는 장난감을 구매하세요</p>
-                        <p class="productPrice">16,600원</p>
-                    </div>
-                    <div class="gotoCart">
-                        <a href="../../html/user/cart.html"><img src="../../image/cart.png" alt="사진"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="product">
-                <a href="../../html/category/cate_productDetail.html"><img
-                        src="https://img0.yna.co.kr/etc/inner/KR/2017/02/01/AKR20170201107900030_01_i_P2.jpg"
-                        alt="사진"></a>
-                <div>
-                    <div>
-                        <p class="productName"><a href="../../html/category/cate_productDetail.html">티저 토이</a></p>
-                        <p class="productComments">재미있는 장난감을 구매하세요</p>
-                        <p class="productPrice">16,600원</p>
-                    </div>
-                    <div class="gotoCart">
-                        <a href="../../html/user/cart.html"><img src="../../image/cart.png" alt="사진"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="product">
-                <a href="../../html/category/cate_productDetail.html"><img
-                        src="https://img0.yna.co.kr/etc/inner/KR/2017/02/01/AKR20170201107900030_01_i_P2.jpg"
-                        alt="사진"></a>
-                <div>
-                    <div>
-                        <p class="productName"><a href="../../html/category/cate_productDetail.html">티저 토이</a></p>
-                        <p class="productComments">재미있는 장난감을 구매하세요</p>
-                        <p class="productPrice">16,600원</p>
-                    </div>
-                    <div class="gotoCart">
-                        <a href="../../html/user/cart.html"><img src="../../image/cart.png" alt="사진"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="product">
-                <a href="../../html/category/cate_productDetail.html"><img
-                        src="https://img0.yna.co.kr/etc/inner/KR/2017/02/01/AKR20170201107900030_01_i_P2.jpg"
-                        alt="사진"></a>
-                <div>
-                    <div>
-                        <p class="productName"><a href="../../html/category/cate_productDetail.html">티저 토이</a></p>
-                        <p class="productComments">재미있는 장난감을 구매하세요</p>
-                        <p class="productPrice">16,600원</p>
-                    </div>
-                    <div class="gotoCart">
-                        <a href="../../html/user/cart.html"><img src="../../image/cart.png" alt="사진"></a>
+                        <p class="eventTitle">베스트리뷰 이벤트</p>
+                        <p class="eventContent">커뮤니티 상품후기의 베스트 리뷰왕에게 상품을 드립니다!</p>
+
+                        <div class="eventInfo">
+                            <span>
+                                마감
+                            </span>
+                            <h5>2023. XX. XX. ~ 2023. XX. XX.</h5>
+                        </div>
                     </div>
                 </div>
             </div>

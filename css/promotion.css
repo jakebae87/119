@@ -55,16 +55,5 @@ main {
     margin-right: 10px;
     border-radius: 15px;
     color: aliceblue;
-}
-
-.onGoing span {
     background-color: rgb(40, 170, 40);
-}
-
-.closed span {
-    background-color: rgb(150, 40, 170);
-}
-
-.closed img {
-    opacity: 0.4;
 }

@@ -1,74 +1,84 @@
-.subTitle_listpackage ul {
-    list-style: none;
-    margin-left: 0;
-    padding: 0;
-    white-space: nowrap;
+/* ==================== font setting ==================== */
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
 }
 
-:visited {
+main :visited {
     color: black;
     text-decoration: none;
 }
 
 
-/* ======================제목====================== */
-.title {
-    width: 1120px;
-    margin: 30px auto;
-    text-align: center;
+
+/* ======================메인 태그 전체 중앙 정렬====================== */
+main {
+    margin: 0 auto;
 }
 
 
-/* ======================부제목====================== */
 
-.subTitle_listpackage {
-    width: 1120px;
-    margin: auto;
-    padding: 20px 0;
+/* ======================현재 페이지 이름====================== */
+main .currentPage {
+    margin: 40px auto;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    justify-content: center;
+    margin-top: 40px;
 }
 
-.subTitle_listpackage ul li {
+
+
+/* ======================커뮤니티 리스트====================== */
+.commnunityList ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    white-space: nowrap;
+}
+
+.commnunityList ul li {
     display: inline-block;
     border: 1px black solid;
-    margin-right: 50px;
+    border-radius: 6px;
+    margin: 0 30px;
 }
 
-.subTitle_listpackage ul li a {
+.commnunityList ul li a {
     text-align: center;
-    background-color: rgb(218, 229, 238);
     display: inline-block;
     width: 150px;
     height: 50px;
     line-height: 50px;
-}
-
-/* 부제목 마우스오버 효과 */
-.subTitle_listpackage ul li a:nth-of-type(n):hover {
     background-color: rgb(25, 50, 100);
     color: white;
 }
 
-/* 등록 버튼 설정 */
+/* 글쓰기 버튼 설정 */
 .board_write {
     display: inline-block;
+    border: 1px black solid;
+    border-radius: 6px;
+    margin: 0 30px;
+}
+
+.board_write a {
+    text-align: center;
+    display: inline-block;
     width: 150px;
     height: 50px;
     line-height: 50px;
-    text-align: center;
-    background-color: rgb(218, 229, 238);
-    border: 1px black solid;
-}
-
-/* 부제목 마우스오버 효과 */
-.board_write:hover {
     background-color: rgb(25, 50, 100);
-    color: white;
+    color: white
 }
 
-/* ======================글 목록====================== */
+/* ======================커뮤니티 리스트 끝====================== */
+
+
+
+/* ======================게시글 테이블 설정====================== */
 
 .attr1 {
     width: 200px;
@@ -80,12 +90,12 @@
     width: 30px;
 }
 
-.board_listpackage {
+.boardList {
     width: 1120px;
     margin: auto;
 }
 
-.board_listpackage table {
+.boardList table {
     margin-top: 60px;
     text-align: center;
     width: 100%;
@@ -96,16 +106,20 @@
     white-space: nowrap;
 }
 
-.board_listpackage table tr {
+.boardList table tr {
     border-top: 1px solid black;
 }
 
-.board_listpackage table th {
+.boardList table th {
     font-size: 25px;
     padding: 20px;
 }
 
-/* ======================글 제목 리스트 구조 설정====================== */
+/* ======================게시글 테이블 설정 끝====================== */
+
+
+
+/* ======================게시글 제목 리스트 구조 설정====================== */
 .titleBox ul {
     display: flex;
 }
@@ -122,27 +136,31 @@
 }
 
 /* 상품후기 사진 */
-.board_listpackage table tr td div img {
+.boardList table tr td div img {
     width: 100px;
     height: 100px;
     border: 1px outset;
 }
 
 /* 상품후기 사진 hover effect */
-.board_listpackage table tr td div img:hover {
+.boardList table tr td div img:hover {
     transform: scale(1.4);
 }
 
 /* 제목 왼쪽 정렬 */
-.board_listpackage table tr td:nth-of-type(1) {
+.boardList table tr td:nth-of-type(1) {
     text-align: left;
 }
 
-.board_listpackage table tr td {
+.boardList table tr td {
     padding: 20px;
 }
 
-/* ======================글 검색====================== */
+/* ======================글 제목 리스트 구조 설정 끝====================== */
+
+
+
+/* ======================상품문의/상품후기 검색====================== */
 .search {
     width: 1120px;
     margin: auto;
@@ -150,9 +168,30 @@
     padding: 60px;
 }
 
+.search form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.searchInput {
+    display: flex;
+    justify-content: center;
+}
+
+.board_write {
+    align-self: flex-end;
+}
+
+
+/* ======================상품문의/상품후기 검색 끝====================== */
+
+
+
+/* ======================상품문의/상품후기 사이즈(너비)====================== */
+
 /* 검색기간, 검색범위 너비 */
-.search select:nth-of-type(n),
-.searchReview select:nth-of-type(n) {
+.search select:nth-of-type(n) {
     width: 25%;
 }
 
@@ -166,36 +205,29 @@
     width: 10%;
 }
 
+/* ======================상품문의/상품후기 사이즈(너비) 끝====================== */
+
+
+
 /* 검색기간, 검색범위의 텍스트 설정 */
-.search select,
-.searchReview select {
+.search select {
     font-size: 16px;
     width: 20%;
     height: 40px;
     text-align: center;
 }
 
-/* 검색어 입력, 검색 버튼 설정*/
-.searchInput {
-    margin-top: 10px;
-}
-
+/* 검색어 입력 설정*/
 .searchInput>input {
     width: 30%;
     height: 40px;
     font-size: 16px;
 }
 
+/* 검색 버튼 설정 */
 .searchInput>input+input {
     width: 10%;
     font-size: 16px;
-}
-
-/* ======================리뷰 검색====================== */
-
-.searchReview {
-    width: 1120px;
-    margin: 30px auto;
 }
 
 /* ======================페이지네이션====================== */

@@ -29,11 +29,8 @@ main {
 
 /* ==================== category title ==================== */
 .cateTitle {
-    margin: 10px 0;
-    padding: 50px 0;
-    font-size: 2em;
+    margin: 60px 0;
     text-align: center;
-    font-weight: bold;
 }
 
 main hr {
