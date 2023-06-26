@@ -9,7 +9,7 @@
 
 /* 상품이미지 */
 .productImage {
-  background: url(../image/product1.jpg) no-repeat;
+  background: url(../../image/product1.jpg) no-repeat;
   width: 500px;
   flex-grow: 1;
 }
