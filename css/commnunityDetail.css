@@ -36,11 +36,15 @@
 
 .boardPackage table tr td {
     align-items: center;
-    width: 20%;
+    width: 30%;
 }
 
-.boardPackage table tr:nth-child(5) td,
-.boardPackage table tr:nth-child(4) td {
+.boardPackage table tr:nth-child(5) td {
+    width: 100%;
+}
+
+.boardPackage table tr:nth-child(4) .contents {
+    align-items: center;
     width: 100%;
 }
 
@@ -53,10 +57,6 @@
 
 .dateAndHits li {
     width: 30%;
-}
-
-.content {
-    line-height: 20px;
 }
 
 p {
@@ -86,8 +86,4 @@ p {
     width: 500px;
     height: 500px;
     box-sizing: border-box;
-}
-
-.contents {
-    margin-top: 40px;
 }

@@ -124,13 +124,19 @@
                     <option value="./writeInquiry.html">상품문의</option>
                 </select>
 
-                <!--별점-->
+                <!--별점 (아래 사이트 참조)-->
+                <!-- https://velog.io/@hellocdpa/220305-%EB%A6%AC%EB%B7%B0-%EB%B3%84%EC%A0%90-%EA%B8%B0%EB%8A%A5-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0 -->
                 <div class="productRating">
-                    <i class="fa-solid fa-star" style="color: #f60404;"></i>
-                    <i class="fa-solid fa-star" style="color: #f60404;"></i>
-                    <i class="fa-solid fa-star" style="color: #f60404;"></i>
-                    <i class="fa-regular fa-star" style="color: #fa0000;"></i>
-                    <i class="fa-regular fa-star" style="color: #fa0000;"></i>
+                    <div form="submitBoard" name="checkStar" id="checkStar">
+                        <input type="radio" name="reviewStar" value="5" id="rate1"><label for="rate1">★</label>
+                        <input type="radio" name="reviewStar" value="4" id="rate2"><label for="rate2">★</label>
+                        <input type="radio" name="reviewStar" value="3" id="rate3"><label for="rate3">★</label>
+                        <input type="radio" name="reviewStar" value="2" id="rate4"><label for="rate4">★</label>
+                        <input type="radio" name="reviewStar" value="1" id="rate5"><label for="rate5">★</label>
+                    </div>
+
+                    <!-- 속찬 별표 -->
+                    <!-- <i class="fa-solid fa-star" style="color: #f60404;"></i> -->
                     <!-- 속인 빈 별표 -->
                     <!-- <i class="fa-regular fa-star" style="color: #fa0000;"></i> -->
                 </div>
