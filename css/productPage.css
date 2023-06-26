@@ -85,6 +85,7 @@ main {
     color: silver;
 }
 
-.productClassification a[href=""] {
+.productClassification a[href=""],
+.productClassification a:hover {
     color: black;
 }
