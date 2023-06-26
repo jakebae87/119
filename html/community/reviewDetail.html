@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="../../css/header.css">
     <link rel="stylesheet" href="../../css/footer.css">
 
-    <link rel="stylesheet" href="../../css/board.css">
+    <link rel="stylesheet" href="../../css/commnunityDetail.css">
+    <!--Fontawesome script-->
+    <script src="https://kit.fontawesome.com/f060eab6a5.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -110,44 +113,65 @@
             </nav>
         </div>
     </header>
+
     <main>
         <div class="cateTitle">
-            <h1>상품문의</h1>
-        </div>
-        <div>
-
-            <div class="selectStarRegist">   
-                <!--페이지 타입 설정-->
-                <select name="selectSubject" onchange="window.open(value,'_self');">
-                    <option value="./writeInquiry.html">상품문의</option>
-                    <option value="./writeReview.html">상품후기</option>
-                </select>
-
-                <!--게시글 등록 버튼-->
-                <div id="registButton">
-                    <input type="submit" form="submitBoard" value="등록">
-                </div>
-            </div>
-
-            <!--게시글 제목과 내용 입력란-->
-            <div>
-                <form action="#" id="submitBoard">
-                    <input id="title" name="title" type="text" placeholder="제목을 입력하세요." maxlength="100" required>
-
-                    <!-- 이미지 파일만 첨부할 수 있도록 accept 속성을 활용함 -->
-                    <input type="file" id="fileUpload" name="fileUpload" multiple
-                        accept="image/gif,image/jpeg,image/png">
-
-                    <!--썸네일 참고(https://sinna94.tistory.com/entry/JavaScript-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%97%85%EB%A1%9C%EB%93%9C-%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0-%EB%A7%8C%EB%93%A4%EA%B8%B0)-->
-                    <textarea id="contents" name="contents" rows="30" cols="100"></textarea>
-                </form>
-            </div>
-
+            <h1>상품후기</h1>
         </div>
 
-        <!--해당 페이지 목록으로 이동 버튼-->
-        <div id="bottomBoard">
-            <input type="button" value="목록" onclick="location.href='../../html/community/inquiry.html'">
+        <div class="boardPackage">
+            <table>
+                <tr>
+                    <th scope="row">제목</th>
+                    <td>우리아이가 잘 먹어요</td>
+                </tr>
+                <tr>
+                    <th scope="row">작성자</th>
+                    <td><span>배**</span></td>
+                </tr>
+                <tr>
+                    <th scope="row">작성일</th>
+                    <td><span>2023-05-11</span></td>
+                    <th scope="row">조회수</th>
+                    <td><span>112</span></td>
+                </tr>
+                <tr>
+                    <th scope="row">상품명</th>
+                    <td>
+                        <a href="../category/cate_search.html">데이스포 장영양제 250g</a>
+                    </td>
+                    <th scope="row">평점</th>
+                    <td><!--별점-->
+                        <div class="productRating">
+                            <i class="fa-solid fa-star" style="color: #f60404;"></i>
+                            <i class="fa-solid fa-star" style="color: #f60404;"></i>
+                            <i class="fa-solid fa-star" style="color: #f60404;"></i>
+                            <i class="fa-regular fa-star" style="color: #fa0000;"></i>
+                            <i class="fa-regular fa-star" style="color: #fa0000;"></i>
+
+                            <!-- 속인 빈 별표 -->
+                            <!-- <i class="fa-regular fa-star" style="color: #fa0000;"></i> -->
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <img class="contentImage"
+                                src="http://bampic.gmarket.co.kr/v1/424/412/2490412424/01376/2490412424396184037600.jpg">
+                            <img class="contentImage"
+                                src="https://bampic.auction.co.kr/v1/174/555/b901555174/00159/b901555174233948515900.jpg">
+                        </div>
+                        <div class="contents">
+                            <p>계속 먹이던건데 얼마안남아서 주문했어요. 효과가 있는건지 없는건지 잘 모르겠지만 강아지가 간식인것처럼 잘먹고 안먹이면 제 마음이 불편할거같아서 계속</p>
+                            <p>먹이는중이네요. 효과가 있길 바래요.</p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div id="bottomBoard">
+                <input type="button" value="목록" onclick="location.href='/html/community/review.html'">
+            </div>
         </div>
     </main>
 

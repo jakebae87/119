@@ -20,7 +20,7 @@
     text-align: center;
     border: 1px solid black;
     border-collapse: collapse;
-    white-space: nowrap;
+    white-space: wrap;
 }
 
 .boardPackage table tr {
@@ -39,6 +39,11 @@
     width: 20%;
 }
 
+.boardPackage table tr:nth-child(5) td,
+.boardPackage table tr:nth-child(4) td {
+    width: 100%;
+}
+
 .dateAndHits {
     display: flex;
     width: 90%;
@@ -55,7 +60,8 @@
 }
 
 p {
-    margin : 10px;
+    margin: 10px;
+    text-align: left;
 }
 
 /* 목록 버튼 설정 */
@@ -74,4 +80,14 @@ p {
 #bottomBoard {
     margin: 20px 0;
     text-align: center;
+}
+
+.contentImage {
+    width: 500px;
+    height: 500px;
+    box-sizing: border-box;
+}
+
+.contents {
+    margin-top: 40px;
 }
