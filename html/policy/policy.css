@@ -13,6 +13,7 @@ main h3 {
 
 .scrollBox {
     height: 700px;
+    margin-bottom: 60px;
     padding: 20px 20px;
     box-sizing: border-box;
     border: solid 1px silver;

@@ -1,13 +1,8 @@
-/* main */
-main {
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
 /* 주문진행도 */
 .cartProcess,
 .cartProcess2 {
+  width: 1120px;
+  margin: auto;
   text-align: center;
   margin-top: 5px;
 }
@@ -36,17 +31,24 @@ main {
 }
 
 /* 항목 */
-.titleArea > div {
-  text-align: center;
-  font-size: 2em;
-  margin-top: 50px;
+.titleArea {
+  width: 1120px;
+  margin: 60px auto;
 }
 
-.listTtitle {
+.titleArea h1 {
+  text-align: center;
+  margin: 60px auto;
+}
+
+.titleArea {
+  width: 1120px;
+  margin: auto;
+}
+
+.listTitle {
   margin-top: 30px;
   margin-bottom: 10px;
-  margin-left: 25px;
-  padding: 0;
 }
 
 .orderInfoTable,
@@ -57,28 +59,51 @@ main {
   white-space: nowrap;
 }
 
-/* 장바구니 */
+/* 주문내역 */
 .cartInfo {
+  width: 1120px;
+  margin: auto;
   border: 1px solid gray;
-  width: 100%;
   border-collapse: collapse;
   text-align: center;
+}
+
+.cartInfo tbody,
+.cartInfo tfoot {
+  border-top: 1px solid black;
+}
+
+.cartImage img {
+  width: 100px;
 }
 
 .cartInfo tbody td {
   height: 50px;
 }
 
+/* 삭제 버튼 */
+#deleteCartProduct {
+  width: 60px;
+  height: 25px;
+  margin: 10px auto;
+  background-color: #808080;
+  color: white;
+  border: none;
+}
+
 /* 주문정보 */
-form th {
+#orderForm {
+  width: 1120px;
+  margin: auto;
+}
+
+#orderForm th {
   width: 10vw;
 }
 
 main input,
 textarea {
-  border-radius: 5px;
   border: 1px solid black;
-  background-color: #f8f8f8;
 }
 
 #firstPhoneNumber,
@@ -150,16 +175,16 @@ textarea {
 /* 결제버튼 */
 .payArea {
   text-align: center;
-  height: 70px;
+  height: 100px;
 }
 
 .productPay {
   display: inline-block;
-  width: 120px;
-  line-height: 40px;
+  width: 150px;
+  line-height: 50px;
   background-color: rgb(16, 40, 102);
   color: white;
-  font-size: 12px;
+  font-size: 16px;
   text-decoration: none;
-  margin: 20px;
+  margin: 20px 0;
 }

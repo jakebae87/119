@@ -1,0 +1,42 @@
+/* 제목 */
+.titleArea {
+  width: 1120px;
+  margin: 60px auto;
+}
+
+.titleArea h1 {
+  text-align: center;
+  margin: 60px auto;
+}
+
+.titleArea {
+  width: 1120px;
+  margin: auto;
+}
+
+.listTitle {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* 주문내역 */
+.cartInfo {
+  width: 1120px;
+  margin: auto;
+  border: 1px solid gray;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.cartInfo tbody,
+.cartInfo tfoot {
+  border-top: 1px solid black;
+}
+
+.cartImage img {
+  width: 100px;
+}
+
+.cartInfo tbody td {
+  height: 50px;
+}

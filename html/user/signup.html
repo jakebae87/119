@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../../css/global.css">
     <link rel="stylesheet" href="../../css/header.css">
     <link rel="stylesheet" href="../../css/footer.css">
-    <link rel="stylesheet" href="../../css/sign_up.css">
+    <link rel="stylesheet" href="./sign_up.css">
 </head>
 
 <body>
@@ -26,7 +26,7 @@
             <div class="searchBox">
                 <form action="../../html/category/cate_search.html" method="get">
                     <fieldset>
-                        <input type="text" maxlength="20" placeholder="검색어 입력" name="search" />
+                        <input type="text" maxlength="20" placeholder="검색어 입력" name="search"/>
                         <button type="submit">
                             <img src="../../image/magnifying-glass-30.png" alt="돋보기 이미지">
                         </button>
@@ -37,6 +37,7 @@
             <div class="userMenu">
                 <a href="../../html/user/login.html">로그인</a>
                 <a href="../../html/user/signup.html">회원가입</a>
+                <a href="../../html/user/mypage.html">마이페이지</a>
                 <a href="../../html/user/cart.html">장바구니</a>
             </div>
         </div>
@@ -112,9 +113,11 @@
     </header>
 
     <main>
-        <div class="sign_up">
-            <h2>회원가입</h2>
+        <div class="cateTitle">
+            <h1>회원가입</h1>
+        </div>
 
+        <div class="sign_up">
             <form action="./success.html" id="signup_form">
                 <div>
                     <table class="table">
@@ -146,7 +149,7 @@
                             <td>
                                 <div>
                                     <select name="year" id="year" class="birth">
-                                        <option value="년">년</option>
+                                        <option value="" disabled selected>년</option>
                                         <option value="2004">2004</option>
                                         <option value="2003">2003</option>
                                         <option value="2002">2002</option>
@@ -195,7 +198,23 @@
                                         <option value="1959">1959</option>
                                     </select>
                                     <select name="month" id="month" class="birth">
-                                        <option value="월">월</option>
+                                        <option value="" disabled selected>월</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+
+                                    </select>
+                                    <select name="day" id="day" class="birth">
+                                        <option value="" disabled selected>일</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -228,21 +247,6 @@
                                         <option value="30">30</option>
                                         <option value="31">31</option>
                                     </select>
-                                    <select name="day" id="day" class="birth">
-                                        <option value="일">일</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                        <option value="12">12</option>
-                                    </select>
                                 </div>
                             </td>
                         </tr>
@@ -252,8 +256,10 @@
                                 <div>
                                     <input type="text" class="number" name="frist_phone_number" value="010" size="1"
                                         readonly>
-                                    <input type="text" class="number" name="second_phone_number" size="1">
-                                    <input type="text" class="number" name="last_phone_number" size="1">
+                                    <input type="text" class="number" name="second_phone_number" size="1" minlength="3"
+                                        maxlength="4" required>
+                                    <input type="text" class="number" name="last_phone_number" size="1" minlength="3"
+                                        maxlength="4" required>
                                 </div>
                             </td>
                         </tr>

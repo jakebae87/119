@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="../../CSS/global.css" />
   <link rel="stylesheet" href="../../CSS/header.css" />
   <link rel="stylesheet" href="../../CSS/footer.css" />
-  <link rel="stylesheet" href="./mypage.css" />
+  <link rel="stylesheet" href="./orderList.css" />
 </head>
 
 <body>
@@ -113,89 +113,54 @@
 
   <main>
     <div class="titleArea">
-      <ul type="square">
-        <h1>마이 페이지</h1>
+      <h1>주문내역조회</h1>
+      <ul type="square" class="listTitle">
         <li>
-          <div>주문처리 현황<span>(최근 3개월 기준)</span></div>
+          <h3>주문 상품 정보</h3>
         </li>
       </ul>
     </div>
-    <div class="myOrder">
-      <div class="beforePay">
-        <div>
-          <span>0</span>
-        </div>
-        <div>입금전</div>
+    <div class="orderListArea">
+      <div>
+        <table class="cartInfo">
+          <colgroup>
+            <col style="width: 100px" />
+            <col style="width: 180px" />
+            <col style="width: auto" />
+            <col style="width: 150px" />
+            <col style="width: 120px" />
+            <col style="width: 130px" />
+            <col style="width: 130px" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">주문일자<br />(주문번호)</th>
+              <th scope="col">이미지</th>
+              <th scope="col">상품정보</th>
+              <th scope="col">수량</th>
+              <th scope="col">상품구매금액</th>
+              <th scope="col">주문처리상태</th>
+              <th scope="col">취소/교환/반품</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <span class="orderDate">230526</span>
+                <span class="orderNumber">(13135)</span>
+              </td>
+              <td>
+                <div class="cartImage"><img src="../../image/product1.jpg" alt="product1Img" /></div>
+              </td>
+              <td><span class="orderProduct">강아지 사료</span></td>
+              <td><span class="orderQuantity">2</span></td>
+              <td><span class="orderPrice">71,000원</span></td>
+              <td><span class="orderState">배송완료</span></td>
+              <td><span class="orderCancel">-</span></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <div class="setDelivery">
-        <div>
-          <span>0</span>
-        </div>
-        <div>배송준비중</div>
-      </div>
-      <div class="delivering">
-        <div>
-          <span>0</span>
-        </div>
-        <div>배송중</div>
-      </div>
-      <div class="delivered">
-        <div>
-          <span>0</span>
-        </div>
-        <div>배송완료</div>
-      </div>
-      <div class="cancelExchangeRefund">
-        <ul>
-          <li class="cancel">
-            <span>취소</span>
-            <span>0</span>
-          </li>
-          <li class="exchange">
-            <span>환불</span>
-            <span>0</span>
-          </li>
-          <li class="refund">
-            <span>반품</span>
-            <span>0</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="shopMain">
-      <a href="./orderList.html" class="orderList">
-        <div class="orderListImg">
-          <img src="../../image/mypage/order.png" alt="" />
-        </div>
-        <strong></strong>
-        <span>주문내역 조회</span>
-        <p>고객님의 주문내역을 확인하실 수 있습니다.</p>
-      </a>
-      <a href="./profile.html" class="profile">
-        <div class="orderListImg">
-          <img src="../../image/mypage/profile.png" alt="" />
-        </div>
-        <strong></strong>
-        <span>회원 정보</span>
-        <p>회원이신 고객님의 개인정보를 관리하는 공간입니다.</p>
-      </a>
-      <a href="./manageBoard.html" class="board">
-        <div class="orderListImg">
-          <img src="../../image/mypage/board.png" alt="" />
-        </div>
-        <strong></strong>
-        <span>게시글 관리</span>
-        <p>고객님께서 작성하신 게시물을 관리하는 공간입니다.</p>
-      </a>
-      <a href="./cart.html" class="cart">
-        <div class="orderListImg">
-          <img src="../../image/mypage/cart.png" alt="" />
-        </div>
-        <strong></strong>
-        <span>장바구니</span>
-        <p>장바구니에 등록하신 상품의 목록을 보여드립니다.</p>
-      </a>
     </div>
   </main>
 
