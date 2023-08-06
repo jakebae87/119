@@ -55,39 +55,6 @@ main {
 
 /* ======================게시글 테이블 설정 끝====================== */
 
-/* ======================게시글 제목 리스트 구조 설정====================== */
-.titleBox ul {
-  display: flex;
-}
-
-/* 상품후기 제목 사진 */
-.titleBox ul > li {
-  align-self: left;
-}
-
-/* 상품후기 상품명과 글제목 */
-.titleBox ul > li + li {
-  align-self: center;
-  margin-left: 30px;
-}
-
-/* 상품후기 사진 */
-.boardList table tr td div img {
-  width: 100px;
-  height: 100px;
-  border: 1px outset;
-}
-
-/* 상품후기 사진 hover effect */
-.boardList table tr td div img:hover {
-  transform: scale(1.4);
-}
-
-/* 제목 왼쪽 정렬 */
-.boardList table tr td:nth-of-type(1) {
-  text-align: left;
-}
-
 .boardList table tr td {
   padding: 20px;
 }
@@ -117,8 +84,13 @@ main {
 }
 
 /* 평점과 카테고리의 위치 설정 */
-.searchConditions > div {
+.searchConditions div:nth-child(1) {
   grid-column: 2/3;
+}
+
+/* 삭제버튼 */
+.searchConditions div:nth-child(2) {
+  grid-column: 3/4;
 }
 
 /* 검색어 입력과 검색 버튼 영역 설정 */
@@ -173,6 +145,13 @@ main {
   text-align: center;
 }
 
+/* 삭제버튼 */
+.deleteBoard {
+  width: 150px;
+  height: 50px;
+  background-color: rgb(25, 50, 100);
+  color: white;
+}
 /* ======================상품문의/상품후기 사이즈(너비) 끝====================== */
 
 /* ======================페이지네이션====================== */

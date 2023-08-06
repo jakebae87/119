@@ -36,7 +36,7 @@
 .cartProduct {
   width: 1120px;
   margin: auto;
-  height: 150px;
+  height: 270px;
   text-align: center;
 }
 .cartProduct > p {
@@ -61,6 +61,11 @@
 }
 
 .cartInfo tbody td {
+  height: 150px;
+}
+
+.cartInfo thead,
+.cartInfo tfoot {
   height: 50px;
 }
 

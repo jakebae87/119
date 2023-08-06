@@ -1,364 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Petmily</title>
+    <link rel="stylesheet" href="../../CSS/global.css" />
+    <link rel="stylesheet" href="../../CSS/header.css" />
+    <link rel="stylesheet" href="../../CSS/footer.css" />
+    <link rel="stylesheet" href="./order.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Petmily</title>
-  <link rel="stylesheet" href="../../CSS/global.css" />
-  <link rel="stylesheet" href="../../CSS/header.css" />
-  <link rel="stylesheet" href="../../CSS/footer.css" />
-  <link rel="stylesheet" href="./order.css" />
-</head>
-
-<body>
-  <header>
-    <div class="headerTOP">
-      <div class="topLogo">
-        <span>Petmily</span>
-        <a href="../../index.html">
-          <img src="../../image/Petmily_logo.png" alt="Petmily_logo">
-        </a>
-      </div>
-
-      <div class="searchBox">
-        <form action="../../html/category/cate_search.html" method="get">
-          <fieldset>
-            <input type="text" maxlength="20" placeholder="검색어 입력" name="search" />
-            <button type="submit">
-              <img src="../../image/magnifying-glass-30.png" alt="돋보기 이미지">
-            </button>
-          </fieldset>
-        </form>
-      </div>
-
-      <div class="userMenu">
-        <a href="../../html/user/login.html">로그인</a>
-        <a href="../../html/user/signup.html">회원가입</a>
-        <a href="../../html/user/mypage.html">마이페이지</a>
-        <a href="../../html/user/cart.html">장바구니</a>
-      </div>
-    </div>
-
-    <div class="headerBottom">
-      <nav>
-        <ul class="mainMenu">
-          <li>
-            <input type="checkbox" id="sideBtn" />
-            <label for="sideBtn">
-              <span></span>
-              <span></span>
-              <span></span>
-            </label>
-
-            <ul class="sideMenu">
-              <li>
-                <ul>
-                  <li><a href="../../html/category/cate_new.html">신상품</a></li>
-                  <li><a href="../../html/category/cate_best.html">인기상품</a></li>
-                  <li><a href="../../html/category/cate_dog.html">강아지</a></li>
-                  <li><a href="../../html/category/cate_cat.html">고양이</a></li>
-                  <li><a href="../../html/category/cate_feed.html">사료</a></li>
-                  <li><a href="../../html/category/cate_snackNutrient.html">간식/영양제</a></li>
-                  <li><a href="../../html/category/cate_hygiene.html">위생</a></li>
-                  <li><a href="../../html/category/cate_beautyCare.html">미용/케어</a></li>
-                  <li><a href="../../html/category/cate_living.html">리빙</a></li>
-                  <li><a href="../../html/category/cate_walkPlay.html">산책/놀이</a></li>
-                  <li><a href="../../html/category/cate_clothesAccessorie.html">의류/악세사리</a></li>
-                </ul>
-              </li>
-
-              <li>
-                <ul>
-                  <li><a href="../../html/community/notice.html">공지사항</a></li>
-                  <li><a href="../../html/community/inquiry.html">상품문의</a></li>
-                  <li><a href="../../html/community/review.html">상품후기</a></li>
-                  <li><a href="../../html/community/faq.html">자주묻는질문</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-
-          <li><a href="../../html/category/cate_feed.html">전체상품</a>
-            <ul class="subMenu">
-              <li><a href="../../html/category/cate_new.html">신상품</a></li>
-              <li><a href="../../html/category/cate_best.html">인기상품</a></li>
-              <li><a href="../../html/category/cate_dog.html">강아지</a></li>
-              <li><a href="../../html/category/cate_cat.html">고양이</a></li>
-              <li><a href="../../html/category/cate_feed.html">사료</a></li>
-              <li><a href="../../html/category/cate_snackNutrient.html">간식/영양제</a></li>
-              <li><a href="../../html/category/cate_hygiene.html">위생</a></li>
-              <li><a href="../../html/category/cate_beautyCare.html">미용/케어</a></li>
-              <li><a href="../../html/category/cate_living.html">리빙</a></li>
-              <li><a href="../../html/category/cate_walkPlay.html">산책/놀이</a></li>
-              <li><a href="../../html/category/cate_clothesAccessorie.html">의류/악세사리</a></li>
-            </ul>
-          </li>
-
-          <li><a href="../../html/community/notice.html">커뮤니티</a>
-            <ul class="subMenu">
-              <li><a href="../../html/community/notice.html">공지사항</a></li>
-              <li><a href="../../html/community/inquiry.html">상품문의</a></li>
-              <li><a href="../../html/community/review.html">상품후기</a></li>
-              <li><a href="../../html/community/faq.html">자주묻는질문</a></li>
-            </ul>
-          </li>
-          <li><a href="../../html/community/event.html">이벤트</a></li>
-          <li><a href="../../html/category/cate_discount.html">유통기한 할인</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <div class="titleArea">
-      <h1>주문</h1>
-      <ul type="square" class="listTitle">
-        <li>
-          <h3>주문상품</h3>
-        </li>
-      </ul>
-    </div>
-    <div class="orderListArea">
-      <div>
-        <table class="cartInfo">
-          <colgroup>
-            <col style="width: 100px" />
-            <col style="width: 180px" />
-            <col style="width: auto" />
-            <col style="width: 150px" />
-            <col style="width: 120px" />
-            <col style="width: 130px" />
-            <col style="width: 130px" />
-          </colgroup>
-          <thead>
-            <tr>
-              <th scope="col">
-                <input type="checkbox" />
-              </th>
-              <th scope="col">이미지</th>
-              <th scope="col">상품정보</th>
-              <th scope="col">판매가</th>
-              <th scope="col">수량</th>
-              <th scope="col">합계</th>
-              <th scope="col">선택</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><input type="checkbox" /></td>
-              <td>
-                <div class="cartImage"><img src="../../image/product1.jpg" alt="product1Img" /></div>
-              </td>
-              <td><span>강아지 사료</span></td>
-              <td><span>34,000원</span></td>
-              <td><span>2</span></td>
-              <td><span>68,000원</span></td>
-              <td><button type="button" id="deleteCartProduct" name="deleteCartProduct">삭제</button></td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <th colspan="7">
-                <span>상품구매금액</span>
-                <strong><span>68,000</span>원</strong>
-                <span>+ 배송비 3000원 = </span>
-                <span>합계 : </span>
-                <strong><span>71,000</span>원</strong>
-              </th>
-            </tr>
-          </tfoot>
-        </table>
-      </div>
-    </div>
-
-    <form action="../user/cart.html" id="orderForm">
-      <div class="orderArea">
-        <ul type="square" class="listTitle">
-          <li>
-            <h3>주문 정보</h3>
-          </li>
-        </ul>
-        <div class="cartProcess2">
-          <ul>
-            <li>장바구니</li>
-            <li>주문서작성</li>
-            <li>결제완료</li>
-            <li>주문완료</li>
-          </ul>
+  <body>
+    <header>
+      <div class="headerTOP">
+        <div class="topLogo">
+          <span>Petmily</span>
+          <a href="../../index.html">
+            <img src="../../image/Petmily_logo.png" alt="Petmily_logo" />
+          </a>
         </div>
-        <div class="orderInfo">
-          <table class="orderInfoTable">
-            <tbody>
-              <tr>
-                <th>
-                  <label for="name">주문하시는 분 </label>
-                </th>
-                <td>
-                  <input type="text" id="name" name="name" required />
-                </td>
-              </tr>
-              <tr>
-                <th>
-                  <label for="secondPhoneNumber">휴대전화 </label>
-                </th>
-                <td>
-                  <input type="text" id="firstPhoneNumber" name="firstPhoneNumber" value="010" size="1" readonly />
-                  &ndash;
-                  <input type="text" id="secondPhoneNumber" name="secondPhoneNumber" size="1" minlength="3"
-                    maxlength="4" required />
-                  &ndash;
-                  <input type="text" id="lastPhoneNumber" name="lastPhoneNumber" size="1" minlength="4" maxlength="4"
-                    required />
-                </td>
-              </tr>
-              <tr>
-                <th>이메일</th>
-                <td>
-                  <label> <input type="text" name="email_id" required /> @ </label>
-                  <input type="text" name="email_address" />
-                  <select name="email_domain">
-                    <option value="직접입력">직접입력</option>
-                    <option value="naver.com">naver.com</option>
-                    <option value="gmail.com">gmail.com</option>
-                    <option value="daum.net">daum.net</option>
-                  </select>
-                  <ul class="emailAlert">
-                    <li>- 이메일을 통해 주문처리과정을 보내드립니다.</li>
-                    <li>- 이메일 주소란에는 반드시 수신가능한 이메일주소를 입력해 주세요</li>
+
+        <div class="searchBox">
+          <form action="../../html/category/cate_search.html" method="get">
+            <fieldset>
+              <input type="text" maxlength="20" placeholder="검색어 입력" name="search" />
+              <button type="submit">
+                <img src="../../image/magnifying-glass-30.png" alt="돋보기 이미지" />
+              </button>
+            </fieldset>
+          </form>
+        </div>
+
+        <div class="userMenu">
+          <a href="../../html/user/login.html">로그인</a>
+          <a href="../../html/user/signup.html">회원가입</a>
+          <a href="../../html/user/mypage.html">마이페이지</a>
+          <a href="../../html/user/cart.html">장바구니</a>
+        </div>
+      </div>
+
+      <div class="headerBottom">
+        <nav>
+          <ul class="mainMenu">
+            <li>
+              <input type="checkbox" id="sideBtn" />
+              <label for="sideBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+              </label>
+
+              <ul class="sideMenu">
+                <li>
+                  <ul>
+                    <li><a href="../../html/category/cate_new.html">신상품</a></li>
+                    <li><a href="../../html/category/cate_best.html">인기상품</a></li>
+                    <li><a href="../../html/category/cate_dog.html">강아지</a></li>
+                    <li><a href="../../html/category/cate_cat.html">고양이</a></li>
+                    <li><a href="../../html/category/cate_feed.html">사료</a></li>
+                    <li><a href="../../html/category/cate_snackNutrient.html">간식/영양제</a></li>
+                    <li><a href="../../html/category/cate_hygiene.html">위생</a></li>
+                    <li><a href="../../html/category/cate_beautyCare.html">미용/케어</a></li>
+                    <li><a href="../../html/category/cate_living.html">리빙</a></li>
+                    <li><a href="../../html/category/cate_walkPlay.html">산책/놀이</a></li>
+                    <li><a href="../../html/category/cate_clothesAccessorie.html">의류/악세사리</a></li>
                   </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+                </li>
 
-      <div class="deliveryArea">
+                <li>
+                  <ul>
+                    <li><a href="../../html/community/notice.html">공지사항</a></li>
+                    <li><a href="../../html/community/inquiry.html">상품문의</a></li>
+                    <li><a href="../../html/community/review.html">상품후기</a></li>
+                    <li><a href="../../html/community/faq.html">자주묻는질문</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="../../html/category/cate_feed.html">전체상품</a>
+              <ul class="subMenu">
+                <li><a href="../../html/category/cate_new.html">신상품</a></li>
+                <li><a href="../../html/category/cate_best.html">인기상품</a></li>
+                <li><a href="../../html/category/cate_dog.html">강아지</a></li>
+                <li><a href="../../html/category/cate_cat.html">고양이</a></li>
+                <li><a href="../../html/category/cate_feed.html">사료</a></li>
+                <li><a href="../../html/category/cate_snackNutrient.html">간식/영양제</a></li>
+                <li><a href="../../html/category/cate_hygiene.html">위생</a></li>
+                <li><a href="../../html/category/cate_beautyCare.html">미용/케어</a></li>
+                <li><a href="../../html/category/cate_living.html">리빙</a></li>
+                <li><a href="../../html/category/cate_walkPlay.html">산책/놀이</a></li>
+                <li><a href="../../html/category/cate_clothesAccessorie.html">의류/악세사리</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="../../html/community/notice.html">커뮤니티</a>
+              <ul class="subMenu">
+                <li><a href="../../html/community/notice.html">공지사항</a></li>
+                <li><a href="../../html/community/inquiry.html">상품문의</a></li>
+                <li><a href="../../html/community/review.html">상품후기</a></li>
+                <li><a href="../../html/community/faq.html">자주묻는질문</a></li>
+              </ul>
+            </li>
+            <li><a href="../../html/community/event.html">이벤트</a></li>
+            <li><a href="../../html/category/cate_discount.html">유통기한 할인</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="titleArea">
+        <h1>주문</h1>
         <ul type="square" class="listTitle">
           <li>
-            <h3>배송 정보</h3>
+            <h3>주문상품</h3>
           </li>
         </ul>
-        <div class="deliveryInfo">
-          <table class="deliveryInfoTable">
-            <tbody>
-              <tr>
-                <th>배송지 선택</th>
-                <td>
-                  <input type="radio" />
-                  <span>주문자 정보와 동일</span>
-                  <input type="radio" />
-                  <span>새로운 배송지</span>
-                </td>
-              </tr>
-              <tr>
-                <th>
-                  <label for="name">받으시는 분 </label>
-                </th>
-                <td>
-                  <input type="text" id="name" name="name" required />
-                </td>
-              </tr>
-              <tr>
-                <th>주소</th>
-                <td><input type="text" id="zipCode" name="zipCode" size="8" minlength="5"
-                    maxlength="5" /><button>우편번호</button></td>
-                <td><input type="text" id="address" name="address" size="70" required />기본주소</td>
-                <td><input type="text" id="address" name="address" size="70" />나머지주소(선택입력가능)</td>
-              </tr>
-              <tr>
-                <th>
-                  <label for="secondPhoneNumber">휴대전화 </label>
-                </th>
-                <td>
-                  <input type="text" id="firstPhoneNumber" name="firstPhoneNumber" value="010" size="1" readonly />
-                  &ndash;
-                  <input type="text" id="secondPhoneNumber" name="secondPhoneNumber" size="1" minlength="3"
-                    maxlength="4" required />
-                  &ndash;
-                  <input type="text" id="lastPhoneNumber" name="lastPhoneNumber" size="1" minlength="4" maxlength="4"
-                    required />
-                </td>
-              </tr>
-              <tr>
-                <th><label for="deliveryMessage">배송메시지</label></th>
-                <td>
-                  <textarea name="deliveryMessage" id="deliveryMessage" rows="3"></textarea>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
       </div>
-
-      <div class="payInfoArea">
-        <ul type="square" class="listTitle">
-          <li>
-            <h3>결제 예정 금액</h3>
-          </li>
-        </ul>
+      <div class="orderListArea">
         <div>
-          <table class="payTable">
+          <table class="cartInfo">
+            <colgroup>
+              <col style="width: 100px" />
+              <col style="width: 180px" />
+              <col style="width: auto" />
+              <col style="width: 150px" />
+              <col style="width: 120px" />
+              <col style="width: 130px" />
+              <col style="width: 130px" />
+            </colgroup>
             <thead>
               <tr>
-                <th>총 주문금액</th>
-                <th>총 할인 + 부가결제금액</th>
-                <th>총 결제예정 금액</th>
+                <th scope="col">
+                  <input type="checkbox" />
+                </th>
+                <th scope="col">이미지</th>
+                <th scope="col">상품정보</th>
+                <th scope="col">판매가</th>
+                <th scope="col">수량</th>
+                <th scope="col">합계</th>
+                <th scope="col">선택</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><span>71,000</span>원</td>
-                <td>-<span>0</span>원</td>
-                <td><span>71,000</span>원</td>
+                <td><input type="checkbox" /></td>
+                <td>
+                  <div class="cartImage"><img src="../../image/product1.jpg" alt="product1Img" /></div>
+                </td>
+                <td><span>강아지 사료</span></td>
+                <td><span>34,000원</span></td>
+                <td><span>2</span></td>
+                <td><span>68,000원</span></td>
+                <td><button type="button" id="deleteCartProduct" name="deleteCartProduct">삭제</button></td>
               </tr>
             </tbody>
+            <tfoot>
+              <tr>
+                <th colspan="7">
+                  <span>상품구매금액</span>
+                  <strong><span>68,000</span>원</strong>
+                  <span>+ 배송비 3000원 = </span>
+                  <span>합계 : </span>
+                  <strong><span>71,000</span>원</strong>
+                </th>
+              </tr>
+            </tfoot>
           </table>
         </div>
       </div>
 
-      <div class="payArea">
-        <button type="submit" class="productPay">결제하기</button>
-      </div>
-    </form>
-  </main>
+      <form action="#" id="orderForm">
+        <div class="orderArea">
+          <ul type="square" class="listTitle">
+            <li>
+              <h3>주문 정보</h3>
+            </li>
+          </ul>
+          <div class="cartProcess2">
+            <ul>
+              <li>장바구니</li>
+              <li>주문서작성</li>
+              <li>결제완료</li>
+              <li>주문완료</li>
+            </ul>
+          </div>
+          <div class="orderInfo">
+            <table class="orderInfoTable">
+              <tbody>
+                <tr>
+                  <th>
+                    <label for="name">주문하시는 분<span class="thRed">*</span></label>
+                  </th>
+                  <td>
+                    <input type="text" id="name" name="name" required />
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <label for="secondPhoneNumber">휴대전화<span class="thRed">*</span></label>
+                  </th>
+                  <td>
+                    <input type="text" id="firstPhoneNumber" name="firstPhoneNumber" value="010" size="1" readonly />
+                    &ndash;
+                    <input type="text" id="secondPhoneNumber" name="secondPhoneNumber" size="1" minlength="3" maxlength="4" required />
+                    &ndash;
+                    <input type="text" id="lastPhoneNumber" name="lastPhoneNumber" size="1" minlength="4" maxlength="4" required />
+                  </td>
+                </tr>
+                <tr>
+                  <th>이메일<span class="thRed">*</span></th>
+                  <td>
+                    <label> <input type="text" name="email_id" required /> @ </label>
+                    <input type="text" name="email_address" />
+                    <select name="email_domain">
+                      <option value="직접입력">직접입력</option>
+                      <option value="naver.com">naver.com</option>
+                      <option value="gmail.com">gmail.com</option>
+                      <option value="daum.net">daum.net</option>
+                    </select>
+                    <ul class="emailAlert">
+                      <li>- 이메일을 통해 주문처리과정을 보내드립니다.</li>
+                      <li>- 이메일 주소란에는 반드시 수신가능한 이메일주소를 입력해 주세요</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
 
-  <footer>
-    <div>
-      <h1>Petmily</h1>
-      <ul>
-        <li>Tel : XXX-XXX-XXXX</li>
-        <li>Email : Email@mail.com</li>
-        <li>Address : XX시 XX구 XX동 XXX</li>
-        <li>CEO : Jeonghyeon BaeㅣSora KimㅣHuisang EunㅣSeungho Choi</li>
-      </ul>
-    </div>
+        <div class="deliveryArea">
+          <ul type="square" class="listTitle">
+            <li>
+              <h3>배송 정보</h3>
+            </li>
+          </ul>
+          <div class="deliveryInfo">
+            <table class="deliveryInfoTable">
+              <tbody>
+                <tr>
+                  <th>배송지 선택<span class="thRed">*</span></th>
+                  <td>
+                    <label>
+                      <input type="radio" name="deliveryAddress" />
+                      <span>주문자 정보와 동일</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="deliveryAddress" />
+                      <span>새로운 배송지</span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <label for="name">받으시는 분<span class="thRed">*</span></label>
+                  </th>
+                  <td>
+                    <input type="text" id="name" name="name" required />
+                  </td>
+                </tr>
+                <tr>
+                  <th>주소<span class="thRed">*</span></th>
+                  <td>
+                    <input type="text" id="postCode" name="postCode" size="8" minlength="5" maxlength="5" />
+                    <input type="submit" name="postCodeFind" value="우편번호" />
+                  </td>
+                  <td><input type="text" id="address" name="address" size="70" required />기본주소</td>
+                  <td><input type="text" id="address" name="address" size="70" />나머지주소(선택입력가능)</td>
+                </tr>
+                <tr>
+                  <th>
+                    <label for="secondPhoneNumber">휴대전화<span class="thRed">*</span></label>
+                  </th>
+                  <td>
+                    <input type="text" id="firstPhoneNumber" name="firstPhoneNumber" value="010" size="1" readonly />
+                    &ndash;
+                    <input type="text" id="secondPhoneNumber" name="secondPhoneNumber" size="1" minlength="3" maxlength="4" required />
+                    &ndash;
+                    <input type="text" id="lastPhoneNumber" name="lastPhoneNumber" size="1" minlength="4" maxlength="4" required />
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <label for="deliveryMessage">배송메시지</label>
+                  </th>
+                  <td>
+                    <textarea name="deliveryMessage" id="deliveryMessage" rows="3"></textarea>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
 
-    <div>
+        <div class="payInfoArea">
+          <ul type="square" class="listTitle">
+            <li>
+              <h3>결제 예정 금액</h3>
+            </li>
+          </ul>
+          <div>
+            <table class="payTable">
+              <thead>
+                <tr>
+                  <th>총 주문금액</th>
+                  <th>총 할인 + 부가결제금액</th>
+                  <th>총 결제예정 금액</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span>71,000</span>원</td>
+                  <td>-<span>0</span>원</td>
+                  <td><span>71,000</span>원</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="payArea">
+          <button type="submit" class="productPay">결제하기</button>
+        </div>
+      </form>
+    </main>
+
+    <footer>
       <div>
-        <h3>POLICY</h3>
+        <h1>Petmily</h1>
         <ul>
-          <li></li>
-          <li><a href="../../html/policy/ToS.html">이용약관</a></li>
-          <li><a href="../../html/policy/privacy.html">개인정보처리방침</a></li>
-          <li><a href="../../html/policy/guide.html">이용안내</a></li>
-          <li><a href="../../html/policy/refund.html">반품, 환불규정</a></li>
+          <li>Tel : XXX-XXX-XXXX</li>
+          <li>Email : Email@mail.com</li>
+          <li>Address : XX시 XX구 XX동 XXX</li>
+          <li>CEO : Jeonghyeon BaeㅣSora KimㅣHuisang EunㅣSeungho Choi</li>
         </ul>
       </div>
 
       <div>
-        <h3>C/S CENTER</h3>
-        <ul>
-          <li></li>
-          <li>MON-FRIㅣ09:30 - 17:00</li>
-          <li>LUNCH ㅣ 12:30 - 13:30</li>
-          <li>SAT, SUN, HOLIDAY OFF</li>
-        </ul>
-      </div>
-    </div>
-  </footer>
-</body>
+        <div>
+          <h3>POLICY</h3>
+          <ul>
+            <li></li>
+            <li><a href="../../html/policy/ToS.html">이용약관</a></li>
+            <li><a href="../../html/policy/privacy.html">개인정보처리방침</a></li>
+            <li><a href="../../html/policy/guide.html">이용안내</a></li>
+            <li><a href="../../html/policy/refund.html">반품, 환불규정</a></li>
+          </ul>
+        </div>
 
+        <div>
+          <h3>C/S CENTER</h3>
+          <ul>
+            <li></li>
+            <li>MON-FRIㅣ09:30 - 17:00</li>
+            <li>LUNCH ㅣ 12:30 - 13:30</li>
+            <li>SAT, SUN, HOLIDAY OFF</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -19,17 +19,21 @@
 
 /* 주문/배송현황 */
 .myOrder {
+  display: flex;
   width: 1120px;
   margin: auto;
   margin-bottom: 30px;
-  border: 1px solid silver;
+  border: 3px solid silver;
   position: relative;
 }
 
 .myOrder > div {
-  display: inline-block;
-  width: 19%;
+  margin: auto;
   text-align: center;
+  width: 20%;
+}
+.cancelExchangeRefund {
+  border-left: 1px dashed gray;
 }
 
 /* > 기호 */
@@ -38,7 +42,7 @@
   font-size: 50px;
   position: absolute;
   color: gainsboro;
-  left: 17%;
+  left: 19%;
   top: 15%;
 }
 
@@ -47,7 +51,7 @@
   font-size: 50px;
   position: absolute;
   color: gainsboro;
-  left: 37%;
+  left: 39%;
   top: 15%;
 }
 
@@ -56,15 +60,7 @@
   font-size: 50px;
   position: absolute;
   color: gainsboro;
-  left: 56%;
-  top: 15%;
-}
-.delivered::after {
-  content: "|";
-  font-size: 60px;
-  position: absolute;
-  color: gray;
-  left: 77%;
+  left: 59%;
   top: 15%;
 }
 
@@ -72,6 +68,9 @@
 .myOrder > div > div > span {
   font-size: 50px;
   line-height: 50px;
+}
+.myOrder span a {
+  color: black;
 }
 
 .myOrder > div > div + div {
@@ -112,7 +111,7 @@
   width: 210px;
   height: 220px;
   padding: 10px;
-  border: 1px solid silver;
+  border: 3px solid silver;
   box-sizing: border-box;
   text-decoration: none;
   color: black;
