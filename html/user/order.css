@@ -78,6 +78,11 @@
 }
 
 .cartInfo tbody td {
+  height: 150px;
+}
+
+.cartInfo thead,
+.cartInfo tfoot {
   height: 50px;
 }
 
@@ -101,11 +106,6 @@
   width: 10vw;
 }
 
-main input,
-textarea {
-  border: 1px solid black;
-}
-
 #firstPhoneNumber,
 #secondPhoneNumber,
 #lastPhoneNumber {
@@ -123,8 +123,20 @@ textarea {
 .deliveryInfoTable td,
 .payTable th,
 .payTable td {
-  padding: 5px 5px 10px;
   border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.orderInfoTable th,
+.orderInfoTable td,
+.deliveryInfoTable th,
+.payTable th,
+.payTable td {
+  padding: 5px 5px 10px;
+}
+
+.deliveryInfoTable input,
+.deliveryInfoTable textarea {
+  margin: 5px 5px 10px;
 }
 
 .orderInfoTable th,
@@ -135,6 +147,10 @@ textarea {
 }
 
 /* 배송정보 */
+.deliveryInfoTable tr:nth-child(1) label + label {
+  margin-left: 10px;
+}
+
 .deliveryInfoTable tr:nth-child(3) td {
   display: block;
 }
@@ -170,6 +186,12 @@ textarea {
 
 .payTable tbody {
   text-align: center;
+}
+
+/* * 기호 */
+.thRed {
+  color: red;
+  margin-left: 5px;
 }
 
 /* 결제버튼 */
