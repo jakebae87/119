@@ -1,0 +1,42 @@
+.Products * {
+    text-decoration: none;
+    
+}
+
+.Products {
+    width: 1120px;
+    margin: auto;
+}
+
+/* ==================== product list area ==================== */
+.productList {
+    margin: 40px 0;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* ==================== Classification with product category ==================== */
+.productClassification ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.productClassification li {
+    width: fit-content;
+    height: 50px;
+    line-height: 50px;
+}
+
+.productClassification a {
+    text-align: center;
+    font-weight: bold;
+    color: silver;
+}
+
+.productClassification a[href=""],
+.productClassification a:hover {
+    color: black;
+}
