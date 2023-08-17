@@ -1,42 +1,6 @@
 import { Link } from "react-router-dom";
 
-const noticeData = [
-    {
-        id: 0,
-        url: '/community/noticeDetail',
-        subject: '휴무 및 배송지연 안내',
-        usename: '펫밀리',
-        createDate: new Date('2023-01-01 00:00:00')
-    },
-    {
-        id: 1,
-        url: '/community/noticeDetail',
-        subject: '5일 어린이날 배송 지연 안내',
-        usename: '펫밀리',
-        createDate: new Date('2023-01-01 00:00:00')
-    },
-    {
-        id: 2,
-        url: '/community/noticeDetail',
-        subject: '2022년 설 배송 지연 및 휴무 안내',
-        usename: '펫밀리',
-        createDate: new Date('2023-01-01 00:00:00')
-    },
-    {
-        id: 3,
-        url: '/community/noticeDetail',
-        subject: '플러스친구 쿠폰 받으세요',
-        usename: '펫밀리',
-        createDate: new Date('2023-01-01 00:00:00')
-    },
-    {
-        id: 4,
-        url: '/community/noticeDetail',
-        subject: '크리스마스 배송 지연 안내',
-        usename: '펫밀리',
-        createDate: new Date('2023-01-01 00:00:00')
-    }
-];
+import SearchedNotices from "./SearchedNotices";
 
 export default function Notice() {
 
@@ -55,38 +19,17 @@ export default function Notice() {
                 </ul>
             </div> {/* commnunityList */}
 
-            <div className="boardList">
-                <table>
-                    <colgroup>
-                        <col className="attr1" />
-                        <col className="attr2" />
-                        <col className="attr3" />
-                    </colgroup>
-                    <tr>
-                        <th>제목</th>
-                        <th>글쓴이</th>
-                        <th>작성일</th>
-                    </tr>
+            <SearchedNotices />
 
-                    {noticeData.map((notice) =>
-                        <tr>
-                            <td><Link to={notice.url}>{notice.subject}</Link></td>
-                            <td>{notice.usename}</td>
-                            <td>{notice.createDate.toDateString()}</td>
-                        </tr>
-                    )}
-                </table>
-            </div> {/* boardList */}
-
-            <div className="search">
+            <div name="search" className="search">
                 <form action="#">
                     <div className="searchConditions">
                         <div>
                             <select name="searchPeriod">
+                                <option value="all">전체</option>
                                 <option value="week">일주일</option>
                                 <option value="month">한달</option>
                                 <option value="firstQuarter">세달</option>
-                                <option value="all">전체</option>
                             </select>
                             <select name="searchCriteria">
                                 <option value="subject">제목</option>
@@ -97,7 +40,7 @@ export default function Notice() {
                     </div>
                     <div className="searchInput">
                         <div>
-                            <input name="searchWord" type="text" />
+                            <input className="searchWord" name="searchWord" type="text" />
                             <input type="submit" value="검색" />
                         </div>
                     </div>
@@ -114,3 +57,4 @@ export default function Notice() {
         </div>
     )
 }
+

@@ -8,7 +8,10 @@
     font-size: 14px;
     margin: auto;
 }
-
+.Findpw h1{
+    margin: 60px auto;
+    text-align: center;
+}
 
 .find_PW {
     width: 400px;

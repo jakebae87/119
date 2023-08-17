@@ -1,4 +1,9 @@
 /* ==================== individual product area ==================== */
+.ProductItem * {
+    margin: 0;
+    padding: 0;
+}
+
 .ProductItem {
     width: calc(100%/3.3);
     margin-bottom: 40px;
@@ -19,31 +24,31 @@
     border: 1px solid silver;
 }
 
-.productName a {
+.ProductItem .productName a {
     color: rgb(25, 50, 100);
 }
 
-.productName,
-.productPrice {
+.ProductItem .productName,
+.ProductItem .productPrice {
     padding: 2.5px 0;
     font-weight: bold;
 }
 
-.productComments {
+.ProductItem .productComments {
     font-size: 0.8em;
 }
 
-.productComments span {
+.ProductItem .productComments span {
     color: red;
 }
 
-.discount {
+.ProductItem .discount {
     text-decoration: line-through;
     color: gray;
 }
 
 /* ==================== goto cart image ==================== */
-.gotoCart>a img {
+.ProductItem .gotoCart>a img {
     width: 30px;
     height: 30px;
     margin: 2.5px 0;

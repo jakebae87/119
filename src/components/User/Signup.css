@@ -8,7 +8,16 @@
     /* font-size: 14px; */
     margin: auto;
 }
-
+.Signup h1{
+    margin: 60px auto;
+    text-align: center;
+}
+.emessage {
+    color: red;
+    font-size: x-small;
+    font-style: italic;
+    margin-left: 10px;
+}
 .sign_up {
     width: 700px;
     padding: 0 40px 60px 40px;

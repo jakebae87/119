@@ -1,6 +1,12 @@
 /* 장바구니 */
+.Cart * {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 .Cart {
-  height: 650px;
+  height: 700px;
 }
 
 .titleArea {
@@ -36,11 +42,16 @@
   background-color: rgb(16, 40, 102);
 }
 
+/* 장바구니 영역 */
+.cartMain {
+  height: auto;
+}
+
 /* 장바구니에 담긴 상품*/
 .cartProduct {
   width: 1120px;
-  margin: auto;
-  height: 200px;
+  margin: auto auto 10px auto;
+  height: auto;
   text-align: center;
 }
 .cartProduct > p {
@@ -92,7 +103,7 @@
 /* 주문버튼 */
 .cartOrder {
   text-align: center;
-  height: 70px;
+  line-height: 70px;
 }
 
 .allOrder,
@@ -117,7 +128,7 @@
 /* 이용안내 */
 .Guide {
   width: 1120px;
-  margin: 30px auto 30px;
+  margin: 10px auto 10px;
   border: 1px solid;
   font-size: 1em;
 }

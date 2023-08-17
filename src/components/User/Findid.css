@@ -9,6 +9,11 @@
     margin: auto;
 }
 
+.Findid h1{
+    margin: 60px auto;
+    text-align: center;
+}
+
 .find_ID {
     width: 400px;
     padding: 0 40px 60px 40px;

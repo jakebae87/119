@@ -1,3 +1,9 @@
+.Order * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 /* 주문진행도 */
 .cartProcess,
 .cartProcess2 {
@@ -60,7 +66,7 @@
 }
 
 /* 주문내역 */
-.cartInfo {
+.orderCartInfo {
   width: 1120px;
   margin: auto;
   border: 1px solid gray;
@@ -68,8 +74,8 @@
   text-align: center;
 }
 
-.cartInfo tbody,
-.cartInfo tfoot {
+.orderCartInfo tbody,
+.orderCartInfo tfoot {
   border-top: 1px solid black;
 }
 
@@ -77,12 +83,12 @@
   width: 100px;
 }
 
-.cartInfo tbody td {
+.orderCartInfo tbody td {
   height: 150px;
 }
 
-.cartInfo thead,
-.cartInfo tfoot {
+.orderCartInfo thead,
+.orderCartInfo tfoot {
   height: 50px;
 }
 
@@ -170,7 +176,7 @@
 }
 
 .deliveryInfo textarea {
-  width: 60vw;
+  width: 70%;
 }
 
 .emailAlert {

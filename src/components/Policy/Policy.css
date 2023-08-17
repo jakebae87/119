@@ -1,4 +1,14 @@
-.Guide {
+.Guide hr,
+.Privacy hr,
+.Refund hr,
+.Tos hr {
+    margin-bottom: 30px;
+}
+
+.Guide,
+.Privacy,
+.Refund,
+.Tos {
     width: 1120px;
     margin: auto;
 }
@@ -49,11 +59,4 @@
 
 .nonScrollBox p {
     margin-bottom: 20px;
-}
-
-.Guide hr,
-.Privacy hr,
-.Refund hr,
-.Tos hr {
-    margin-bottom: 30px;
 }

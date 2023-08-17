@@ -5,12 +5,17 @@
 }
 
 .Login {
-    font-size: 14px;
+    /* font-size: 14px; */
     margin: auto;
+    /* margin-top: 100px; */
+}
+.Login h1{
+    margin: 60px auto;
+    text-align: center;
 }
 
-
 .login_ {
+    
     width: 400px;
     padding: 0 40px 60px 40px;
     box-sizing: border-box;
@@ -74,7 +79,7 @@
     background-color: green;
 }
 
-.login_ li>a {
+.login_ li {
     text-decoration: none;
     color: #9B9B9B;
     font-size: 12.8px;

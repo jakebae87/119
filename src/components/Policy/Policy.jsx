@@ -1,3 +1,4 @@
+import "./Policy.css";
 import { Route, Routes } from "react-router-dom";
 
 import ToS from "./ToS";
@@ -8,10 +9,10 @@ import Refund from "./Refund";
 function Policy() {
     return (
         <Routes>
-            <Route path="/ToS" element={<ToS />} />
-            <Route path="/Privacy" element={<Privacy />} />
-            <Route path="/Guide" element={<Guide />} />
-            <Route path="/Refund" element={<Refund />} />
+            <Route path="/tos" element={<ToS />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/guide" element={<Guide />} />
+            <Route path="/refund" element={<Refund />} />
         </Routes>
     );
 }

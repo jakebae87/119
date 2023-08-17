@@ -19,10 +19,10 @@ function Footer() {
         <div>
           <h3>POLICY</h3>
           <ul>
-            <li><Link to="/Policy/ToS">이용약관</Link></li>
-            <li><Link to="/Policy/Privacy">개인정보처리방침</Link></li>
-            <li><Link to="/Policy/Guide">이용안내</Link></li>
-            <li><Link to="/Policy/Refund">반품, 환불규정</Link></li>
+            <li><Link to="/policy/tos">이용약관</Link></li>
+            <li><Link to="/policy/privacy">개인정보처리방침</Link></li>
+            <li><Link to="/policy/guide">이용안내</Link></li>
+            <li><Link to="/policy/refund">반품, 환불규정</Link></li>
           </ul>
         </div>
 
@@ -40,4 +40,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default React.memo(Footer);

@@ -1,25 +1,37 @@
 import "./ProductDetail.css";
 import "../../App.css";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import detailImage from "../../assets/Images/productDetail1.jpg";
 import "https://kit.fontawesome.com/f060eab6a5.js";
+
+// Mock Data
+import mockData from "../MockData/MockData_Products";
 
 // 이미지
 import product1 from "../../assets/Images/product1.jpg";
 
 export default function ProductDetail() {
+
+  const { id } = useParams();
+  const product = mockData.find((item) => item.id === parseInt(id));
+
   return (
     <div className="ProductDetail">
       <div className="productPage">
         <div className="productImage">
-          <img src={product1} alt="product1" />
+          <img
+            src={product.img}
+            alt="product1"
+            width={"500px"}
+            height={"400px"}
+          />
         </div>
         <table className="productInfo">
           <tbody>
             <tr>
               <th>상품명</th>
-              <td>강아지 사료</td>
+              <td>{product.title}</td>
             </tr>
             <tr>
               <th>원산지</th>
@@ -27,7 +39,7 @@ export default function ProductDetail() {
             </tr>
             <tr>
               <th>가격</th>
-              <td>34,000원</td>
+              <td>{product.price}</td>
             </tr>
             <tr>
               <th>수량</th>
@@ -47,12 +59,12 @@ export default function ProductDetail() {
             </tr>
             <tr>
               <td colSpan="2">
-                <Link to="/order">
+                <Link to={`/order/${id}`}>
                   <a href="" className="buySoon">
                     바로구매하기
                   </a>
                 </Link>
-                <Link to="/">
+                <Link to={`/cart/${id}`}>
                   <a href="" className="buyCart">
                     장바구니
                   </a>
@@ -64,20 +76,22 @@ export default function ProductDetail() {
       </div>
 
       <div className="productDetailPage">
-        <ul className="productDetailMenu">
-          <li>
-            <a href="#productDetailImg">상품정보</a>
-          </li>
-          <li>
-            <a href="#productReview">리뷰</a>
-          </li>
-          <li>
-            <a href="#productQA">Q&A</a>
-          </li>
-          <li>
-            <a href="#buyGuide">구매안내</a>
-          </li>
-        </ul>
+        <div className="productDetailnav">
+          <ul className="productDetailMenu">
+            <li>
+              <a href="#productDetailImg">상품정보</a>
+            </li>
+            <li>
+              <a href="#productReview">리뷰</a>
+            </li>
+            <li>
+              <a href="#productQA">Q&A</a>
+            </li>
+            <li>
+              <a href="#buyGuide">구매안내</a>
+            </li>
+          </ul>
+        </div>
         <div id="productDetailImg" className="productDetailImg">
           <img src={detailImage} className="detailImage" alt="productDetail1" />
         </div>
@@ -313,9 +327,8 @@ export default function ProductDetail() {
         <div id="buyGuide" className="buyGuide">
           <div className="buyGuide">
             <div className="returnInfo">
-              <h4 className="tit">반품/교환 정보</h4>
-              <table className="prdc_detail_table">
-                <caption>반품/교환 정보 테이블</caption>
+              <h2 className="returnTitle">반품/교환 정보</h2>
+              <table className="returnInfoTable">
                 <colgroup>
                   <col style={{ width: "18%" }} />
                   <col />
@@ -339,42 +352,41 @@ export default function ProductDetail() {
                 </tbody>
               </table>
 
-              <h4 className="tit">반품/교환 기준</h4>
-              <div className="b_product_info_cont">
-                <p className="c_product_info_cont">
+              <h2 className="returnTitle">반품/교환 기준</h2>
+              <div className="returnStandard">
+                <p className="returnStandardTitle">
                   상품 수령 후 7일 이내에 신청하실 수 있습니다. 단, 제품이
                   표시·광고 내용과 다르거나, 계약과 다르게 이행된 경우는 제품
                   수령일부터 3개월 이내, 그 사실을 안 날 또는 알 수 있었던
                   날부터 30일 이내에 교환/반품이 가능합니다.
                 </p>
-                <dl className="c_product_info_list">
+                <dl className="returnStandardList">
                   <dt>
-                    추가적으로 다음의 경우 해당하는 반품/교환은 신청이 불가능할
-                    수 있습니다.
+                    ⦁ 추가적으로 다음의 경우 해당하는 반품/교환은 신청이
+                    불가능할 수 있습니다.
                   </dt>
                   <dd>
-                    소비자의 책임 있는 사유로 상품 등이 멸실 또는 훼손된 경우
+                    - 소비자의 책임 있는 사유로 상품 등이 멸실 또는 훼손된 경우
                     (단지, 상품 확인을 위한 포장 훼손 제외)
                   </dd>
                   <dd>
-                    소비자의 사용 또는 소비에 의해 상품 등의 가치가 현저히
+                    - 소비자의 사용 또는 소비에 의해 상품 등의 가치가 현저히
                     감소한 경우
                   </dd>
                   <dd>
-                    시간의 경과에 의해 재판매가 곤란할 정도로 상품 등의 가치가
+                    - 시간의 경과에 의해 재판매가 곤란할 정도로 상품 등의 가치가
                     현저히 감소한 경우
                   </dd>
-                  <dd>복제가 가능한 상품 등의 포장을 훼손한 경우</dd>
+                  <dd>- 복제가 가능한 상품 등의 포장을 훼손한 경우</dd>
                   <dd>
-                    소비자의 주문에 따라 개별적으로 생산되는 상품이 제작에
+                    - 소비자의 주문에 따라 개별적으로 생산되는 상품이 제작에
                     들어간 경우
                   </dd>
                 </dl>
               </div>
 
-              <h4 className="tit">판매자정보</h4>
-              <table className="prdc_detail_table">
-                <caption>판매자정보 테이블</caption>
+              <h2 className="returnTitle">판매자정보</h2>
+              <table className="sellerTable">
                 <colgroup>
                   <col style={{ width: "18%" }} />
                   <col style={{ width: "32%" }} />
@@ -384,91 +396,78 @@ export default function ProductDetail() {
                 <tbody>
                   <tr>
                     <th scope="row">판매자</th>
-                    <td>폰마블</td>
+                    <td>Petmily</td>
                     <th scope="row">상호명/대표자</th>
-                    <td>주식회사 마블프로듀스 │ 전현준</td>
+                    <td>주식회사 Petmily │ XXX</td>
                   </tr>
-
                   <tr>
                     <th scope="row">사업자구분</th>
                     <td>법인사업자 </td>
-
                     <th scope="row">고객문의 대표번호</th>
-                    <td>1833-3454</td>
+                    <td>XXXX-XXXX</td>
                   </tr>
-
                   <tr>
                     <th scope="row">사업자등록번호</th>
-                    <td>5298100403</td>
-
+                    <td>XXXXXXXXXX</td>
                     <th scope="row">통신판매업신고</th>
-                    <td>2021-서울금천-1539</td>
+                    <td>2023-경기성남-XXXX</td>
                   </tr>
                   <tr>
                     <th scope="row">E-Mail</th>
-                    <td>marvelproduce@naver.com</td>
-
+                    <td>petmily@petmily.com</td>
                     <th scope="row">고객문의 가능시간</th>
-                    <td>10시 ~ 17시 (점심시간, 토요일, 일요일, 공휴일 제외)</td>
+                    <td>9시 ~ 17시 (점심시간, 토요일, 일요일, 공휴일 제외)</td>
                   </tr>
-
                   <tr>
                     <th scope="row">영업소재지</th>
-                    <td colspan="3">
-                      서울특별시 금천구 가산디지털1로 168
-                      (가산동,우림라이온스밸리) B동 710호, 711호
-                    </td>
+                    <td colspan="3">XX시 XX구 XX동 XXX</td>
                   </tr>
                 </tbody>
               </table>
-              <div className="btm_txt cfix">
-                <p className="info03">
-                  11번가 결제대금예치업 등록번호: 02-006-00022
+              <div className="payDeposit">
+                <p className="registNum">
+                  펫밀리 결제대금예치업 등록번호: XX-XXX-XXXXX
                 </p>
-                <ul className="dot">
+                <ul className="payDepositList">
                   <li>
-                    <span className="ico"></span>11번가는 전자금융거래법에 따라
-                    금융감독(원)위원회에 결제대금예치업을
-                    등록(등록번호:02-006-000022)하였으며, 모든 입점 판매자는
-                    자동적으로 동 서비스에 가입하였습니다.
+                    펫밀리는 전자금융거래법에 따라 금융감독(원)위원회에
+                    결제대금예치업을 등록(등록번호:XX-XXX-XXXXX)하였으며, 모든
+                    입점 판매자는 자동적으로 동 서비스에 가입하였습니다.
                   </li>
                   <li>
-                    <span className="ico"></span>본 판매자는 고객님의 안전거래를
-                    위해 구매금액, 결제수단에 상관없이 모든 거래에 대하여 저희
-                    11번가 쇼핑몰이 가입한 11번가(주)의 구매안전 서비스를
-                    자동으로 적용하고 있습니다.
+                    본 판매자는 고객님의 안전거래를 위해 구매금액, 결제수단에
+                    상관없이 모든 거래에 대하여 저희 펫밀리 쇼핑몰이 가입한
+                    펫밀리(주)의 구매안전 서비스를 자동으로 적용하고 있습니다.
                   </li>
                 </ul>
               </div>
 
-              <h4 className="tit">구매시 주의사항</h4>
-              <div className="list_wrap">
-                <ul className="dot">
+              <h2 className="returnTitle">구매시 주의사항</h2>
+              <div className="precaution">
+                <ul className="PrecautionsList">
                   <li>
-                    <span className="ico"></span>「전자상거래 등에서의
-                    소비자보호에 관한 법률」에 의한 반품규정이 판매자가 지정한
-                    반품조건보다 우선합니다.
+                    ⦁ 「전자상거래 등에서의 소비자보호에 관한 법률」에 의한
+                    반품규정이 판매자가 지정한 반품조건보다 우선합니다.
                   </li>
                   <li>
-                    <span className="ico"></span>미성년자가 물품을 구매하는
-                    경우, 법정대리인이 동의하지 않으면 미성년자 본인 또는
-                    법정대리인이 구매를 취소할 수 있습니다.
+                    ⦁ 미성년자가 물품을 구매하는 경우, 법정대리인이 동의하지
+                    않으면 미성년자 본인 또는 법정대리인이 구매를 취소할 수
+                    있습니다.
                   </li>
                   <li>
-                    <span className="ico"></span>공산품, 전기용품 등 인증대상
-                    상품을 구매하실 경우 '전기용품 및 생활용품 안전관리법' 등
-                    관련 법률에 따라 허가 받은 상품인지 확인하시기 바랍니다.
+                    ⦁ 공산품, 전기용품 등 인증대상 상품을 구매하실 경우
+                    '전기용품 및 생활용품 안전관리법' 등 관련 법률에 따라 허가
+                    받은 상품인지 확인하시기 바랍니다.
                   </li>
                   <li>
-                    <span className="ico"></span>11번가의 결제시스템을 이용하지
-                    않고 판매자와 직접거래 하실 경우 상품을 받지 못하거나.
-                    구매한 상품과 상이한 상품을 받는 등 피해가 발생 할 수 있으니
-                    유의하시기 바랍니다.
+                    ⦁ 펫밀리의 결제시스템을 이용하지 않고 판매자와 직접거래 하실
+                    경우 상품을 받지 못하거나. 구매한 상품과 상이한 상품을 받는
+                    등 피해가 발생 할 수 있으니 유의하시기 바랍니다.
                   </li>
                   <li>
-                    <span className="ico"></span>등록된 판매물품과 내용은
-                    판매자가 등록한 것으로 11번가(주)가 운영하는 11번가에 등록된
-                    내용에 대하여 일체의 책임을 지지 않습니다.
+                    ⦁ 등록된 판매물품과 내용은 판매자가 등록한 것으로
+                    펫밀리(주)가 운영하는 펫밀리에 등록된 내용에 대하여 일체의
+                    책임을 지지 않습니다.
                   </li>
                 </ul>
               </div>

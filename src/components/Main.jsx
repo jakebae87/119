@@ -5,6 +5,10 @@ import Home from "./Home/Home";
 
 // Products
 import Products from "./Products/Products";
+import SearchedProducts from "./Products/SearchedProducts";
+import NewProducts from "./Products/NewProducts";
+import PopularProducts from "./Products/PopularProducts";
+import DiscountedProducts from "./Products/DiscountedProducts";
 import ProductDetail from "./Products/ProductDetail";
 
 // Policy
@@ -26,11 +30,11 @@ import Success from "./User/Success";
 // Community
 import Community from "./Community/Community";
 
-// Event
-import Event from "./Event/Event";
-
 // Board
 import Board from "./Board/Board";
+
+// Event
+import Event from "./Event/Event";
 
 function Main() {
     return (
@@ -40,18 +44,22 @@ function Main() {
                 <Route path="/" element={<Home />} />
 
                 {/* Product */}
-                <Route path="/products" element={<Products />} />
-                <Route path="/productdetail" element={<ProductDetail />} />
+                <Route path="/products/:kind/:category" element={<Products />} />
+                <Route path="/products/searchedproducts" element={<SearchedProducts />} />
+                <Route path="/products/newproducts" element={<NewProducts />} />
+                <Route path="/products/popularproducts" element={<PopularProducts />} />
+                <Route path="/products/discountedproducts" element={<DiscountedProducts />} />
+                <Route path="/productdetail/:id" element={<ProductDetail />} />
 
                 {/* Policy */}
                 <Route path="/policy/*" element={<Policy />} />
 
                 {/* User */}
-                <Route path="/cart" element={<Cart />} />
+                <Route path="/cart/:id" element={<Cart />} />
                 <Route path="/mypage" element={<MyPage />} />
                 <Route path="/mypage/myprofile" element={<Profile />} />
                 <Route path="/mypage/manageboard" element={<ManageBoard />} />
-                <Route path="/order" element={<Order />} />
+                <Route path="/order/:id" element={<Order />} />
                 <Route path="/orderlist" element={<OrderList />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/login" element={<Login />} />
@@ -62,12 +70,11 @@ function Main() {
                 {/* Community */}
                 <Route path="/community/*" element={<Community />} />
 
-                {/* Event */}
-                <Route path="/event" element={<Event />} />
-
                 {/* Board */}
                 <Route path="/board/*" element={<Board />} />
 
+                {/* Event */}
+                <Route path="/event" element={<Event />} />
             </Routes>
         </div>
     );

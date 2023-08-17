@@ -1,4 +1,3 @@
-import "./Policy.css";
 import React from "react";
 
 function Refund() {

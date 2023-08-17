@@ -1,92 +1,73 @@
-import React, { useState, useEffect, useRef } from 'react';
+import './ImageSlider.css'; // 이미지 슬라이더 스타일링을 위한 CSS 파일을 임포트하세요.
+import React, { useState, useEffect } from 'react';
 
+// 이미지
 import prom_img1 from '../../assets/Images/prom_img1.jpg';
 import prom_img2 from '../../assets/Images/prom_img2.jpg';
 import prom_img3 from '../../assets/Images/prom_img3.jpg';
 import prom_img4 from '../../assets/Images/prom_img4.jpg';
 import prom_img5 from '../../assets/Images/prom_img5.jpg';
 
-const ImageSlider = () => {
-    const images = [
-        prom_img1,
-        prom_img2,
-        prom_img3,
-        prom_img4,
-        prom_img5,
-    ];
+const images = [
+    prom_img1,
+    prom_img2,
+    prom_img3,
+    prom_img4,
+    prom_img5
+];
 
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [isHovered, setIsHovered] = useState(false);
-    const slideContainerRef = useRef(null);
+const ImageSlider = () => {
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    const nextImage = () => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    };
+
+    const prevImage = () => {
+        setCurrentImageIndex((prevIndex) =>
+            prevIndex === 0 ? images.length - 1 : prevIndex - 1
+        );
+    };
+
+    const goToImage = (index) => {
+        setCurrentImageIndex(index);
+    };
 
     useEffect(() => {
-        const slideTimer = setInterval(() => {
-            if (!isHovered) {
-                nextSlide();
-            }
-        }, 3000);
-
-        return () => {
-            clearInterval(slideTimer);
-        };
-    }, [isHovered]);
-
-    const nextSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    };
-
-    const goToSlide = (index) => {
-        setCurrentIndex(index);
-    };
-
-    const handleMouseEnter = () => {
-        setIsHovered(true);
-    };
-
-    const handleMouseLeave = () => {
-        setIsHovered(false);
-    };
+        const interval = setInterval(nextImage, 5000);
+        return () => clearInterval(interval);
+    }, []);
 
     return (
-        <div
-            className="slide_container"
-            ref={slideContainerRef}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-        >
-            <ul className="slide_list">
+        <div className="ImageSlider">
+            <div className="slider-container">
                 {images.map((image, index) => (
-                    <li
+                    <div
                         key={index}
-                        className={index === currentIndex ? 'active' : ''}
-                        style={{
-                            transform: `translateX(${100 * (index - (currentIndex + 1))
-                                }%)`,
-                            transition: 'transform 0.5s ease-in-out',
-                        }}
+                        className={`slider-image ${index === currentImageIndex ? 'active' : ''
+                            }`}
                     >
-                        <img src={image} alt={`bg${index + 1}`} />
-                    </li>
+                        <img src={image} alt={`Slide ${index}`} />
+                    </div>
                 ))}
-            </ul>
 
-            <div className="pageOfPages">
-                <a href="/eventboard">
-                    {currentIndex + 1} / {images.length}
-                </a>
-            </div>
-            <div className="pager">
-                {images.map((_, index) => (
-                    // eslint-disable-next-line jsx-a11y/anchor-is-valid
-                    <a
-                        key={index}
-                        href="#"
-                        className={currentIndex === index ? 'active' : ''}
-                        onClick={() => goToSlide(index)}
-                    >
-                        /
-                    </a>
-                ))}
+                <div className="slider-controls">
+                    <button className="prev-button" onClick={prevImage}>
+                        &#x2039;
+                    </button>
+                    <div className="dots">
+                        {images.map((_, index) => (
+                            <div
+                                key={index}
+                                className={`dot ${index === currentImageIndex ? 'active' : ''}`}
+                                onClick={() => goToImage(index)}
+                            />
+                        ))}
+                    </div>
+                    <button className="next-button" onClick={nextImage}>
+                        &#x203a;
+                    </button>
+                </div>
             </div>
         </div>
     );

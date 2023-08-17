@@ -4,6 +4,7 @@ import './CommnunityDetail.css';
 import { Route, Routes } from "react-router-dom";
 
 import Notice from "./Notice";
+import SearchedNotices from "./SearchedNotices";
 import NoticeDetail from "./NoticeDetail";
 import Inquiry from "./Inquiry";
 import InquiryDetail from "./InquiryDetail";
@@ -16,6 +17,7 @@ export default function Community() {
     return (
         <Routes>
             <Route path="/notice" element={<Notice />} />
+            <Route path="/notice/searchNotices" element={<SearchedNotices />} />
             <Route path="/noticeDetail" element={<NoticeDetail />} />
             <Route path="/inquiry" element={<Inquiry />} />
             <Route path="/inquiryDetail" element={<InquiryDetail />} />

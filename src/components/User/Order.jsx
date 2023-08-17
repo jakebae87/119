@@ -1,10 +1,15 @@
 import "./Order.css";
 import React from "react";
+import { useParams } from "react-router-dom";
 
-// 이미지
-import product1 from "../../assets/Images/product1.jpg";
+// Mock Data
+import mockData from "../MockData/MockData_Products";
 
 export default function Order() {
+
+  const { id } = useParams();
+  const product = mockData.find((item) => item.id === parseInt(id));
+
   return (
     <div className="Order">
       <div className="orderTitleArea">
@@ -17,7 +22,7 @@ export default function Order() {
       </div>
       <div className="orderListArea">
         <div>
-          <table className="cartInfo">
+          <table className="orderCartInfo">
             <colgroup>
               <col style={{ width: 100 }} />
               <col style={{ width: 180 }} />
@@ -47,20 +52,20 @@ export default function Order() {
                 </td>
                 <td>
                   <div className="cartImage">
-                    <img src={product1} alt="product1Img" />{" "}
+                    <img src={product.img} alt="product1" />
                   </div>
                 </td>
                 <td>
-                  <span>강아지 사료</span>
+                  <span>{product.title}</span>
                 </td>
                 <td>
-                  <span>34,000원</span>
+                  <span>{product.price}</span>
                 </td>
                 <td>
-                  <span>2</span>
+                  <span>1</span>
                 </td>
                 <td>
-                  <span>68,000원</span>
+                  <span>{product.price}</span>
                 </td>
                 <td>
                   <button
@@ -78,12 +83,12 @@ export default function Order() {
                 <th colspan="7">
                   <span>상품구매금액 </span>
                   <strong>
-                    <span>68,000</span>원
+                    <span>{product.price}</span>원
                   </strong>
                   <span> + 배송비 3000원 = </span>
                   <span>합계 : </span>
                   <strong>
-                    <span>71,000</span>원
+                    <span>{product.price + 3000}</span>원
                   </strong>
                 </th>
               </tr>
@@ -325,13 +330,13 @@ export default function Order() {
               <tbody>
                 <tr>
                   <td>
-                    <span>71,000</span>원
+                    <span>{product.price + 3000}</span>원
                   </td>
                   <td>
                     -<span>0</span>원
                   </td>
                   <td>
-                    <span>71,000</span>원
+                    <span>{product.price + 3000}</span>원
                   </td>
                 </tr>
               </tbody>

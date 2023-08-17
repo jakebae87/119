@@ -1,10 +1,14 @@
 import "./Cart.css";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
-// 이미지
-import product1 from "../../assets/Images/product1.jpg";
+// Mock Data
+import mockData from "../MockData/MockData_Products";
 
 export default function Cart() {
+
+  const { id } = useParams();
+  const product = mockData.find((item) => item.id === parseInt(id));
+
   return (
     <div className="Cart">
       <div className="titleArea">
@@ -53,20 +57,20 @@ export default function Cart() {
                 </td>
                 <td>
                   <div className="cartImage">
-                    <img src={product1} alt="product1Img" />
+                    <img src={product.img} alt="product1" />
                   </div>
                 </td>
                 <td>
-                  <span>강아지 사료</span>
+                  <span>{product.title}</span>
                 </td>
                 <td>
-                  <span>34,000원</span>
+                  <span>{product.price}</span>
                 </td>
                 <td>
-                  <span>2</span>
+                  <span>1</span>
                 </td>
                 <td>
-                  <span>68,000원</span>
+                  <span>{product.price}</span>
                 </td>
                 <td>
                   <Link to="/order">
@@ -89,12 +93,12 @@ export default function Cart() {
                 <th colspan="7">
                   <span>상품구매금액 </span>
                   <strong>
-                    <span className="productPrice">68,000</span>원
+                    <span className="productPrice">{product.price}</span>원
                   </strong>
                   <span className="deliveryPrice"> + 배송비 3000원 = </span>
                   <span>합계 : </span>
                   <strong>
-                    <span className="cartPrice">71,000</span>원
+                    <span className="cartPrice">{product.price + 3000}</span>원
                   </strong>
                 </th>
               </tr>
@@ -102,12 +106,12 @@ export default function Cart() {
           </table>
         </div>
         <div className="cartOrder">
-          <Link to="/order">
+          <Link to={`/order/${id}`}>
             <a className="allOrder" href>
               전체상품주문
             </a>
           </Link>
-          <Link to="/order">
+          <Link to={`/order/${id}`}>
             <a className="selectOrder">선택상품주문</a>
           </Link>
           <Link>
