@@ -1,0 +1,91 @@
+main {
+    width: 1120px;
+    margin: auto;
+}
+
+
+/* ==================== product list area ==================== */
+.productList {
+    margin: 40px 0;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+/* ==================== individual product area ==================== */
+.product {
+    width: calc(100%/3.3);
+    margin-bottom: 40px;
+}
+
+.product>div {
+    margin: 0 10px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.product>a img {
+    width: 100%;
+    height: 300px;
+
+    box-sizing: border-box;
+    border: 1px solid silver;
+}
+
+.productName a {
+    color: rgb(25, 50, 100);
+}
+
+.productName,
+.productPrice {
+    padding: 2.5px 0;
+    font-weight: bold;
+}
+
+.productComments {
+    font-size: 0.8em;
+}
+
+.productComments span {
+    color: red;
+}
+
+.discount {
+    text-decoration: line-through;
+    color: gray;
+}
+
+/* ==================== goto cart image ==================== */
+.gotoCart>a img {
+    width: 30px;
+    height: 30px;
+    margin: 2.5px 0;
+}
+
+
+/* ==================== Classification with product category ==================== */
+.productClassification ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.productClassification li {
+    width: fit-content;
+    height: 50px;
+    line-height: 50px;
+}
+
+.productClassification a {
+    text-align: center;
+    font-weight: bold;
+    color: silver;
+}
+
+.productClassification a[href=""],
+.productClassification a:hover {
+    color: black;
+}

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Petmily</title>
+
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+
+    <link rel="stylesheet" href="./board.css">
+</head>
+
+<body>
+    <header>
+        <div class="headerTOP">
+            <div class="topLogo">
+                <span>Petmily</span>
+                <a href="../../index.html">
+                    <img src="../../image/Petmily_logo.png" alt="Petmily_logo">
+                </a>
+            </div>
+
+            <div class="searchBox">
+                <form action="../../html/category/cate_search.html" method="get">
+                    <fieldset>
+                        <input type="text" maxlength="20" placeholder="검색어 입력" name="search" />
+                        <button type="submit">
+                            <img src="../../image/magnifying-glass-30.png" alt="돋보기 이미지">
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="userMenu">
+                <a href="../../html/user/login.html">로그인</a>
+                <a href="../../html/user/signup.html">회원가입</a>
+                <a href="../../html/user/mypage.html">마이페이지</a>
+                <a href="../../html/user/cart.html">장바구니</a>
+            </div>
+        </div>
+
+        <div class="headerBottom">
+            <nav>
+                <ul class="mainMenu">
+                    <li>
+                        <input type="checkbox" id="sideBtn" />
+                        <label for="sideBtn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </label>
+
+                        <ul class="sideMenu">
+                            <li>
+                                <ul>
+                                    <li><a href="../../html/category/cate_new.html">신상품</a></li>
+                                    <li><a href="../../html/category/cate_best.html">인기상품</a></li>
+                                    <li><a href="../../html/category/cate_dog.html">강아지</a></li>
+                                    <li><a href="../../html/category/cate_cat.html">고양이</a></li>
+                                    <li><a href="../../html/category/cate_feed.html">사료</a></li>
+                                    <li><a href="../../html/category/cate_snackNutrient.html">간식/영양제</a></li>
+                                    <li><a href="../../html/category/cate_hygiene.html">위생</a></li>
+                                    <li><a href="../../html/category/cate_beautyCare.html">미용/케어</a></li>
+                                    <li><a href="../../html/category/cate_living.html">리빙</a></li>
+                                    <li><a href="../../html/category/cate_walkPlay.html">산책/놀이</a></li>
+                                    <li><a href="../../html/category/cate_clothesAccessorie.html">의류/악세사리</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <ul>
+                                    <li><a href="../../html/community/notice.html">공지사항</a></li>
+                                    <li><a href="../../html/community/inquiry.html">상품문의</a></li>
+                                    <li><a href="../../html/community/review.html">상품후기</a></li>
+                                    <li><a href="../../html/community/faq.html">자주묻는질문</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><a href="../../html/category/cate_feed.html">전체상품</a>
+                        <ul class="subMenu">
+                            <li><a href="../../html/category/cate_new.html">신상품</a></li>
+                            <li><a href="../../html/category/cate_best.html">인기상품</a></li>
+                            <li><a href="../../html/category/cate_dog.html">강아지</a></li>
+                            <li><a href="../../html/category/cate_cat.html">고양이</a></li>
+                            <li><a href="../../html/category/cate_feed.html">사료</a></li>
+                            <li><a href="../../html/category/cate_snackNutrient.html">간식/영양제</a></li>
+                            <li><a href="../../html/category/cate_hygiene.html">위생</a></li>
+                            <li><a href="../../html/category/cate_beautyCare.html">미용/케어</a></li>
+                            <li><a href="../../html/category/cate_living.html">리빙</a></li>
+                            <li><a href="../../html/category/cate_walkPlay.html">산책/놀이</a></li>
+                            <li><a href="../../html/category/cate_clothesAccessorie.html">의류/악세사리</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="../../html/community/notice.html">커뮤니티</a>
+                        <ul class="subMenu">
+                            <li><a href="../../html/community/notice.html">공지사항</a></li>
+                            <li><a href="../../html/community/inquiry.html">상품문의</a></li>
+                            <li><a href="../../html/community/review.html">상품후기</a></li>
+                            <li><a href="../../html/community/faq.html">자주묻는질문</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../html/community/event.html">이벤트</a></li>
+                    <li><a href="../../html/category/cate_discount.html">유통기한 할인</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="cateTitle">
+            <h1>상품문의</h1>
+        </div>
+        <div>
+
+            <div class="selectStarRegist">   
+                <!--페이지 타입 설정-->
+                <select name="selectSubject" onchange="window.open(value,'_self');">
+                    <option value="./writeInquiry.html">상품문의</option>
+                    <option value="./writeReview.html">상품후기</option>
+                </select>
+
+                <!--게시글 등록 버튼-->
+                <div id="registButton">
+                    <input type="submit" form="submitBoard" value="등록">
+                </div>
+            </div>
+
+            <!--게시글 제목과 내용 입력란-->
+            <div>
+                <form action="#" id="submitBoard">
+                    <input id="title" name="title" type="text" placeholder="제목을 입력하세요." maxlength="100" required>
+
+                    <!-- 이미지 파일만 첨부할 수 있도록 accept 속성을 활용함 -->
+                    <input type="file" id="fileUpload" name="fileUpload" multiple
+                        accept="image/gif,image/jpeg,image/png">
+
+                    <!--썸네일 참고(https://sinna94.tistory.com/entry/JavaScript-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%97%85%EB%A1%9C%EB%93%9C-%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0-%EB%A7%8C%EB%93%A4%EA%B8%B0)-->
+                    <textarea id="contents" name="contents" rows="30" cols="100"></textarea>
+                </form>
+            </div>
+
+        </div>
+
+        <!--해당 페이지 목록으로 이동 버튼-->
+        <div id="bottomBoard">
+            <input type="button" value="목록" onclick="location.href='../../html/community/inquiry.html'">
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <h1>Petmily</h1>
+            <ul>
+                <li>Tel : XXX-XXX-XXXX</li>
+                <li>Email : Email@mail.com</li>
+                <li>Address : XX시 XX구 XX동 XXX</li>
+                <li>CEO : Jeonghyeon BaeㅣSora KimㅣHuisang EunㅣSeungho Choi</li>
+            </ul>
+        </div>
+
+        <div>
+            <div>
+                <h3>POLICY</h3>
+                <ul>
+                    <li></li>
+                    <li><a href="../../html/policy/ToS.html">이용약관</a></li>
+                    <li><a href="../../html/policy/privacy.html">개인정보처리방침</a></li>
+                    <li><a href="../../html/policy/guide.html">이용안내</a></li>
+                    <li><a href="../../html/policy/refund.html">반품, 환불규정</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>C/S CENTER</h3>
+                <ul>
+                    <li></li>
+                    <li>MON-FRIㅣ09:30 - 17:00</li>
+                    <li>LUNCH ㅣ 12:30 - 13:30</li>
+                    <li>SAT, SUN, HOLIDAY OFF</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

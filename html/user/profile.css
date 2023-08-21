@@ -1,0 +1,83 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+main {
+  font-size: 14px;
+  margin: auto;
+}
+
+/* 제목 */
+.profile_form h1 {
+  margin: 60px auto;
+  text-align: center;
+}
+
+/* 회원정보 */
+.profile_form {
+  width: 700px;
+  box-sizing: border-box;
+  margin: 0 auto 60px;
+  padding: 0 40px;
+}
+
+.table {
+  font-style: bold;
+  margin: 0 auto;
+}
+
+#profileForm tbody tr {
+  display: flex;
+  width: 580px;
+  margin: 10px 0;
+}
+
+#profileForm tr > th {
+  flex: 2;
+  text-align: left;
+  line-height: 48px;
+}
+
+#profileForm tr > td {
+  flex: 8;
+  white-space: nowrap;
+}
+
+.profile,
+.birth,
+.number {
+  display: inline-block;
+  white-space: nowrap;
+  height: 48px;
+  line-height: 48px;
+  border-radius: 6px;
+  background-color: #f8f8f8;
+}
+
+.profile {
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+/* 생년월일, 연락처 */
+.birth,
+.number {
+  width: 33%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* 수정하기 버튼 */
+.editBtn {
+  width: 580px;
+  display: inline-block;
+  height: 48px;
+  color: #ffffff;
+  font-size: 16px;
+  background-color: rgb(25, 50, 100);
+  margin-top: 20px;
+  border-radius: 6px;
+}
