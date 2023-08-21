@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Petmily</title>
+
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+
+    <link rel="stylesheet" href="./commnunity.css">
+    <!--Fontawesome script-->
+    <script src="https://kit.fontawesome.com/f060eab6a5.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="headerTOP">
+            <div class="topLogo">
+                <span>Petmily</span>
+                <a href="../../index.html">
+                    <img src="../../image/Petmily_logo.png" alt="Petmily_logo">
+                </a>
+            </div>
+
+            <div class="searchBox">
+                <form action="../../html/category/cate_search.html" method="get">
+                    <fieldset>
+                        <input type="text" maxlength="20" placeholder="검색어 입력" name="search" />
+                        <button type="submit">
+                            <img src="../../image/magnifying-glass-30.png" alt="돋보기 이미지">
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="userMenu">
+                <a href="../../html/user/login.html">로그인</a>
+                <a href="../../html/user/signup.html">회원가입</a>
+                <a href="../../html/user/mypage.html">마이페이지</a>
+                <a href="../../html/user/cart.html">장바구니</a>
+            </div>
+        </div>
+
+        <div class="headerBottom">
+            <nav>
+                <ul class="mainMenu">
+                    <li>
+                        <input type="checkbox" id="sideBtn" />
+                        <label for="sideBtn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </label>
+
+                        <ul class="sideMenu">
+                            <li>
+                                <ul>
+                                    <li><a href="../../html/category/cate_new.html">신상품</a></li>
+                                    <li><a href="../../html/category/cate_best.html">인기상품</a></li>
+                                    <li><a href="../../html/category/cate_dog.html">강아지</a></li>
+                                    <li><a href="../../html/category/cate_cat.html">고양이</a></li>
+                                    <li><a href="../../html/category/cate_feed.html">사료</a></li>
+                                    <li><a href="../../html/category/cate_snackNutrient.html">간식/영양제</a></li>
+                                    <li><a href="../../html/category/cate_hygiene.html">위생</a></li>
+                                    <li><a href="../../html/category/cate_beautyCare.html">미용/케어</a></li>
+                                    <li><a href="../../html/category/cate_living.html">리빙</a></li>
+                                    <li><a href="../../html/category/cate_walkPlay.html">산책/놀이</a></li>
+                                    <li><a href="../../html/category/cate_clothesAccessorie.html">의류/악세사리</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <ul>
+                                    <li><a href="../../html/community/notice.html">공지사항</a></li>
+                                    <li><a href="../../html/community/inquiry.html">상품문의</a></li>
+                                    <li><a href="../../html/community/review.html">상품후기</a></li>
+                                    <li><a href="../../html/community/faq.html">자주묻는질문</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><a href="../../html/category/cate_feed.html">전체상품</a>
+                        <ul class="subMenu">
+                            <li><a href="../../html/category/cate_new.html">신상품</a></li>
+                            <li><a href="../../html/category/cate_best.html">인기상품</a></li>
+                            <li><a href="../../html/category/cate_dog.html">강아지</a></li>
+                            <li><a href="../../html/category/cate_cat.html">고양이</a></li>
+                            <li><a href="../../html/category/cate_feed.html">사료</a></li>
+                            <li><a href="../../html/category/cate_snackNutrient.html">간식/영양제</a></li>
+                            <li><a href="../../html/category/cate_hygiene.html">위생</a></li>
+                            <li><a href="../../html/category/cate_beautyCare.html">미용/케어</a></li>
+                            <li><a href="../../html/category/cate_living.html">리빙</a></li>
+                            <li><a href="../../html/category/cate_walkPlay.html">산책/놀이</a></li>
+                            <li><a href="../../html/category/cate_clothesAccessorie.html">의류/악세사리</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="../../html/community/notice.html">커뮤니티</a>
+                        <ul class="subMenu">
+                            <li><a href="../../html/community/notice.html">공지사항</a></li>
+                            <li><a href="../../html/community/inquiry.html">상품문의</a></li>
+                            <li><a href="../../html/community/review.html">상품후기</a></li>
+                            <li><a href="../../html/community/faq.html">자주묻는질문</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../html/community/event.html">이벤트</a></li>
+                    <li><a href="../../html/category/cate_discount.html">유통기한 할인</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="cateTitle">
+            <h1>상품후기</h1>
+        </div>
+        <div class="commnunityList">
+            <div>
+                <ul>
+                    <li><a href="../../html/community/notice.html">공지사항</a></li>
+                    <li><a href="../../html/community/inquiry.html">상품문의</a></li>
+                    <li><a href="../../html/community/review.html">상품후기</a></li>
+                    <li><a href="../../html/community/faq.html">자주묻는질문</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="boardList">
+            <table>
+                <colgroup>
+                    <col class="attr1">
+                    <col class="attr2">
+                    <col class="attr3">
+                    <col class="attr4">
+                </colgroup>
+                <tr>
+                    <th>제목</th>
+                    <th>평점</th>
+                    <th>글쓴이</th>
+                    <th>작성일</th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="titleBox">
+                            <ul>
+                                <li>
+                                    <img src="../../image/products/food_image1.jpg" alt="데이스포 장영양제 250g">
+                                </li>
+                                <li>
+                                    <strong>
+                                        <p id="productName" name="productName">데이스포 장영양제 250g</p>
+                                    </strong>
+                                    <div>
+                                        <a href="../../html/community/reviewDetail.html">우리아이가 잘 먹어요</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="productRating">
+                            <i class="fa-solid fa-star" style="color: #f60404;"></i>
+                            <i class="fa-solid fa-star" style="color: #f60404;"></i>
+                            <i class="fa-solid fa-star" style="color: #f60404;"></i>
+                            <i class="fa-regular fa-star" style="color: #fa0000;"></i>
+                            <i class="fa-regular fa-star" style="color: #fa0000;"></i>
+
+                            <!-- 속인 빈 별표 -->
+                            <!-- <i class="fa-regular fa-star" style="color: #fa0000;"></i> -->
+                        </div>
+                    </td>
+                    <td>배**</td>
+                    <td>2023-05-11</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="titleBox">
+                            <ul>
+                                <li>
+                                    <img src="../../image/products/food_image2.jpg" alt="애견비책 오리 연어 화식사료 120g x 10">
+                                </li>
+                                <li>
+                                    <strong>
+                                        <p id="productName" name="productName">애견비책 오리 연어 화식사료 120g x 10</p>
+                                    </strong>
+                                    <a href="#">가성비가 안좋아요</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="productRating">
+                            <i class="fa-solid fa-star" style="color: #f60404;"></i>
+                            <i class="fa-regular fa-star" style="color: #fa0000;"></i>
+                            <i class="fa-regular fa-star" style="color: #fa0000;"></i>
+                            <i class="fa-regular fa-star" style="color: #fa0000;"></i>
+                            <i class="fa-regular fa-star" style="color: #fa0000;"></i>
+
+                            <!-- 속인 빈 별표 -->
+                            <!-- <i class="fa-regular fa-star" style="color: #fa0000;"></i> -->
+                        </div>
+                    </td>
+                    <td>김**</td>
+                    <td>2023-04-25</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="titleBox">
+                            <ul>
+                                <li>
+                                    <img src="../../image/products/food_image3.jpg"
+                                        alt="NPABC-844-A-반려동물 사각캔 닭고기+소고기 100gx24">
+                                </li>
+                                <li>
+                                    <strong>
+                                        <p id="productName" name="productName">NPABC-844-A-반려동물 사각캔 닭고기+소고기 100gx24</p>
+                                    </strong>
+                                    <a href="#">닭가슴살 부족할 때, 내가 먹어도 꿀맛임</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="productRating">
+                            <i class="fa-solid fa-star" style="color: #f60404;"></i>
+                            <i class="fa-solid fa-star" style="color: #f60404;"></i>
+                            <i class="fa-solid fa-star" style="color: #f60404;"></i>
+                            <i class="fa-regular fa-star" style="color: #fa0000;"></i>
+                            <i class="fa-regular fa-star" style="color: #fa0000;"></i>
+
+                            <!-- 속인 빈 별표 -->
+                            <!-- <i class="fa-regular fa-star" style="color: #fa0000;"></i> -->
+                        </div>
+                    </td>
+                    <td>최**</td>
+                    <td>2023-01-05</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="titleBox">
+                            <ul>
+                                <li>
+                                    <img src="../../image/products/food_image4.jpg" alt="기둥 컴팩트 애견배변판 배변용품 반려동물 애완">
+                                </li>
+                                <li>
+                                    <strong>
+                                        <p id="productName" name="productName">기둥 컴팩트 애견배변판 배변용품 반려동물 애완</p>
+                                    </strong>
+                                    <a href="#">배변 교육시키는데 너무 좋네요</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="productRating">
+                            <i class="fa-solid fa-star" style="color: #f60404;"></i>
+                            <i class="fa-solid fa-star" style="color: #f60404;"></i>
+                            <i class="fa-solid fa-star" style="color: #f60404;"></i>
+                            <i class="fa-solid fa-star" style="color: #f60404;"></i>
+                            <i class="fa-regular fa-star" style="color: #fa0000;"></i>
+
+                            <!-- 속인 빈 별표 -->
+                            <!-- <i class="fa-regular fa-star" style="color: #fa0000;"></i> -->
+                        </div>
+                    </td>
+                    <td>은**</td>
+                    <td>2022-12-29</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="titleBox">
+                            <ul>
+                                <li>
+                                    <img src="../../image/products/food_image5.jpg"
+                                        alt="gooby 메모리폼 스텝인 하네스 편안한 강아지 가슴줄">
+                                </li>
+                                <li>
+                                    <strong>
+                                        <p id="productName" name="productName">gooby 메모리폼 스텝인 하네스 편안한 강아지 가슴줄</p>
+                                    </strong>
+                                    <a href="#">산책 필수템!</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="productRating">
+                            <i class="fa-solid fa-star" style="color: #f60404;"></i>
+                            <i class="fa-solid fa-star" style="color: #f60404;"></i>
+                            <i class="fa-solid fa-star" style="color: #f60404;"></i>
+                            <i class="fa-solid fa-star" style="color: #f60404;"></i>
+                            <i class="fa-regular fa-star" style="color: #fa0000;"></i>
+
+                            <!-- 속인 빈 별표 -->
+                            <!-- <i class="fa-regular fa-star" style="color: #fa0000;"></i> -->
+                        </div>
+                    </td>
+                    <td>박**</td>
+                    <td>2022-12-11</td>
+                </tr>
+            </table>
+        </div>
+        <div class="search">
+            <form action="#">
+                <div class="searchConditions">
+                    <div>
+                        <select name="searchSelections">
+                            <option value="newest">최신순</option>
+                            <option value="starRating">별점순</option>
+                            <option value="recommendation ">추천순</option>
+                        </select>
+                        <select name="searchCategory">
+                            <option value="" disabled selected>카테고리를 선택해주세요.</option>
+                            <option value="subject">제목</option>
+                            <option value="content">내용</option>
+                            <option value="writer">글쓴이</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="searchInput">
+                    <div>
+                        <input type="text">
+                        <input type="submit" value="검색">
+                    </div>
+                    <div class="board_write">
+                        <a href="../board/writeReview.html">글쓰기</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <h1>Petmily</h1>
+            <ul>
+                <li>Tel : XXX-XXX-XXXX</li>
+                <li>Email : Email@mail.com</li>
+                <li>Address : XX시 XX구 XX동 XXX</li>
+                <li>CEO : Jeonghyeon BaeㅣSora KimㅣHuisang EunㅣSeungho Choi</li>
+            </ul>
+        </div>
+
+        <div>
+            <div>
+                <h3>POLICY</h3>
+                <ul>
+                    <li></li>
+                    <li><a href="../../html/policy/ToS.html">이용약관</a></li>
+                    <li><a href="../../html/policy/privacy.html">개인정보처리방침</a></li>
+                    <li><a href="../../html/policy/guide.html">이용안내</a></li>
+                    <li><a href="../../html/policy/refund.html">반품, 환불규정</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>C/S CENTER</h3>
+                <ul>
+                    <li></li>
+                    <li>MON-FRIㅣ09:30 - 17:00</li>
+                    <li>LUNCH ㅣ 12:30 - 13:30</li>
+                    <li>SAT, SUN, HOLIDAY OFF</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
