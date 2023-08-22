@@ -1,5 +1,3 @@
-import "./ManageBoard.css";
-// import "./global.css";
 
 export default function ManageBoard() {
   return (

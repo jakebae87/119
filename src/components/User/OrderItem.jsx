@@ -1,4 +1,3 @@
-import "./Order.css";
 import React from "react";
 
 const OrderItem = ({ cartItems, onDelete }) => {

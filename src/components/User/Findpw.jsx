@@ -1,4 +1,3 @@
-import './Findpw.css'
 
 function Findpw () {
 

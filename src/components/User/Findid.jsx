@@ -1,5 +1,3 @@
-import './Findid.css'
-
 function Findid () {
     // const onKeyDown =(e)=>{
     //     if(e.keyCode === 13){

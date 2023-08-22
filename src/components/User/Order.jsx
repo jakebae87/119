@@ -1,4 +1,3 @@
-import "./Order.css";
 import React from "react";
 import OrderItem from "./OrderItem";
 

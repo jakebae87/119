@@ -1,4 +1,4 @@
-import './ImageSlider.css'; // 이미지 슬라이더 스타일링을 위한 CSS 파일을 임포트하세요.
+import './ImageSlider.css';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 

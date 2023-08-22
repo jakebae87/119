@@ -1,4 +1,3 @@
-import "./MyPage.css";
 import { Link } from "react-router-dom";
 
 // 이미지
