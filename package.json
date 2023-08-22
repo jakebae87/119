@@ -41,6 +41,5 @@
   },
   "devDependencies": {
     "gh-pages": "^6.0.0"
-  },
-  "homepage": "https://jakebae87.github.io/119/"
+  }
 }
