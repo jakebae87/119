@@ -27,7 +27,7 @@ const ProductItem = ({ it, onAddToCart }) => {
                 <div>
                     <p className="productName"><Link to={`/productdetail/${it.id}`}>{it.title}</Link></p>
                     <p className="productComments">{it.content}</p>
-                    <p className="productPrice"><span>{it.price}원</span><sup>{discountStr}</sup></p>
+                    <p className="productPrice"><span>{it.price.toLocaleString()}원</span><sup>{discountStr}</sup></p>
                 </div>
                 <div className="gotoCart">
                     <button onClick={() => handleAddToCart(it)} >
