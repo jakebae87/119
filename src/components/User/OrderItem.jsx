@@ -1,10 +1,10 @@
 import React from "react";
 
-const OrderItem = ({ cartItems, onDelete }) => {
+const OrderItem = ({ orderItems, deleteOrder }) => {
 
   return (
     <tbody>
-      {cartItems.map((item) => (
+      {orderItems.map((item) => (
         <tr>
           <td>
             <div className="orderImage">
@@ -29,7 +29,7 @@ const OrderItem = ({ cartItems, onDelete }) => {
               id="deleteCartProduct"
               name="deleteCartProduct"
               onClick={() => {
-                onDelete(item);
+                deleteOrder(item);
               }}
             >
               삭제

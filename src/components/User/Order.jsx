@@ -1,10 +1,10 @@
 import React from "react";
 import OrderItem from "./OrderItem";
 
-export default function Order({ cartItems, onDelete }) {
+export default function Order({ orderItems, deleteOrder }) {
 
   const totalPrice = () => {
-    return cartItems.reduce(
+    return orderItems.reduce(
       (total, item) => total + item.price * item.quantity, 0
     );
   };
@@ -40,7 +40,7 @@ export default function Order({ cartItems, onDelete }) {
                 <th scope="col">선택</th>
               </tr>
             </thead>
-            <OrderItem cartItems={cartItems} onDelete={onDelete} />
+            <OrderItem orderItems={orderItems} deleteOrder={deleteOrder} />
             <tfoot>
               <tr>
                 <th colSpan="7">

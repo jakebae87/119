@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import ProductItem from '../Products/ProductItem';
 import mockData from '../MockData/MockData_Products';
 
-function Introduce({ props, onAddToCart }) {
+function Introduce({ props, addCart }) {
     const tempData = [...mockData];
     const PopularProducts = tempData.sort((max, min) => (min.cntOfsales - max.cntOfsales));
 
@@ -43,7 +43,7 @@ function Introduce({ props, onAddToCart }) {
 
             <div className="productList">
                 {filteredData.map((item, idx) => {
-                    if (idx < 3) return (<ProductItem key={item.id} it={item} onAddToCart={onAddToCart} />);
+                    if (idx < 3) return (<ProductItem key={item.id} it={item} addCart={addCart} />);
                 })}
             </div>
         </div>

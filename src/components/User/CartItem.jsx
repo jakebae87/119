@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 
 const CartItem = ({ cartItems, onDelete, checkedItems, checkChange, increQuantity, decreQuantity }) => {
@@ -12,43 +11,38 @@ const CartItem = ({ cartItems, onDelete, checkedItems, checkChange, increQuantit
               type="checkbox"
               checked={checkedItems.includes(item.id)}
               onChange={(e) => checkChange(e, item.id)}
-            />
-          </td>
+              />
+            </td>
+            <td>
+              <div className="cartImage">
+                <img src={item.img} alt="product1" />
+              </div>
+            </td>
+            <td>
+              <span>{item.title}</span>
+            </td>
+            <td>
+              <span>{item.price.toLocaleString()}</span>
+            </td>
           <td>
-            <div className="cartImage">
-              <img src={item.img} alt="product1" />
-            </div>
-          </td>
-          <td>
-            <span>{item.title}</span>
-          </td>
-          <td>
-            <span>{item.price.toLocaleString()}</span>
-          </td>
-          <td>
-            <button className="decreQuantity" onClick={() => { decreQuantity(item) }}>▽</button>
-            <span>{item.quantity}</span>
-            <button className="increQuantity" onClick={() => { increQuantity(item) }}>△</button>
-          </td>
-          <td>
-            <span>{(item.price * item.quantity).toLocaleString()}</span>
-          </td>
-          <td>
-            <Link to="/user/order">
-              <button type="submit" id="order" name="order">
-                주문하기
+            <button className="decreQuantity" onClick={()=>{decreQuantity(item)}}>▽</button>
+              <span>{item.quantity}</span>
+            <button className="increQuantity" onClick={()=>{increQuantity(item)}}>△</button>
+            </td>
+            <td>
+              <span>{(item.price*item.quantity).toLocaleString()}</span>
+            </td>
+            <td>
+              <button
+                type="button"
+                id="deleteCartProduct"
+                name="deleteCartProduct"
+                onClick={() => {
+                  onDelete(item);
+                }}
+              >
+                삭제
               </button>
-            </Link>
-            <button
-              type="button"
-              id="deleteCartProduct"
-              name="deleteCartProduct"
-              onClick={() => {
-                onDelete(item);
-              }}
-            >
-              삭제
-            </button>
           </td>
         </tr>
       ))}

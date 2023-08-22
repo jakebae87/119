@@ -6,7 +6,7 @@ import ProductItem from "./ProductItem";
 // Mock Data
 import mockData from "../MockData/MockData_Products";
 
-function SearchedProducts({ onAddToCart }) {
+function SearchedProducts({ addCart }) {
     const [searchParams, setSearchParams] = useSearchParams("");
     const search = searchParams.get('search');
 
@@ -23,7 +23,7 @@ function SearchedProducts({ onAddToCart }) {
             <hr />
 
             <div className="productList">
-                {getSearchResult().map((item) => (<ProductItem key={item.id} it={item} onAddToCart={onAddToCart} />))}
+                {getSearchResult().map((item) => (<ProductItem key={item.id} it={item} addCart={addCart} />))}
             </div>
         </div>
     );

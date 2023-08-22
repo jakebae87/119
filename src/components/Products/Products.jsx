@@ -11,17 +11,17 @@ import PromotionProducts from './PromotionProducts';
 import SearchedProducts from './SearchedProducts';
 import ProductDetail from './ProductDetail';
 
-function Products({ onAddToCart, increQuantity, decreQuantity }) {
+function Products({ addCart, increQuantity, decreQuantity }) {
     return (
         <Routes>
-            <Route path="/:kind/:category" element={<AllProducts onAddToCart={onAddToCart} />} />
-            <Route path="/promotionproducts/:id" element={<PromotionProducts onAddToCart={onAddToCart} />} />
-            <Route path="/searchedproducts" element={<SearchedProducts onAddToCart={onAddToCart} />} />
-            <Route path="/newproducts" element={<NewProducts onAddToCart={onAddToCart} />} />
-            <Route path="/popularproducts" element={<PopularProducts onAddToCart={onAddToCart} />} />
-            <Route path="/discountedproducts" element={<DiscountedProducts onAddToCart={onAddToCart} />} />
+            <Route path="/:kind/:category" element={<AllProducts addCart={addCart} />} />
+            <Route path="/promotionproducts/:id" element={<PromotionProducts addCart={addCart} />} />
+            <Route path="/searchedproducts" element={<SearchedProducts addCart={addCart} />} />
+            <Route path="/newproducts" element={<NewProducts addCart={addCart} />} />
+            <Route path="/popularproducts" element={<PopularProducts addCart={addCart} />} />
+            <Route path="/discountedproducts" element={<DiscountedProducts addCart={addCart} />} />
             <Route path="/productdetail/:id" element={<ProductDetail
-                onAddToCart={onAddToCart}
+                addCart={addCart}
                 increQuantity={increQuantity}
                 decreQuantity={decreQuantity} />}
             />

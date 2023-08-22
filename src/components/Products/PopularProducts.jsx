@@ -5,7 +5,7 @@ import ProductItem from "./ProductItem";
 // Mock Data
 import mockData from "../MockData/MockData_Products";
 
-function PopularProducts({ onAddToCart }) {
+function PopularProducts({ addCart }) {
     const tempData = [...mockData];
     const filteredData = tempData.sort((max, min) => (min.cntOfsales - max.cntOfsales));
 
@@ -18,7 +18,7 @@ function PopularProducts({ onAddToCart }) {
 
             <div className="productList">
                 {filteredData.map((item, idx) => {
-                    if (idx < 5) return (<ProductItem key={item.id} it={item} onAddToCart={onAddToCart} />);
+                    if (idx < 5) return (<ProductItem key={item.id} it={item} addCart={addCart} />);
                 })}
             </div>
         </div>
