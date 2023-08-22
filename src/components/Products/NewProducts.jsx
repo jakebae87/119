@@ -6,7 +6,7 @@ import ProductItem from "./ProductItem";
 // Mock Data
 import mockData from "../MockData/MockData_Products";
 
-function NewProducts() {
+function NewProducts({ onAddToCart }) {
     const filteredData = mockData.filter(item => {
         return item.new;
     });
@@ -19,7 +19,7 @@ function NewProducts() {
             <hr />
 
             <div className="productList">
-                {filteredData.map((item) => (<ProductItem key={item.id} it={item} />))}
+                {filteredData.map((item) => (<ProductItem key={item.id} it={item} onAddToCart={onAddToCart} />))}
             </div>
         </div>
     );
