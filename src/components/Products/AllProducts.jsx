@@ -54,7 +54,7 @@ function AllProducts({ onAddToCart }) {
     };
 
     return (
-        <div className="AllProducts">
+        <div className="Products">
             <div className="cateTitle">
                 <h1>{title1} {title2}</h1>
             </div>

@@ -1,14 +1,14 @@
-.AllProducts * {
+.Products * {
     list-style: none;
     text-decoration: none;
 }
 
-.AllProducts {
+.Products {
     width: 1120px;
     margin: auto;
 }
 
-.AllProducts .active {
+.Products .active {
     color: black;
 }
 
@@ -43,11 +43,11 @@
 
 
 /* Pagenation */
-.AllProducts .pagination {
+.Products .pagination {
     padding: 40px;
 }
 
-.AllProducts .pagination a {
+.Products .pagination a {
     cursor: pointer;
     color: rgb(25, 50, 100);
     border: 1px solid rgb(25, 50, 100);
