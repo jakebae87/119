@@ -1,6 +1,5 @@
 import "./Cart.css";
 import React from "react";
-import { Link } from "react-router-dom";
 
 
 const CartItem = ({ cartItems, onDelete, checkedItems, checkChange, increQuantity, decreQuantity }) => {
@@ -24,7 +23,7 @@ const CartItem = ({ cartItems, onDelete, checkedItems, checkChange, increQuantit
               <span>{item.title}</span>
             </td>
             <td>
-              <span>{item.price}</span>
+              <span>{item.price.toLocaleString()}</span>
             </td>
           <td>
             <button className="decreQuantity" onClick={()=>{decreQuantity(item)}}>▽</button>
@@ -32,14 +31,9 @@ const CartItem = ({ cartItems, onDelete, checkedItems, checkChange, increQuantit
             <button className="increQuantity" onClick={()=>{increQuantity(item)}}>△</button>
             </td>
             <td>
-              <span>{item.price*item.quantity}</span>
+              <span>{(item.price*item.quantity).toLocaleString()}</span>
             </td>
             <td>
-              <Link to="/order">
-                <button type="submit" id="order" name="order">
-                  주문하기
-                </button>
-              </Link>
               <button
                 type="button"
                 id="deleteCartProduct"

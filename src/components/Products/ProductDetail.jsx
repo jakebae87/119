@@ -9,21 +9,25 @@ import "https://kit.fontawesome.com/f060eab6a5.js";
 import mockData from "../MockData/MockData_Products";
 
 // 이미지
-import product1 from "../../assets/Images/product1.jpg";
+import review_image1 from "../../assets/Images/products/food_image1.jpg";
+import review_image2 from "../../assets/Images/products/food_image2.jpg";
+import review_image3 from "../../assets/Images/products/food_image3.jpg";
+import review_image4 from "../../assets/Images/products/food_image4.jpg";
+import review_image5 from "../../assets/Images/products/food_image5.jpg";
 
-const ProductDetail = ({ onAddToCart }) => {
+const ProductDetail = ({ addCart }) => {
   const { id } = useParams();
   const product = mockData.find((item) => item.id === parseInt(id));
 
   // 수량
   const [quantity, setQuantity] = useState(1);
 
-  const handleQuantityChange = (event) => {
+  const quantityChange = (event) => {
     setQuantity(parseInt(event.target.value, 10));
   };
 
   const handleAddToCart = () => {
-    onAddToCart({ ...product, quantity: quantity });
+    addCart({ ...product, quantity: quantity });
     setQuantity(1); 
   };
 
@@ -59,7 +63,7 @@ const ProductDetail = ({ onAddToCart }) => {
                   name="quantity"
                   id="quantity"
                   value={quantity}
-                  onChange={handleQuantityChange}
+                  onChange={quantityChange}
                 >
                   {Array.from({ length: 100 }, (_, i) => (
                     <option key={i + 1} value={i + 1}>
@@ -106,10 +110,10 @@ const ProductDetail = ({ onAddToCart }) => {
               <a href="#productDetailImg">상품정보</a>
             </li>
             <li>
-              <a href="#productReview">리뷰</a>
+              <a href="#productReview">상품후기</a>
             </li>
             <li>
-              <a href="#productQA">Q&A</a>
+              <a href="#productQA">상품문의</a>
             </li>
             <li>
               <a href="#buyGuide">구매안내</a>
@@ -142,7 +146,7 @@ const ProductDetail = ({ onAddToCart }) => {
                   <div className="titleBox">
                     <ul>
                       <li>
-                        <img src={product1} alt="product1" />
+                        <img src={review_image1} alt="product1" />
                       </li>
                       <li>
                         <strong>
@@ -150,15 +154,13 @@ const ProductDetail = ({ onAddToCart }) => {
                             데이스포 장영양제 250g
                           </p>
                         </strong>
-                        <div>
-                            우리아이가 잘 먹어요
-                        </div>
+                        <div>우리아이가 잘 먹어요</div>
                       </li>
                     </ul>
                   </div>
                 </td>
                 <td>
-                  <div className="productRating">
+                  <div className="productsRating">
                     <i className="fa-solid fa-star"></i>
                     <i className="fa-solid fa-star"></i>
                     <i className="fa-solid fa-star"></i>
@@ -174,7 +176,7 @@ const ProductDetail = ({ onAddToCart }) => {
                   <div className="titleBox">
                     <ul>
                       <li>
-                        <img src={product1} alt="product1" />
+                        <img src={review_image2} alt="product1" />
                       </li>
                       <li>
                         <strong>
@@ -188,7 +190,7 @@ const ProductDetail = ({ onAddToCart }) => {
                   </div>
                 </td>
                 <td>
-                  <div className="productRating">
+                  <div className="productsRating">
                     <i className="fa-solid fa-star"></i>
                     <i className="fa-regular fa-star"></i>
                     <i className="fa-regular fa-star"></i>
@@ -204,7 +206,7 @@ const ProductDetail = ({ onAddToCart }) => {
                   <div className="titleBox">
                     <ul>
                       <li>
-                        <img src={product1} alt="product1" />
+                        <img src={review_image3} alt="product1" />
                       </li>
                       <li>
                         <strong>
@@ -218,7 +220,7 @@ const ProductDetail = ({ onAddToCart }) => {
                   </div>
                 </td>
                 <td>
-                  <div className="productRating">
+                  <div className="productsRating">
                     <i className="fa-solid fa-star"></i>
                     <i className="fa-solid fa-star"></i>
                     <i className="fa-solid fa-star"></i>
@@ -234,7 +236,7 @@ const ProductDetail = ({ onAddToCart }) => {
                   <div className="titleBox">
                     <ul>
                       <li>
-                        <img src={product1} alt="product1" />
+                        <img src={review_image4} alt="product1" />
                       </li>
                       <li>
                         <strong>
@@ -248,7 +250,7 @@ const ProductDetail = ({ onAddToCart }) => {
                   </div>
                 </td>
                 <td>
-                  <div className="productRating">
+                  <div className="productsRating">
                     <i className="fa-solid fa-star"></i>
                     <i className="fa-solid fa-star"></i>
                     <i className="fa-solid fa-star"></i>
@@ -264,7 +266,7 @@ const ProductDetail = ({ onAddToCart }) => {
                   <div className="titleBox">
                     <ul>
                       <li>
-                        <img src={product1} alt="product1" />
+                        <img src={review_image5} alt="product1" />
                       </li>
                       <li>
                         <strong>
@@ -278,7 +280,7 @@ const ProductDetail = ({ onAddToCart }) => {
                   </div>
                 </td>
                 <td>
-                  <div className="productRating">
+                  <div className="productsRating">
                     <i className="fa-solid fa-star"></i>
                     <i className="fa-solid fa-star"></i>
                     <i className="fa-solid fa-star"></i>

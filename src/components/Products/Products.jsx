@@ -7,7 +7,7 @@ import ProductItem from "./ProductItem";
 // Mock Data
 import mockData from "../MockData/MockData_Products";
 
-function Products({ onAddToCart }) {
+function Products({ addCart }) {
     // 상품 분류
     const { kind, category } = useParams();
 
@@ -81,7 +81,7 @@ function Products({ onAddToCart }) {
 
             <div className="productList">
                 {currentItems.map((item) => (
-                    <ProductItem key={item.id} it={item} onAddToCart={onAddToCart} />
+                    <ProductItem key={item.id} it={item} addCart={addCart} />
                 ))}
             </div>
 

@@ -2,24 +2,19 @@
   margin: 0 auto;
 }
 
-/* ======================게시글 테이블 설정====================== */
-
-.attr1 {
-  width: 200px;
-}
-
-.attr2,
-.attr3,
-.attr4 {
-  width: 30px;
-}
-
-.boardList {
+.myBoardList {
   width: 1120px;
   margin: auto;
 }
 
-.boardList table {
+.boardattr1,
+.boardattr2,
+.boardattr3,
+.boardattr4 {
+  width: 150px;
+}
+
+.myBoardList table {
   margin-top: 60px;
   text-align: center;
   width: 100%;
@@ -30,29 +25,26 @@
   white-space: nowrap;
 }
 
-.boardList table tr {
+.myBoardList table tr {
   border-top: 1px solid black;
 }
 
-.boardList table th {
+.myBoardList table th {
   font-size: 24px;
   padding: 20px;
 }
 
 /* 글자 밑줄 삭제 */
-.boardList table a {
+.myBoardList table a {
   text-decoration: none;
+  color: black;
 }
 
-/* ======================게시글 테이블 설정 끝====================== */
-
-.boardList table tr td {
+.myBoardList table tr td {
   padding: 20px;
 }
 
-/* ======================글 제목 리스트 구조 설정 끝====================== */
-
-/* ======================상품문의/상품후기 검색====================== */
+/* 상품문의/상품후기 검색 */
 .search {
   width: 1120px;
   margin: auto;
@@ -140,8 +132,9 @@
 .deleteBoard {
   width: 150px;
   height: 50px;
-  background-color: rgb(25, 50, 100);
-  color: white;
+  border: 0;
+  background-color: #fff;
+  color: black;
 }
 /* ======================상품문의/상품후기 사이즈(너비) 끝====================== */
 

@@ -2,10 +2,10 @@ import "./Order.css";
 import React from "react";
 import OrderItem from "./OrderItem";
 
-export default function Order({ cartItems, onDelete }) {
+export default function Order({ orderItems, onDelete }) {
 
   const totalPrice = () => {
-    return cartItems.reduce(
+    return orderItems.reduce(
       (total, item) => total + item.price * item.quantity, 0
     );
   };
@@ -41,18 +41,24 @@ export default function Order({ cartItems, onDelete }) {
                 <th scope="col">선택</th>
               </tr>
             </thead>
-            <OrderItem cartItems={cartItems} onDelete={onDelete} />
+            <OrderItem orderItems={orderItems} onDelete={onDelete} />
             <tfoot>
               <tr>
                 <th colSpan="7">
                   <span>상품구매금액 </span>
                   <strong>
-                    <span className="productPrice">{totalPrice()}</span>원
+                    <span className="productPrice">
+                      {totalPrice().toLocaleString()}
+                    </span>
+                    원
                   </strong>
                   <span className="deliveryPrice"> + 배송비 3000원 = </span>
                   <span>합계 : </span>
                   <strong>
-                    <span className="cartPrice">{totalPrice() + 3000}</span>원
+                    <span className="cartPrice">
+                      {(totalPrice() + 3000).toLocaleString()}
+                    </span>
+                    원
                   </strong>
                 </th>
               </tr>
@@ -294,13 +300,13 @@ export default function Order({ cartItems, onDelete }) {
               <tbody>
                 <tr>
                   <td>
-                    <span>{totalPrice() + 3000}</span>원
+                    <span>{(totalPrice() + 3000).toLocaleString()}</span>원
                   </td>
                   <td>
                     - <span>0</span>원
                   </td>
                   <td>
-                    <span>{totalPrice() + 3000}</span>원
+                    <span>{(totalPrice() + 3000).toLocaleString()}</span>원
                   </td>
                 </tr>
               </tbody>

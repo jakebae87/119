@@ -5,11 +5,11 @@ import { useState, useRef } from "react";
 // 이미지
 import CartImg from '../../assets/Images/cart.png';
 
-const ProductItem = ({ it, onAddToCart }) => {
+const ProductItem = ({ it, addCart }) => {
     const [quantity, setQuantity] = useState(1);
 
-    const handleAddToCart = () => {
-        onAddToCart({ ...it, quantity: quantity });
+    const handleAddCart = () => {
+        addCart({ ...it, quantity: quantity });
         setQuantity(1);
     };
 
@@ -30,7 +30,7 @@ const ProductItem = ({ it, onAddToCart }) => {
                     <p className="productPrice"><span>{it.price}원</span><sup>{discountStr}</sup></p>
                 </div>
                 <div className="gotoCart">
-                    <button onClick={() => handleAddToCart(it)} >
+                    <button onClick={() => handleAddCart(it)} >
                         <Link to={`/cart`}>
                             <img src={CartImg} alt="장바구니사진" />
                         </Link>

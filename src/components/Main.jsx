@@ -41,9 +41,16 @@ import Event from "./Event/Event";
 // Test
 
 function Main() {
-    // 장바구니 상품 추가
+    // 장바구니 상품
     const [cartItems, setCartItems] = useState([]);
+    // 장바구니 체크된 상품
+    const [checkedItems, setCheckedItems] = useState(
+      cartItems.map((cart) => cart.id)
+    );
+    // 주문페이지 상품
+    const [orderItems, setOrderItems] = useState([]);
 
+    // 장바구니 상품 추가
     const addCart = (it) => {
         const existingCartItem = cartItems.find((item) => item.id === it.id);
         if (existingCartItem) {
@@ -85,21 +92,54 @@ function Main() {
         }
     };
 
+    // 각 상품 체크
+    const checkChange = (event, itemId) => {
+      if (event.target.checked) {
+        setCheckedItems([...checkedItems, itemId]);
+      } else {
+        setCheckedItems(checkedItems.filter((cartId) => cartId !== itemId));
+      }
+    };
+
+    // 전체 상품 체크
+    const allCheck = (checked) => {
+      if (checked) {
+        const cartIdArray = [];
+        cartItems.map((cart) => cartIdArray.push(cart.id));
+        setCheckedItems(cartIdArray);
+      } else {
+        setCheckedItems([]);
+      }
+    };
+
+    // 장바구니 전체상품 주문
+    const allOrder = () => {
+        setOrderItems(cartItems);
+    };
+
+    // 장바구니 체크(선택)상품만 주문
+    const selectedOrder = () => {
+      const selectedOrderItems = cartItems.filter((cart) =>
+        checkedItems.includes(cart.id)
+      );
+        setOrderItems(selectedOrderItems);
+    };
+
     return (
         <div className="Main">
             <Routes>
                 {/* Home */}
-                <Route path="/" element={<Home onAddToCart={addCart} />} />
+                <Route path="/" element={<Home addCart={addCart} />} />
 
                 {/* Product */}
-                <Route path="/products/:kind/:category" element={<Products onAddToCart={addCart} />} />
+                <Route path="/products/:kind/:category" element={<Products addCart={addCart} />} />
                 <Route path="/products/promotionproducts" element={<PromotionProducts />} />
                 <Route path="/products/searchedproducts" element={<SearchedProducts />} />
                 <Route path="/products/newproducts" element={<NewProducts />} />
                 <Route path="/products/popularproducts" element={<PopularProducts />} />
                 <Route path="/products/discountedproducts" element={<DiscountedProducts />} />
                 <Route path="/productdetail/:id" element={<ProductDetail
-                    onAddToCart={addCart}
+                    addCart={addCart}
                     increQuantity={increQuantity}
                     decreQuantity={decreQuantity} />}
                 />
@@ -111,11 +151,16 @@ function Main() {
                 <Route path="/cart" element={<Cart cartItems={cartItems}
                     onDelete={deleteCart}
                     increQuantity={increQuantity}
-                    decreQuantity={decreQuantity} />} />
+                    decreQuantity={decreQuantity}
+                    checkChange={checkChange}
+                    checkedItems={checkedItems}
+                    allCheck={allCheck}
+                    allOrder={allOrder}
+                    selectedOrder={selectedOrder} />} />
                 <Route path="/mypage" element={<MyPage />} />
                 <Route path="/mypage/myprofile" element={<Profile />} />
                 <Route path="/mypage/manageboard" element={<ManageBoard />} />
-                <Route path="/order" element={<Order cartItems={cartItems} onDelete={deleteCart} />} />
+                <Route path="/order" element={<Order orderItems={orderItems} onDelete={deleteCart} />} />
                 <Route path="/orderlist" element={<OrderList />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/login" element={<Login />} />

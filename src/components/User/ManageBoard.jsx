@@ -1,77 +1,39 @@
 import "./ManageBoard.css";
-// import "./global.css";
+import mockData from "../MockData/MockData_Inquiry";
+import { useState } from "react";
+import ManageBoardList from "./ManageBoardList";
 
 export default function ManageBoard() {
+  const [board, setBoard] = useState(mockData);
+
+  // 게시글 삭제
+  const deleteBoard = (it) => {
+      setBoard(board.filter((board) => board.id !== it.id));
+  };
+  
   return (
     <div className="ManageBoard">
       <div className="cateTitle">
         <h1>게시글 관리</h1>
       </div>
-      <div className="boardList">
+      <div className="myBoardList">
         <table>
           <colgroup>
-            <col className="attr1" />
-            <col className="attr2" />
-            <col className="attr3" />
+            <col className="boardattr1" />
+            <col className="boardattr2" />
+            <col className="boardattr3" />
+            <col className="boardattr4" />
           </colgroup>
           <tr>
-            <th>
-              <input type="checkbox" />
-            </th>
             <th>제목</th>
             <th>글쓴이</th>
             <th>작성일</th>
+            <th>삭제</th>
           </tr>
-          <tr>
-            <td>
-              <input type="checkbox" />
-            </td>
-            <td>
-              <a href="#">유통기한 확인요청</a>
-            </td>
-            <td>은**</td>
-            <td>2023-05-11</td>
-          </tr>
-          <tr>
-            <td>
-              <input type="checkbox" />
-            </td>
-            <td>
-              <a href="#">사이즈가 궁금해요</a>
-            </td>
-            <td>은**</td>
-            <td>2023-04-25</td>
-          </tr>
-          <tr>
-            <td>
-              <input type="checkbox" />
-            </td>
-            <td>
-              <a href="#">배송 언제 되나요?</a>
-            </td>
-            <td>은**</td>
-            <td>2023-01-05</td>
-          </tr>
-          <tr>
-            <td>
-              <input type="checkbox" />
-            </td>
-            <td>
-              <a href="#">유통기한 확인 해주세요</a>
-            </td>
-            <td>은**</td>
-            <td>2022-12-29</td>
-          </tr>
-          <tr>
-            <td>
-              <input type="checkbox" />
-            </td>
-            <td>
-              <a href="#">우리 강아지가 먹어도 될까요?</a>
-            </td>
-            <td>은**</td>
-            <td>2022-12-11</td>
-          </tr>
+          <ManageBoardList
+            board={board}
+            deleteBoard={deleteBoard}
+          />
         </table>
       </div>
 
@@ -91,9 +53,6 @@ export default function ManageBoard() {
                 <option value="writer">글쓴이</option>
               </select>
             </div>
-            <div>
-              <button class="deleteBoard">삭제</button>
-            </div>
           </div>
           <div className="searchInput">
             <div>
@@ -105,11 +64,11 @@ export default function ManageBoard() {
       </div>
 
       <div className="pagination">
-        <a href="#">&laquo;</a>
-        <a href="#">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">&raquo;</a>
+        <a href="">&laquo;</a>
+        <a href=""><strong>1</strong></a>
+        <a href="">2</a>
+        <a href="">3</a>
+        <a href="">&raquo;</a>
       </div>
     </div>
   );

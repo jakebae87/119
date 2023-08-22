@@ -1,44 +1,20 @@
 import "./Cart.css";
 import { Link } from "react-router-dom";
-import React, { useState } from "react";
+import React from "react";
 import CartItem from "./CartItem";
 
-export default function Cart({ cartItems, onDelete, increQuantity, decreQuantity }) {
-
-  const [checkedItems, setCheckedItems] = useState(
-    cartItems.map((item) => item.id)
-  );
+export default function Cart({ cartItems, onDelete, increQuantity, decreQuantity, checkChange, checkedItems, allCheck, allOrder, selectedOrder }) {
 
   // 체크된 상품 가격
   const totalPrice = () => {
     const selectedTotalPrice = checkedItems.reduce((total, itemId) => {
-      const selectedItem = cartItems.find((item) => item.id === itemId);
+      const selectedItem = cartItems.find((cart) => cart.id === itemId);
       if (selectedItem) {
         return total + selectedItem.price * selectedItem.quantity;
       }
       return total;
     }, 0);
     return selectedTotalPrice;
-  };
-
-  // 각 상품 체크
-  const checkChange = (event, itemId) => {
-    if (event.target.checked) {
-      setCheckedItems([...checkedItems, itemId]);
-    } else {
-      setCheckedItems(checkedItems.filter((id) => id !== itemId));
-    }
-  };
-
-  // 전체 상품 체크
-  const allCheck = (checked) => {
-    if (checked) {
-      const cartIdArray = [];
-      cartItems.map((cart) => cartIdArray.push(cart.id));
-      setCheckedItems(cartIdArray);
-    } else {
-      setCheckedItems([]);
-    }
   };
 
   return (
@@ -72,10 +48,12 @@ export default function Cart({ cartItems, onDelete, increQuantity, decreQuantity
             <thead>
               <tr>
                 <th scope="col">
-                  <input type='checkbox'
+                  <input
+                    type="checkbox"
                     onChange={(e) => allCheck(e.target.checked)}
-                    // 데이터 개수와 체크된 아이템의 개수가 다를 경우 선택 해제(하나라도 해제 시 선택 해제)
-                    checked={checkedItems.length === cartItems.length ? true : false}
+                    checked={
+                      checkedItems.length === cartItems.length ? true : false
+                    }
                   />
                 </th>
                 <th scope="col">이미지</th>
@@ -99,12 +77,12 @@ export default function Cart({ cartItems, onDelete, increQuantity, decreQuantity
                 <th colSpan="7">
                   <span>상품구매금액 </span>
                   <strong>
-                    <span className="productPrice">{totalPrice()}</span>원
+                    <span className="productPrice">{totalPrice().toLocaleString()}</span>원
                   </strong>
-                  <span className="deliveryPrice"> + 배송비 3000원 = </span>
+                  <span className="deliveryPrice"> + 배송비 3,000원 = </span>
                   <span>합계 : </span>
                   <strong>
-                    <span className="cartPrice">{totalPrice() + 3000}</span>원
+                    <span className="cartPrice">{(totalPrice() + 3000).toLocaleString()}</span>원
                   </strong>
                 </th>
               </tr>
@@ -113,13 +91,15 @@ export default function Cart({ cartItems, onDelete, increQuantity, decreQuantity
         </div>
         <div className="cartOrder">
           <Link to={`/order`}>
-            <a className="allOrder">전체상품주문</a>
+            <button className="allOrder" onClick={() => { allOrder(); }}>전체상품주문</button>
           </Link>
           <Link to={`/order`}>
-            <a className="selectOrder">선택상품주문</a>
+            <button className="selectOrder" onClick={() => { selectedOrder(); }}>
+              선택상품주문
+            </button>
           </Link>
           <Link to="/products/all/all">
-            <a className="returnShop">쇼핑계속하기</a>
+            <button className="returnShop">쇼핑계속하기</button>
           </Link>
         </div>
         <div className="Guide">

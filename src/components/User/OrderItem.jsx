@@ -1,11 +1,11 @@
 import "./Order.css";
 import React from "react";
 
-const OrderItem = ({ cartItems, onDelete }) => {
+const OrderItem = ({ orderItems, onDelete }) => {
 
   return (
     <tbody>
-      {cartItems.map((item) => (
+      {orderItems.map((item) => (
         <tr>
           <td>
             <div className="orderImage">
@@ -16,13 +16,13 @@ const OrderItem = ({ cartItems, onDelete }) => {
             <span>{item.title}</span>
           </td>
           <td>
-            <span>{item.price}</span>
+            <span>{item.price.toLocaleString()}</span>
           </td>
           <td>
             <span>{item.quantity}</span>
           </td>
           <td>
-            <span>{item.price * item.quantity}</span>
+            <span>{(item.price * item.quantity).toLocaleString()}</span>
           </td>
           <td>
             <button
