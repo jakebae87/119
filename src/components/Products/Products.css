@@ -18,7 +18,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    column-gap: calc((100% - (100%/3.3*3))/2);
 }
 
 
@@ -42,19 +42,20 @@
 }
 
 
-/* ==================== pagination ==================== */
-.pagination {
-    font-size: 20px;
-    text-align: center;
+/* Pagenation */
+.Products .pagination {
     padding: 40px;
 }
 
-.pagination a {
-    color: black;
-    padding: 8px 16px;
-    text-decoration: none;
+.Products .pagination a {
+    cursor: pointer;
+    color: rgb(25, 50, 100);
+    border: 1px solid rgb(25, 50, 100);
+    font-weight: bold;
 }
 
-.pagination a[href=""] {
+.pagination a.active {
+    color: aliceblue;
+    background-color: rgb(25, 50, 100);
     font-weight: bold;
 }

@@ -40,7 +40,7 @@ function Header() {
                     <Link to="/login">로그인</Link>
                     <Link to="/signup">회원가입</Link>
                     <Link to="/mypage">마이페이지</Link>
-                    <Link to="/cart/0">장바구니</Link>
+                    <Link to="/cart">장바구니</Link>
                 </div>
             </div>
 

@@ -1,14 +1,14 @@
 import "./Order.css";
 import React from "react";
-import { useParams } from "react-router-dom";
+import OrderItem from "./OrderItem";
 
-// Mock Data
-import mockData from "../MockData/MockData_Products";
+export default function Order({ cartItems, onDelete }) {
 
-export default function Order() {
-
-  const { id } = useParams();
-  const product = mockData.find((item) => item.id === parseInt(id));
+  const totalPrice = () => {
+    return cartItems.reduce(
+      (total, item) => total + item.price * item.quantity, 0
+    );
+  };
 
   return (
     <div className="Order">
@@ -24,71 +24,35 @@ export default function Order() {
         <div>
           <table className="orderCartInfo">
             <colgroup>
-              <col style={{ width: 100 }} />
-              <col style={{ width: 180 }} />
+              <col style={{ width: 280 }} />
               <col style={{ width: "auto" }} />
               <col style={{ width: 150 }} />
-              <col style={{ width: 120 }} />
-              <col style={{ width: 130 }} />
+              <col style={{ width: 150 }} />
+              <col style={{ width: 140 }} />
               <col style={{ width: 130 }} />
             </colgroup>
             <thead>
               <tr>
-                <th scope="col">
-                  <input type="checkbox" />
-                </th>
                 <th scope="col">이미지</th>
-                <th scope="col">상품정보</th>
+                <th scope="col">상품명</th>
                 <th scope="col">판매가</th>
                 <th scope="col">수량</th>
                 <th scope="col">합계</th>
                 <th scope="col">선택</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <input type="checkbox" />
-                </td>
-                <td>
-                  <div className="cartImage">
-                    <img src={product.img} alt="product1" />
-                  </div>
-                </td>
-                <td>
-                  <span>{product.title}</span>
-                </td>
-                <td>
-                  <span>{product.price}</span>
-                </td>
-                <td>
-                  <span>1</span>
-                </td>
-                <td>
-                  <span>{product.price}</span>
-                </td>
-                <td>
-                  <button
-                    type="button"
-                    id="deleteCartProduct"
-                    name="deleteCartProduct"
-                  >
-                    삭제
-                  </button>
-                </td>
-              </tr>
-            </tbody>
+            <OrderItem cartItems={cartItems} onDelete={onDelete} />
             <tfoot>
               <tr>
-                <th colspan="7">
+                <th colSpan="7">
                   <span>상품구매금액 </span>
                   <strong>
-                    <span>{product.price}</span>원
+                    <span className="productPrice">{totalPrice()}</span>원
                   </strong>
-                  <span> + 배송비 3000원 = </span>
+                  <span className="deliveryPrice"> + 배송비 3000원 = </span>
                   <span>합계 : </span>
                   <strong>
-                    <span>{product.price + 3000}</span>원
+                    <span className="cartPrice">{totalPrice() + 3000}</span>원
                   </strong>
                 </th>
               </tr>
@@ -330,13 +294,13 @@ export default function Order() {
               <tbody>
                 <tr>
                   <td>
-                    <span>{product.price + 3000}</span>원
+                    <span>{totalPrice() + 3000}</span>원
                   </td>
                   <td>
-                    -<span>0</span>원
+                    - <span>0</span>원
                   </td>
                   <td>
-                    <span>{product.price + 3000}</span>원
+                    <span>{totalPrice() + 3000}</span>원
                   </td>
                 </tr>
               </tbody>

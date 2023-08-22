@@ -1,9 +1,9 @@
 import "./OrderList.css";
-// import "./global.css";
 import React from "react";
 
 // 이미지
 import product1 from "../../assets/Images/product1.jpg";
+import product2 from "../../assets/Images/products/clothes_dog.jpg";
 
 export default function OrderList() {
   return (
@@ -18,7 +18,7 @@ export default function OrderList() {
       </div>
       <div className="orderListArea">
         <div>
-          <table className="cartInfo">
+          <table className="orderListInfo">
             <colgroup>
               <col style={{ width: 100 }} />
               <col style={{ width: 180 }} />
@@ -46,11 +46,11 @@ export default function OrderList() {
             <tbody>
               <tr>
                 <td>
-                  <span className="orderDate">230526</span>
+                  <span className="orderDate">230526</span><br/>
                   <span className="orderNumber">(13135)</span>
                 </td>
                 <td>
-                  <div className="cartImage">
+                  <div className="orderListImage">
                     <img src={product1} alt="" />
                   </div>
                 </td>
@@ -62,6 +62,32 @@ export default function OrderList() {
                 </td>
                 <td>
                   <span className="orderPrice">71,000원</span>
+                </td>
+                <td>
+                  <span className="orderState">배송완료</span>
+                </td>
+                <td>
+                  <span className="orderCancel">-</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span className="orderDate">230623</span><br/>
+                  <span className="orderNumber">(14536)</span>
+                </td>
+                <td>
+                  <div className="orderListImage">
+                    <img src={product2} alt="" />
+                  </div>
+                </td>
+                <td>
+                  <span className="orderProduct">강아지 옷</span>
+                </td>
+                <td>
+                  <span className="orderQuantity">3</span>
+                </td>
+                <td>
+                  <span className="orderPrice">60,000원</span>
                 </td>
                 <td>
                   <span className="orderState">배송완료</span>

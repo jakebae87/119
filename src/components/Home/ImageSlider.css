@@ -33,15 +33,11 @@
 
 .slider-controls {
     position: absolute;
-    /* bottom: 20px; */
     left: 0;
-    /* 이전 버튼을 이미지 좌측으로 배치 */
     width: 100%;
-    /* 컨트롤 전체 너비 설정 */
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    /* 각 요소를 좌우로 분산 배치 */
+    justify-content: center;
 }
 
 .prev-button,
@@ -59,6 +55,16 @@
     color: white;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    position: absolute;
+    bottom: 0;
+}
+
+.prev-button {
+    left: 0;
+}
+
+.next-button {
+    right: 0;
 }
 
 .prev-button:hover,
@@ -70,10 +76,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 10px;
     position: absolute;
-    /* bottom: 0; */
-    bottom: 20px;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
 }

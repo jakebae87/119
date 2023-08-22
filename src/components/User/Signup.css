@@ -59,11 +59,20 @@
     width: 150px;
     height: 48px;
     border-radius: 6px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     margin-left: 10px;
     border: solid 1px silver;
 }
-
+.birthbox{
+    width: 100%;
+    height: 48px;
+    /* margin-bottom: 10px; */
+}
+.numberbox{
+    width: 100%;
+    height: 48px;
+    margin-bottom: 10px;
+}
 .signupbox::placeholder {
     color: #D2D2D2;
 }
@@ -78,6 +87,7 @@
     display: inline-block;
     text-align: center;
     border: solid 1px silver;
+    margin-top: 10px;
 }
 
 .number {
@@ -85,7 +95,7 @@
     height: 48px;
     padding: 0 10px;
     box-sizing: border-box;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     border-radius: 6px;
     background-color: #F8F8F8;
     margin-left: 10px;

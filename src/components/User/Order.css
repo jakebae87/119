@@ -79,12 +79,16 @@
   border-top: 1px solid black;
 }
 
-.cartImage img {
+.orderImage img {
   width: 100px;
 }
 
 .orderCartInfo tbody td {
-  height: 150px;
+  height: 100px;
+}
+
+.orderCartInfo tr:not(:first-child) {
+  border-top: 1px solid black;
 }
 
 .orderCartInfo thead,

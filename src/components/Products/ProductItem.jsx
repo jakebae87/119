@@ -1,34 +1,40 @@
 import "./ProductItem.css";
-
 import { Link } from 'react-router-dom'
+import { useState, useRef } from "react";
 
 // 이미지
 import CartImg from '../../assets/Images/cart.png';
 
-const ProductItem = ({ mockData }) => {
-    let prevPrice, res;
+const ProductItem = ({ it, onAddToCart }) => {
+    const [quantity, setQuantity] = useState(1);
 
-    if (mockData.discount) {
-        prevPrice = mockData.price + "원";
-        res = mockData.price - mockData.price * mockData.discount / 100;
-        mockData.price = Math.floor(res / 10) * 10;
+    const handleAddToCart = () => {
+        onAddToCart({ ...it, quantity: quantity });
+        setQuantity(1);
+    };
+
+    let discountStr = "";
+    if (it.discount) {
+        discountStr = `${it.discount}% 할인`
     }
 
     return (
         <div className="ProductItem">
-            <Link to={`/productdetail/${mockData.id}`}>
-                <img src={mockData.img} alt="상품사진" />
+            <Link to={`/productdetail/${it.id}`}>
+                <img src={it.img} alt="상품사진" />
             </Link>
             <div>
                 <div>
-                    <p class="productName"><Link to={`/productdetail/${mockData.id}`}>{mockData.title}</Link></p>
-                    <p class="productComments">{mockData.content}</p>
-                    <p class="productPrice"><span>{prevPrice}</span> {mockData.price}<span>원</span></p>
+                    <p className="productName"><Link to={`/productdetail/${it.id}`}>{it.title}</Link></p>
+                    <p className="productComments">{it.content}</p>
+                    <p className="productPrice"><span>{it.price}원</span><sup>{discountStr}</sup></p>
                 </div>
-                <div class="gotoCart">
-                    <Link to={`/cart/${mockData.id}`}>
-                        <img src={CartImg} alt="장바구니사진" />
-                    </Link>
+                <div className="gotoCart">
+                    <button onClick={() => handleAddToCart(it)} >
+                        <Link to={`/cart`}>
+                            <img src={CartImg} alt="장바구니사진" />
+                        </Link>
+                    </button>
                 </div>
             </div>
         </div>

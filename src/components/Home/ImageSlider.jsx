@@ -1,5 +1,6 @@
 import './ImageSlider.css'; // 이미지 슬라이더 스타일링을 위한 CSS 파일을 임포트하세요.
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 // 이미지
 import prom_img1 from '../../assets/Images/prom_img1.jpg';
@@ -42,32 +43,35 @@ const ImageSlider = () => {
         <div className="ImageSlider">
             <div className="slider-container">
                 {images.map((image, index) => (
-                    <div
-                        key={index}
-                        className={`slider-image ${index === currentImageIndex ? 'active' : ''
-                            }`}
-                    >
-                        <img src={image} alt={`Slide ${index}`} />
-                    </div>
+                    <Link to={`/products/promotionproducts/${index + 1}`}>
+                        <div
+                            key={index}
+                            className={`slider-image ${index === currentImageIndex ? 'active' : ''}`}
+                        >
+                            <img src={image} alt={`Slide ${index}`} />
+                        </div>
+                    </Link>
                 ))}
+            </div>
 
-                <div className="slider-controls">
-                    <button className="prev-button" onClick={prevImage}>
-                        &#x2039;
-                    </button>
-                    <div className="dots">
-                        {images.map((_, index) => (
-                            <div
-                                key={index}
-                                className={`dot ${index === currentImageIndex ? 'active' : ''}`}
-                                onClick={() => goToImage(index)}
-                            />
-                        ))}
-                    </div>
-                    <button className="next-button" onClick={nextImage}>
-                        &#x203a;
-                    </button>
+
+            <div className="slider-controls">
+                <button className="prev-button" onClick={prevImage}>
+                    &#x2039;
+                </button>
+                <div className="dots">
+                    {images.map((_, index) => (
+                        <div
+                            key={index}
+                            className={`dot ${index === currentImageIndex ? 'active' : ''}`}
+                            onClick={() => goToImage(index)}
+                        />
+                    ))}
                 </div>
+
+                <button className="next-button" onClick={nextImage}>
+                    &#x203a;
+                </button>
             </div>
         </div>
     );

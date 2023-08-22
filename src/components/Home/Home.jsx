@@ -7,12 +7,13 @@ import Introduce from "./Introduce";
 
 import mockData from "../MockData/MockData_Home";
 
-function Home() {
+function Home({ onAddToCart }) {
     return (
         <div className="Home">
             <ImageSlider />
+            
             <div id="mainWrap">
-                {mockData.map((item, index) => (<Introduce props={[item, index]} />))}
+                {mockData.map((item, index) => (<Introduce props={[item, index]} onAddToCart={onAddToCart} />))}
             </div>
         </div>
     );

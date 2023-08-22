@@ -11,9 +11,7 @@ const EventItem = ({ id, title, content, startDate, endDate, progress, img }) =>
     return (
         <div className={`events ${progress}`}>
             <div>
-                <a href="/">
-                    <img src={img} alt="이벤트 사진" />
-                </a>
+                <img src={img} alt="이벤트 사진" />
 
                 <div>
                     <p className="eventTitle">{title}</p>

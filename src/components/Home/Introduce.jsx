@@ -1,15 +1,10 @@
 import './Introduce.css'
 import { Link } from 'react-router-dom';
 
-import IntroduceItem from './IntroduceItem';
 import ProductItem from '../Products/ProductItem';
 import mockData from '../MockData/MockData_Products';
 
-// 이미지
-import CartImg from '../../assets/Images/cart.png';
-
-
-function Introduce({ props }) {
+function Introduce({ props, onAddToCart }) {
     const tempData = [...mockData];
     const PopularProducts = tempData.sort((max, min) => (min.cntOfsales - max.cntOfsales));
 
@@ -47,9 +42,8 @@ function Introduce({ props }) {
             </div>
 
             <div className="productList">
-
                 {filteredData.map((item, idx) => {
-                    if (idx < 3) return (<IntroduceItem mockData={item} />);
+                    if (idx < 3) return (<ProductItem key={item.id} it={item} onAddToCart={onAddToCart} />);
                 })}
             </div>
         </div>

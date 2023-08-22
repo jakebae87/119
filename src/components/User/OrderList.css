@@ -26,7 +26,7 @@
 }
 
 /* 주문내역 */
-.cartInfo {
+.orderListInfo {
   width: 1120px;
   margin: auto;
   border: 1px solid gray;
@@ -34,15 +34,21 @@
   text-align: center;
 }
 
-.cartInfo tbody,
-.cartInfo tfoot {
+.orderListInfo tbody,
+.orderListInfo tfoot {
   border-top: 1px solid black;
 }
 
-.cartImage img {
+.orderListInfo tr:not(:first-child) {
+  border-top: 1px solid black;
+}
+
+/* 이미지 */
+.orderListImage img {
   width: 100px;
 }
 
-.cartInfo tbody td {
-  height: 50px;
+/* 주문내역 폭 */
+.orderListInfo tbody td {
+  height: 100px;
 }

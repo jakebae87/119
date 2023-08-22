@@ -1,14 +1,14 @@
 import "./Products.css";
-import React from "react";
-import { useState } from "react";
-import { NavLink, Link, useParams } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { NavLink, useParams } from "react-router-dom";
 
 import ProductItem from "./ProductItem";
 
 // Mock Data
 import mockData from "../MockData/MockData_Products";
 
-function Products() {
+function Products({ onAddToCart }) {
+    // 상품 분류
     const { kind, category } = useParams();
 
     const filteredKind = mockData.filter((item) => {
@@ -38,6 +38,22 @@ function Products() {
     else if (category === "clothesAccessorie") title2 = "의류/악세사리";
     else title2 = "";
 
+    // 페이지네이션
+    useEffect(() => {
+        setCurrentPage(1);
+    }, [kind, category]);
+
+    const itemsPerPage = 9;
+    const [currentPage, setCurrentPage] = useState(1);
+
+    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    const currentItems = filteredData.slice(indexOfFirstItem, indexOfLastItem);
+
+    const paginate = (pageNumber) => {
+        setCurrentPage(pageNumber);
+    };
+
     return (
         <div className="Products">
             <div className="cateTitle">
@@ -64,15 +80,34 @@ function Products() {
             </div>
 
             <div className="productList">
-                {filteredData.map((item) => (<ProductItem mockData={item} />))}
+                {currentItems.map((item) => (
+                    <ProductItem key={item.id} it={item} onAddToCart={onAddToCart} />
+                ))}
             </div>
 
+            {/* 페이지네이션 컴포넌트 */}
             <div className="pagination">
-                <a href="#">&laquo;</a>
-                <a href="">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">&raquo;</a>
+                {currentPage > 1 && (
+                    <a className="prev-page" onClick={() => paginate(currentPage - 1)}>
+                        이전 페이지
+                    </a>
+                )}
+
+                {Array.from({ length: Math.ceil(filteredData.length / itemsPerPage) }).map((_, index) => (
+                    <a
+                        key={index}
+                        onClick={() => paginate(index + 1)}
+                        className={index + 1 === currentPage ? "active" : ""}
+                    >
+                        {index + 1}
+                    </a>
+                ))}
+
+                {currentPage < Math.ceil(filteredData.length / itemsPerPage) && (
+                    <a className="next-page" onClick={() => paginate(currentPage + 1)}>
+                        다음 페이지
+                    </a>
+                )}
             </div>
         </div>
     );

@@ -1,6 +1,6 @@
 import "./ProductDetail.css";
 import "../../App.css";
-import React from "react";
+import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import detailImage from "../../assets/Images/productDetail1.jpg";
 import "https://kit.fontawesome.com/f060eab6a5.js";
@@ -11,10 +11,21 @@ import mockData from "../MockData/MockData_Products";
 // 이미지
 import product1 from "../../assets/Images/product1.jpg";
 
-export default function ProductDetail() {
-
+const ProductDetail = ({ onAddToCart }) => {
   const { id } = useParams();
   const product = mockData.find((item) => item.id === parseInt(id));
+
+  // 수량
+  const [quantity, setQuantity] = useState(1);
+
+  const handleQuantityChange = (event) => {
+    setQuantity(parseInt(event.target.value, 10));
+  };
+
+  const handleAddToCart = () => {
+    onAddToCart({ ...product, quantity: quantity });
+    setQuantity(1); 
+  };
 
   return (
     <div className="ProductDetail">
@@ -44,7 +55,12 @@ export default function ProductDetail() {
             <tr>
               <th>수량</th>
               <td>
-                <select name="quantity" id="quantity">
+                <select
+                  name="quantity"
+                  id="quantity"
+                  value={quantity}
+                  onChange={handleQuantityChange}
+                >
                   {Array.from({ length: 100 }, (_, i) => (
                     <option key={i + 1} value={i + 1}>
                       {i + 1}
@@ -59,15 +75,23 @@ export default function ProductDetail() {
             </tr>
             <tr>
               <td colSpan="2">
-                <Link to={`/order/${id}`}>
-                  <a href="" className="buySoon">
+                <Link to={`/order`}>
+                  <button
+                    className="buySoon"
+                    quantity={quantity}
+                    onClick={() => handleAddToCart(product)}
+                  >
                     바로구매하기
-                  </a>
+                  </button>
                 </Link>
-                <Link to={`/cart/${id}`}>
-                  <a href="" className="buyCart">
+                <Link to={`/cart`}>
+                  <button
+                    className="buyCart"
+                    quantity={quantity}
+                    onClick={() => handleAddToCart(product)}
+                  >
                     장바구니
-                  </a>
+                  </button>
                 </Link>
               </td>
             </tr>
@@ -127,9 +151,7 @@ export default function ProductDetail() {
                           </p>
                         </strong>
                         <div>
-                          <a href="../../html/community/reviewDetail.html">
                             우리아이가 잘 먹어요
-                          </a>
                         </div>
                       </li>
                     </ul>
@@ -160,7 +182,7 @@ export default function ProductDetail() {
                             애견비책 오리 연어 화식사료 120g x 10
                           </p>
                         </strong>
-                        <a href="#">가성비가 안좋아요</a>
+                        가성비가 안좋아요
                       </li>
                     </ul>
                   </div>
@@ -190,7 +212,7 @@ export default function ProductDetail() {
                             NPABC-844-A-반려동물 사각캔 닭고기+소고기 100gx24
                           </p>
                         </strong>
-                        <a href="#">닭가슴살 부족할 때, 내가 먹어도 꿀맛임</a>
+                        닭가슴살 부족할 때, 내가 먹어도 꿀맛임
                       </li>
                     </ul>
                   </div>
@@ -220,7 +242,7 @@ export default function ProductDetail() {
                             기둥 컴팩트 애견배변판 배변용품 반려동물 애완
                           </p>
                         </strong>
-                        <a href="#">배변 교육시키는데 너무 좋네요</a>
+                        배변 교육시키는데 너무 좋네요
                       </li>
                     </ul>
                   </div>
@@ -250,7 +272,7 @@ export default function ProductDetail() {
                             gooby 메모리폼 스텝인 하네스 편안한 강아지 가슴줄
                           </p>
                         </strong>
-                        <a href="#">산책 필수템!</a>
+                        산책 필수템!
                       </li>
                     </ul>
                   </div>
@@ -288,35 +310,35 @@ export default function ProductDetail() {
               </tr>
               <tr>
                 <td>
-                  <a href="./inquiryDetail.html">유통기한 확인요청</a>
+                  <a href="">유통기한 확인요청</a>
                 </td>
                 <td>배**</td>
                 <td>2023-05-11</td>
               </tr>
               <tr>
                 <td>
-                  <a href="#">사이즈가 궁금해요</a>
+                  <a href="">사이즈가 궁금해요</a>
                 </td>
                 <td>김**</td>
                 <td>2023-04-25</td>
               </tr>
               <tr>
                 <td>
-                  <a href="#">배송 언제 되나요?</a>
+                  <a href="">배송 언제 되나요?</a>
                 </td>
                 <td>최**</td>
                 <td>2023-01-05</td>
               </tr>
               <tr>
                 <td>
-                  <a href="#">유통기한 확인 해주세요</a>
+                  <a href="">유통기한 확인 해주세요</a>
                 </td>
                 <td>은**</td>
                 <td>2022-12-29</td>
               </tr>
               <tr>
                 <td>
-                  <a href="#">우리 강아지가 먹어도 될까요?</a>
+                  <a href="">우리 강아지가 먹어도 될까요?</a>
                 </td>
                 <td>박**</td>
                 <td>2022-12-11</td>
@@ -477,4 +499,6 @@ export default function ProductDetail() {
       </div>
     </div>
   );
-}
+};
+
+export default ProductDetail;
