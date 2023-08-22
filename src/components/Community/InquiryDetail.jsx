@@ -1,6 +1,14 @@
-import { Link } from "react-router-dom";
+import React from "react";
+import { Link, useParams } from "react-router-dom";
+
+import mockData from "../MockData/MockData_Inquiry";
 
 export default function InquiryDetail() {
+
+    const { id } = useParams();
+    const inquiry = mockData.find((item) => item.id === parseInt(id));
+
+    const contents = inquiry.contents.split('\n').map((it) => <p>{it}</p>);
 
     return (
         <div className="InquiryDetail">
@@ -12,29 +20,28 @@ export default function InquiryDetail() {
                 <table>
                     <tr>
                         <th scope="row">제목</th>
-                        <td>유통기한 확인요청</td>
+                        <td>{inquiry.subject}</td>
                     </tr>
                     <tr>
                         <th scope="row">작성자</th>
-                        <td><span>배**</span></td>
+                        <td><span>{inquiry.username}</span></td>
                     </tr>
                     <tr>
                         <th scope="row">작성일</th>
-                        <td><span>2023-05-11</span></td>
+                        <td><span>{inquiry.createDate.toLocaleDateString()}</span></td>
                         <th scope="row">조회수</th>
-                        <td><span>42</span></td>
+                        <td><span>{inquiry.hit}</span></td>
                     </tr>
                     <tr>
                         <th scope="row">상품명</th>
                         <td>
-                            <a href="../category/cate_search.html">애견비책 오리 연어 화식사료 120g x 10</a>
+                            <Link to={`/productdetail/${inquiry.id}`}>{inquiry.productName}</Link>
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <div class="contents">
-                                <p>유통기한 확인 요청 드려요.</p>
-                                <p>10개 전부 동일한 유통기한인가요?</p>
+                                {contents}
                             </div>
 
                         </td>

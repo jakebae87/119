@@ -3,9 +3,9 @@ import { useSearchParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 // Mock Data
-import mockData from "../MockData/MockData_Notice";
+import mockData from "../MockData/MockData_Inquiry";
 
-function SearchedNotices() {
+function SearchedInquiry() {
 
     const [searchParams, setSearchParams] = useSearchParams("");
 
@@ -79,11 +79,11 @@ function SearchedNotices() {
                     <th>작성일</th>
                 </tr>
 
-                {getSearchResult().map((notice) =>
+                {getSearchResult().map((inquiry) =>
                     <tr>
-                        <td><Link to={`${notice.id}`}>{notice.subject}</Link></td>
-                        <td>{notice.username}</td>
-                        <td>{notice.createDate.toLocaleDateString()}</td>
+                        <td><Link to={`${inquiry.id}`}>{inquiry.subject}</Link></td>
+                        <td>{inquiry.username}</td>
+                        <td>{inquiry.createDate.toLocaleDateString()}</td>
                     </tr>
                 )}
             </table>
@@ -91,4 +91,4 @@ function SearchedNotices() {
     );
 }
 
-export default SearchedNotices;
+export default SearchedInquiry;

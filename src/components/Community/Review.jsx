@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
-import Star from "../Community/Star";
-
-import mockData from "../MockData/MockData_Review";
+import SearchedReview from "./SearchedReview";
 
 export default function Review() {
     return (
@@ -36,33 +34,8 @@ export default function Review() {
                         <th>작성일</th>
                     </tr>
 
-                    {mockData.map((review) =>
+                    <SearchedReview />
 
-                        <tr>
-                            <td>
-                                <div className="titleBox">
-                                    <ul>
-                                        <li>
-                                            <Link to={review.url}><img src={review.image} alt={review.productName} /></Link>
-                                        </li>
-                                        <li>
-                                            <strong>
-                                                <p id="productName" name="productName">{review.productName}</p>
-                                            </strong>
-                                            <div>
-                                                <Link to={review.url}>{review.subject}</Link>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </td>
-                            <td>
-                                <Star star={review.star} />
-                            </td>
-                            <td>{review.usename}</td>
-                            <td>{review.createDate.toDateString()}</td>
-                        </tr>
-                    )}
                 </table>
             </div>
 
@@ -75,8 +48,7 @@ export default function Review() {
                                 <option value="starRating">별점순</option>
                                 <option value="recommendation ">추천순</option>
                             </select>
-                            <select name="searchCategory">
-                                <option value="" disabled selected>카테고리를 선택해주세요.</option>
+                            <select name="searchCriteria">
                                 <option value="subject">제목</option>
                                 <option value="content">내용</option>
                                 <option value="writer">글쓴이</option>
@@ -85,7 +57,7 @@ export default function Review() {
                     </div>
                     <div className="searchInput">
                         <div>
-                            <input type="text" />
+                            <input className="searchWord" name="searchWord" type="text" />
                             <input type="submit" value="검색" />
                         </div>
                         <div className="board_write">

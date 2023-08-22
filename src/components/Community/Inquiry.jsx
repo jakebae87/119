@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-
-import mockData from "../MockData/MockData_Inquiry";
+import SearchedInquiry from "./SearchedInquiry";
 
 export default function Inquiry() {
     return (
@@ -16,39 +15,18 @@ export default function Inquiry() {
                     <li><Link to="/community/faq">자주묻는질문</Link></li>
                 </ul>
             </div>
-            <div className="boardList">
-                <table>
-                    <colgroup>
-                        <col className="attr1" />
-                        <col className="attr2" />
-                        <col className="attr3" />
-                    </colgroup>
-                    <tr>
-                        <th>제목</th>
-                        <th>글쓴이</th>
-                        <th>작성일</th>
-                    </tr>
 
-                    {mockData.map((inquiry) =>
-                        <tr>
-                            <td><Link to={inquiry.url}>{inquiry.subject}</Link></td>
-                            <td>{inquiry.usename}</td>
-                            <td>{inquiry.createDate.toDateString()}</td>
-                        </tr>
-                    )}
-
-                </table>
-            </div>
+            <SearchedInquiry />
 
             <div className="search">
                 <form action="#">
                     <div className="searchConditions">
                         <div>
                             <select name="searchPeriod">
+                                <option value="all">전체</option>
                                 <option value="week">일주일</option>
                                 <option value="month">한달</option>
                                 <option value="firstQuarter">세달</option>
-                                <option value="all">전체</option>
                             </select>
                             <select name="searchCriteria">
                                 <option value="subject">제목</option>
@@ -59,7 +37,7 @@ export default function Inquiry() {
                     </div>
                     <div className="searchInput">
                         <div>
-                            <input name="searchWord" type="text" />
+                            <input className="searchWord" name="searchWord" type="text" />
                             <input type="submit" value="검색" />
                         </div>
                         <div className="board_write">

@@ -10,7 +10,7 @@ export default function InquiryWrite() {
             <div>
 
                 <div className="selectStarRegist">
-                    <select name="selectSubject" onchange="window.open(value,'_self');">
+                    <select name="selectSubject" onChange="window.open(value,'_self');">
                         <option value="./writeInquiry.html">상품문의</option>
                         <option value="./writeReview.html">상품후기</option>
                     </select>
