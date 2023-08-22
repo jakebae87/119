@@ -169,7 +169,7 @@ const mockData = [
         content: '삼각형 스크래쳐입니다',
         price: 24000,
         new: false,
-        promotion: true,
+        promotion: 1,
         cntOfsales: 5,
         discount: 20,
         img: Prom1
@@ -182,7 +182,7 @@ const mockData = [
         content: '고양이 장난감2입니다',
         price: 15000,
         new: false,
-        promotion: true,
+        promotion: 2,
         cntOfsales: 15,
         discount: 50,
         img: Prom2
@@ -195,7 +195,7 @@ const mockData = [
         content: '강아지 옷2입니다',
         price: 15000,
         new: false,
-        promotion: true,
+        promotion: 3,
         cntOfsales: 25,
         discount: 50,
         img: Prom3
@@ -208,7 +208,7 @@ const mockData = [
         content: '반려동물 간식입니다',
         price: 30000,
         new: false,
-        promotion: true,
+        promotion: 4,
         cntOfsales: 35,
         discount: 0,
         img: Prom4
@@ -221,7 +221,7 @@ const mockData = [
         content: '강아지용 하네스입니다',
         price: 30000,
         new: false,
-        promotion: true,
+        promotion: 5,
         cntOfsales: 45,
         discount: 0,
         img: Prom5
