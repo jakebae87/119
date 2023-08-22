@@ -54,7 +54,8 @@
   height: auto;
   text-align: center;
 }
-.cartProduct > p {
+
+.cartProduct>p {
   display: inline-block;
   font-weight: bold;
 }
@@ -106,6 +107,7 @@
 /* 주문, 삭제 버튼 */
 #order,
 #deleteCartProduct {
+  cursor: pointer;
   display: block;
   width: 60px;
   height: 25px;
