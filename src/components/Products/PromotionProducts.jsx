@@ -1,6 +1,6 @@
 import "./Products.css";
 import React from "react";
-
+import { useParams } from "react-router-dom";
 import ProductItem from "./ProductItem";
 
 // Mock Data
@@ -11,6 +11,11 @@ function PromotionProducts() {
         return item.promotion;
     });
 
+    const { id } = useParams();
+    const product = mockData.filter((item) => item.promotion === parseInt(id));
+
+    console.log(id);
+
     return (
         <div className="Products">
             <div className="cateTitle">
@@ -19,7 +24,7 @@ function PromotionProducts() {
             <hr />
 
             <div className="productList">
-                {filteredData.map((item) => (<ProductItem key={item.id} it={item} />))}
+                {product.map((item) => (<ProductItem key={item.id} it={item} />))}
             </div>
         </div>
     );

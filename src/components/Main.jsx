@@ -93,7 +93,7 @@ function Main() {
 
                 {/* Product */}
                 <Route path="/products/:kind/:category" element={<Products onAddToCart={addCart} />} />
-                <Route path="/products/promotionproducts" element={<PromotionProducts />} />
+                <Route path="/products/promotionproducts/:id" element={<PromotionProducts />} />
                 <Route path="/products/searchedproducts" element={<SearchedProducts />} />
                 <Route path="/products/newproducts" element={<NewProducts />} />
                 <Route path="/products/popularproducts" element={<PopularProducts />} />

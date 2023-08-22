@@ -41,19 +41,19 @@ const ImageSlider = () => {
 
     return (
         <div className="ImageSlider">
-            <Link to={"/products/promotionproducts"}>
-                <div className="slider-container">
-                    {images.map((image, index) => (
+            <div className="slider-container">
+                {images.map((image, index) => (
+                    <Link to={`/products/promotionproducts/${index + 1}`}>
                         <div
                             key={index}
-                            className={`slider-image ${index === currentImageIndex ? 'active' : ''
-                                }`}
+                            className={`slider-image ${index === currentImageIndex ? 'active' : ''}`}
                         >
                             <img src={image} alt={`Slide ${index}`} />
                         </div>
-                    ))}
-                </div>
-            </Link>
+                    </Link>
+                ))}
+            </div>
+
 
             <div className="slider-controls">
                 <button className="prev-button" onClick={prevImage}>
