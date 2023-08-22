@@ -212,6 +212,7 @@
 }
 
 .productPay {
+  cursor: pointer;
   display: inline-block;
   width: 150px;
   line-height: 50px;
