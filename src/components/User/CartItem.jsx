@@ -7,52 +7,52 @@ const CartItem = ({ cartItems, onDelete, checkedItems, checkChange, increQuantit
   return (
     <tbody>
       {cartItems.map((item) => (
-          <tr>
-            <td>
-              <input
+        <tr>
+          <td>
+            <input
               type="checkbox"
               checked={checkedItems.includes(item.id)}
               onChange={(e) => checkChange(e, item.id)}
-              />
-            </td>
-            <td>
-              <div className="cartImage">
-                <img src={item.img} alt="product1" />
-              </div>
-            </td>
-            <td>
-              <span>{item.title}</span>
-            </td>
-            <td>
-              <span>{item.price}</span>
-            </td>
+            />
+          </td>
           <td>
-            <button className="decreQuantity" onClick={()=>{decreQuantity(item)}}>▽</button>
-              <span>{item.quantity}</span>
-            <button className="increQuantity" onClick={()=>{increQuantity(item)}}>△</button>
-            </td>
-            <td>
-              <span>{item.price*item.quantity}</span>
-            </td>
-            <td>
-              <Link to="/order">
-                <button type="submit" id="order" name="order">
-                  주문하기
-                </button>
-              </Link>
-              <button
-                type="button"
-                id="deleteCartProduct"
-                name="deleteCartProduct"
-                onClick={() => {
-                  onDelete(item);
-                }}
-              >
-                삭제
+            <div className="cartImage">
+              <img src={item.img} alt="product1" />
+            </div>
+          </td>
+          <td>
+            <span>{item.title}</span>
+          </td>
+          <td>
+            <span>{item.price.toLocaleString()}</span>
+          </td>
+          <td>
+            <button className="decreQuantity" onClick={() => { decreQuantity(item) }}>▽</button>
+            <span>{item.quantity}</span>
+            <button className="increQuantity" onClick={() => { increQuantity(item) }}>△</button>
+          </td>
+          <td>
+            <span>{(item.price * item.quantity).toLocaleString()}</span>
+          </td>
+          <td>
+            <Link to="/order">
+              <button type="submit" id="order" name="order">
+                주문하기
               </button>
-            </td>
-          </tr>
-        ))}
+            </Link>
+            <button
+              type="button"
+              id="deleteCartProduct"
+              name="deleteCartProduct"
+              onClick={() => {
+                onDelete(item);
+              }}
+            >
+              삭제
+            </button>
+          </td>
+        </tr>
+      ))}
     </tbody>
   );
 };

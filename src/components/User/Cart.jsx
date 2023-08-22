@@ -99,12 +99,12 @@ export default function Cart({ cartItems, onDelete, increQuantity, decreQuantity
                 <th colSpan="7">
                   <span>상품구매금액 </span>
                   <strong>
-                    <span className="productPrice">{totalPrice()}</span>원
+                    <span className="productPrice">{totalPrice().toLocaleString()}</span>원
                   </strong>
-                  <span className="deliveryPrice"> + 배송비 3000원 = </span>
+                  <span className="deliveryPrice"> + 배송비 3,000원 = </span>
                   <span>합계 : </span>
                   <strong>
-                    <span className="cartPrice">{totalPrice() + 3000}</span>원
+                    <span className="cartPrice">{(totalPrice() + 3000).toLocaleString()}</span>원
                   </strong>
                 </th>
               </tr>

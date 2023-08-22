@@ -16,13 +16,13 @@ const OrderItem = ({ cartItems, onDelete }) => {
             <span>{item.title}</span>
           </td>
           <td>
-            <span>{item.price}</span>
+            <span>{item.price.toLocaleString()}</span>
           </td>
           <td>
             <span>{item.quantity}</span>
           </td>
           <td>
-            <span>{item.price * item.quantity}</span>
+            <span>{(item.price * item.quantity).toLocaleString()}</span>
           </td>
           <td>
             <button

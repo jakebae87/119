@@ -50,7 +50,7 @@ const ProductDetail = ({ onAddToCart }) => {
             </tr>
             <tr>
               <th>가격</th>
-              <td>{product.price}</td>
+              <td>{product.price.toLocaleString()}</td>
             </tr>
             <tr>
               <th>수량</th>
@@ -71,7 +71,7 @@ const ProductDetail = ({ onAddToCart }) => {
             </tr>
             <tr>
               <th>배송비</th>
-              <td>3000원</td>
+              <td>3,000원</td>
             </tr>
             <tr>
               <td colSpan="2">
