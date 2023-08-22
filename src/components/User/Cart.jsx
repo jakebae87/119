@@ -112,10 +112,10 @@ export default function Cart({ cartItems, onDelete, increQuantity, decreQuantity
           </table>
         </div>
         <div className="cartOrder">
-          <Link to={`/order`}>
+          <Link to={`/user/order`}>
             <a className="allOrder">전체상품주문</a>
           </Link>
-          <Link to={`/order`}>
+          <Link to={`/user/order`}>
             <a className="selectOrder">선택상품주문</a>
           </Link>
           <Link to="/products/all/all">

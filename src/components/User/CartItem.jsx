@@ -35,7 +35,7 @@ const CartItem = ({ cartItems, onDelete, checkedItems, checkChange, increQuantit
             <span>{(item.price * item.quantity).toLocaleString()}</span>
           </td>
           <td>
-            <Link to="/order">
+            <Link to="/user/order">
               <button type="submit" id="order" name="order">
                 주문하기
               </button>

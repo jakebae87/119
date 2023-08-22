@@ -24,7 +24,7 @@ export default function MyPage() {
         <div className="beforePay">
           <div>
             <span>
-              <Link to="/orderList">
+              <Link to="/user/orderList">
                 <a href="./orderList.html">0</a>
               </Link>
             </span>
@@ -36,7 +36,7 @@ export default function MyPage() {
         <div className="setDelivery">
           <div>
             <span>
-              <Link to="/orderList">
+              <Link to="/user/orderList">
                 <a href="./orderList.html">0</a>
               </Link>
             </span>
@@ -48,7 +48,7 @@ export default function MyPage() {
         <div className="delivering">
           <div>
             <span>
-              <Link to="/orderList">
+              <Link to="/user/orderList">
                 <a href="./orderList.html">0</a>
               </Link>
             </span>
@@ -60,7 +60,7 @@ export default function MyPage() {
         <div className="delivered">
           <div>
             <span>
-              <Link to="/orderList">
+              <Link to="/user/orderList">
                 <a href="./orderList.html">0</a>
               </Link>
             </span>
@@ -76,7 +76,7 @@ export default function MyPage() {
                 <strong>취소 </strong>
               </span>
               <span>
-                <Link to="/orderList">
+                <Link to="/user/orderList">
                   <a href="./orderList.html">0</a>
                 </Link>
               </span>
@@ -86,7 +86,7 @@ export default function MyPage() {
                 <strong>환불 </strong>
               </span>
               <span>
-                <Link to="/orderList">
+                <Link to="/user/orderList">
                   <a href="./orderList.html">0</a>
                 </Link>
               </span>
@@ -96,7 +96,7 @@ export default function MyPage() {
                 <strong>반품 </strong>
               </span>
               <span>
-                <Link to="/orderList">
+                <Link to="/user/orderList">
                   <a href="./orderList.html">0</a>
                 </Link>
               </span>
@@ -106,7 +106,7 @@ export default function MyPage() {
       </div>
 
       <div className="shopMain">
-        <Link to="/orderList">
+        <Link to="/user/orderList">
           <a href="" className="orderList">
             <div className="orderListImg">
               <img src={order} alt="" />
@@ -116,7 +116,7 @@ export default function MyPage() {
             <p>고객님의 주문내역을 확인하실 수 있습니다.</p>
           </a>
         </Link>
-        <Link to="/mypage/myprofile">
+        <Link to="/user/mypage/myprofile">
           <a href="" className="profil">
             <div className="orderListImg">
               <img src={profile} alt="" />
@@ -126,7 +126,7 @@ export default function MyPage() {
             <p>회원이신 고객님의 개인정보를 관리하는 공간입니다.</p>
           </a>
         </Link>
-        <Link to="/mypage/manageBoard">
+        <Link to="/user/mypage/manageBoard">
           <a href="" className="board">
             <div className="orderListImg">
               <img src={board} alt="" />
@@ -136,7 +136,7 @@ export default function MyPage() {
             <p>고객님께서 작성하신 게시물을 관리하는 공간입니다.</p>
           </a>
         </Link>
-        <Link to="/cart">
+        <Link to="/user/cart">
           <a href="" className="cart">
             <div className="orderListImg">
               <img src={cart} alt="" />

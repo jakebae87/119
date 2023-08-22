@@ -272,7 +272,7 @@ function Signup() {
                                 </td>
                             </tr>
                         </table>
-                        <Link to="/Success"><input onClick={onSubmit} type="submit" className="signupBtn" value="가입하기" /></Link>
+                        <Link to="/user/Success"><input onClick={onSubmit} type="submit" className="signupBtn" value="가입하기" /></Link>
                     </div>
                 </form>
             </div>

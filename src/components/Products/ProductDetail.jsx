@@ -1,5 +1,3 @@
-import "./ProductDetail.css";
-import "../../App.css";
 import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import detailImage from "../../assets/Images/productDetail1.jpg";
@@ -75,7 +73,7 @@ const ProductDetail = ({ onAddToCart }) => {
             </tr>
             <tr>
               <td colSpan="2">
-                <Link to={`/order`}>
+                <Link to={`/user/order`}>
                   <button
                     className="buySoon"
                     quantity={quantity}
@@ -84,7 +82,7 @@ const ProductDetail = ({ onAddToCart }) => {
                     바로구매하기
                   </button>
                 </Link>
-                <Link to={`/cart`}>
+                <Link to={`/user/cart`}>
                   <button
                     className="buyCart"
                     quantity={quantity}

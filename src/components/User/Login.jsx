@@ -45,9 +45,9 @@ function Login () {
             <button className="kakao" onClick={KakaoLogin}>카카오로 로그인</button>
             <button className="naver" onClick={NaverLogin}>네이버로 로그인</button>
             <ul>
-                <Link to='/signup' style={{textDecoration: 'none'}}><li>회원가입</li></Link>
-                <Link to="/findID" style={{textDecoration: 'none'}}><li>아이디 찾기</li></Link>
-                <Link to="/findPW" style={{textDecoration: 'none'}}><li>비밀번호 찾기</li></Link>
+                <Link to='/user/signup' style={{textDecoration: 'none'}}><li>회원가입</li></Link>
+                <Link to="/user/findID" style={{textDecoration: 'none'}}><li>아이디 찾기</li></Link>
+                <Link to="/user/findPW" style={{textDecoration: 'none'}}><li>비밀번호 찾기</li></Link>
             </ul>
         </div>
     </div>

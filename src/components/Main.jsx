@@ -1,33 +1,17 @@
-import { Route, Routes } from "react-router-dom";
 import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
 
 // Home
 import Home from "./Home/Home";
 
 // Products
 import Products from "./Products/Products";
-import PromotionProducts from "./Products/PromotionProducts";
-import SearchedProducts from "./Products/SearchedProducts";
-import NewProducts from "./Products/NewProducts";
-import PopularProducts from "./Products/PopularProducts";
-import DiscountedProducts from "./Products/DiscountedProducts";
-import ProductDetail from "./Products/ProductDetail";
 
 // Policy
 import Policy from "./Policy/Policy";
 
 // User
-import Cart from "./User/Cart";
-import MyPage from "./User/MyPage";
-import Order from "./User/Order";
-import Profile from "./User/Profile";
-import OrderList from "./User/OrderList";
-import ManageBoard from "./User/ManageBoard";
-import Signup from "./User/Signup";
-import Login from "./User/Login";
-import Findid from "./User/Findid"
-import Findpw from "./User/Findpw"
-import Success from "./User/Success";
+import User from "./User/User";
 
 // Community
 import Community from "./Community/Community";
@@ -91,37 +75,23 @@ function Main() {
                 {/* Home */}
                 <Route path="/" element={<Home onAddToCart={addCart} />} />
 
-                {/* Product */}
-                <Route path="/products/:kind/:category" element={<Products onAddToCart={addCart} />} />
-                <Route path="/products/promotionproducts/:id" element={<PromotionProducts onAddToCart={addCart} />} />
-                <Route path="/products/searchedproducts" element={<SearchedProducts onAddToCart={addCart} />} />
-                <Route path="/products/newproducts" element={<NewProducts onAddToCart={addCart} />} />
-                <Route path="/products/popularproducts" element={<PopularProducts onAddToCart={addCart} />} />
-                <Route path="/products/discountedproducts" element={<DiscountedProducts onAddToCart={addCart} />} />
-                <Route path="/productdetail/:id" element={<ProductDetail
+                {/* Products */}
+                <Route path="/products/*" element={<Products
                     onAddToCart={addCart}
                     increQuantity={increQuantity}
-                    decreQuantity={decreQuantity} />}
-                />
+                    decreQuantity={decreQuantity}
+                />} />
 
                 {/* Policy */}
                 <Route path="/policy/*" element={<Policy />} />
 
                 {/* User */}
-                <Route path="/cart" element={<Cart cartItems={cartItems}
+                <Route path="/user/*" element={<User
+                    cartItems={cartItems}
                     onDelete={deleteCart}
                     increQuantity={increQuantity}
-                    decreQuantity={decreQuantity} />} />
-                <Route path="/mypage" element={<MyPage />} />
-                <Route path="/mypage/myprofile" element={<Profile />} />
-                <Route path="/mypage/manageboard" element={<ManageBoard />} />
-                <Route path="/order" element={<Order cartItems={cartItems} onDelete={deleteCart} />} />
-                <Route path="/orderlist" element={<OrderList />} />
-                <Route path="/signup" element={<Signup />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/findID" element={<Findid />} />
-                <Route path="/findPW" element={<Findpw />} />
-                <Route path="/success" element={<Success />} />
+                    decreQuantity={decreQuantity}
+                />} />
 
                 {/* Community */}
                 <Route path="/community/*" element={<Community />} />

@@ -1,4 +1,3 @@
-import "./ProductItem.css";
 import { Link } from 'react-router-dom'
 import { useState, useRef } from "react";
 
@@ -20,18 +19,18 @@ const ProductItem = ({ it, onAddToCart }) => {
 
     return (
         <div className="ProductItem">
-            <Link to={`/productdetail/${it.id}`}>
+            <Link to={`/products/productdetail/${it.id}`}>
                 <img src={it.img} alt="상품사진" />
             </Link>
             <div>
                 <div>
-                    <p className="productName"><Link to={`/productdetail/${it.id}`}>{it.title}</Link></p>
+                    <p className="productName"><Link to={`/products/productdetail/${it.id}`}>{it.title}</Link></p>
                     <p className="productComments">{it.content}</p>
                     <p className="productPrice"><span>{it.price.toLocaleString()}원</span><sup>{discountStr}</sup></p>
                 </div>
                 <div className="gotoCart">
                     <button onClick={() => handleAddToCart(it)} >
-                        <Link to={`/cart`}>
+                        <Link to={`/user/cart`}>
                             <img src={CartImg} alt="장바구니사진" />
                         </Link>
                     </button>

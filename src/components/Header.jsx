@@ -37,10 +37,10 @@ function Header() {
                 </div>
 
                 <div className="userMenu">
-                    <Link to="/login">로그인</Link>
-                    <Link to="/signup">회원가입</Link>
-                    <Link to="/mypage">마이페이지</Link>
-                    <Link to="/cart">장바구니</Link>
+                    <Link to="user/login">로그인</Link>
+                    <Link to="user/signup">회원가입</Link>
+                    <Link to="user/mypage">마이페이지</Link>
+                    <Link to="user/cart">장바구니</Link>
                 </div>
             </div>
 
