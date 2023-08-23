@@ -48,7 +48,7 @@ function SearchedReview() {
                 break;
 
             case 'content':
-                sortedData = selectedData.filter((it) => it.content.includes(searchWord));
+                sortedData = selectedData.filter((it) => it.contents.includes(searchWord));
                 break;
 
             case 'writer':

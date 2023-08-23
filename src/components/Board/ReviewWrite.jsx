@@ -44,7 +44,6 @@ export default function ReviewWrite() {
                         <input type="hidden" id="star" name="star" value={score} />
 
                         <textarea id="contents" name="contents" rows="30" cols="100"></textarea>
-                        {/* textarea 태그의 입력값을 p 태그로 바꾸기 https://archijude.tistory.com/552 */}
                     </form>
                 </div>
             </div>

@@ -48,13 +48,13 @@ function SearchedNotices() {
                 break;
         }
 
-        switch (searchCriteria) {
+        switch (searchCriteria) {   // 종류별 데이터 분류 이후에 검색어에 맞는 게시글 조회
             case 'subject':
                 sortedData = periodData.filter((it) => it.subject.includes(searchWord));
                 break;
 
             case 'content':
-                sortedData = periodData.filter((it) => it.content.includes(searchWord));
+                sortedData = periodData.filter((it) => it.contents.includes(searchWord));
                 break;
 
             case 'writer':

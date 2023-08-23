@@ -54,7 +54,7 @@ function SearchedFaq() {
                 break;
 
             case 'content':
-                sortedData = periodData.filter((it) => it.content.includes(searchWord));
+                sortedData = periodData.filter((it) => it.contents.includes(searchWord));
                 break;
 
             case 'writer':

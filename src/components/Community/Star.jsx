@@ -24,12 +24,12 @@ function Star({ star }) { // 정수 타입의 매개변수를 Review.js로부터
 
   return (
     <div>
-      {Array.map((star, index) => {
+      {Array.map((index) => {
         return (
           <FaStar
             key={index}
             size="20"
-            className={starPackage[star] && 'redStar'}
+            className={starPackage[index] && 'redStar'}
           />
         );
       })}
