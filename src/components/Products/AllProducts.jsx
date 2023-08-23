@@ -6,36 +6,31 @@ import ProductItem from "./ProductItem";
 // Mock Data
 import mockData from "../MockData/MockData_Products";
 
+const kindTitles = {
+    all: "",
+    dog: "강아지",
+    cat: "고양이"
+};
+
+const categoryTitles = {
+    all: "전체상품",
+    feed: "사료",
+    snackNutrient: "간식/영양제",
+    hygiene: "위생용품",
+    beautyCare: "미용/케어용품",
+    living: "리빙용품",
+    walkPlay: "산책/놀이용품",
+    clothesAccessorie: "의류/악세사리"
+};
+
 function AllProducts({ addCart }) {
-    // 상품 분류
     const { kind, category } = useParams();
 
-    const filteredKind = mockData.filter((item) => {
-        if (kind === "all") { return true; }
-        else { return item.kind === kind || item.kind === "all"; }
-    });
+    const filteredKind = mockData.filter((item) => kind === "all" || item.kind === kind || item.kind === "all");
+    const filteredData = filteredKind.filter((item) => category === "all" || item.category === category);
 
-    const filteredData = filteredKind.filter((item) => {
-        if (category === "all") { return true; }
-        else { return item.category === category; }
-    });
-
-    let title1, title2;
-
-    if (kind === "all") title1 = "";
-    else if (kind === "dog") title1 = "강아지";
-    else if (kind === "cat") title1 = "고양이";
-    else title1 = "";
-
-    if (category === "all") title2 = "전체상품";
-    else if (category === "feed") title2 = "사료";
-    else if (category === "snackNutrient") title2 = "간식/영양제";
-    else if (category === "hygiene") title2 = "위생용품";
-    else if (category === "beautyCare") title2 = "미용/케어용품";
-    else if (category === "living") title2 = "리빙용품";
-    else if (category === "walkPlay") title2 = "산책/놀이용품";
-    else if (category === "clothesAccessorie") title2 = "의류/악세사리";
-    else title2 = "";
+    const title1 = kindTitles[kind] || "";
+    const title2 = categoryTitles[category] || "";
 
     // 페이지네이션
     useEffect(() => {
