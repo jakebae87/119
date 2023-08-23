@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import detailImage from "../../assets/Images/productDetail1.jpg";
-import "https://kit.fontawesome.com/f060eab6a5.js";
 
 // Mock Data
 import mockData from "../MockData/MockData_Products";
@@ -26,7 +25,7 @@ const ProductDetail = ({ addCart }) => {
 
   const handleAddToCart = () => {
     addCart({ ...product, quantity: quantity });
-    setQuantity(1); 
+    setQuantity(1);
   };
 
   return (
