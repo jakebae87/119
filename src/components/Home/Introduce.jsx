@@ -1,32 +1,28 @@
 import './Introduce.css'
 import { Link } from 'react-router-dom';
-
+import { useState, useEffect } from 'react';
 import ProductItem from '../Products/ProductItem';
 import mockData from '../MockData/MockData_Products';
 
 function Introduce({ props, addCart }) {
-    const tempData = [...mockData];
-    const PopularProducts = tempData.sort((max, min) => (min.cntOfsales - max.cntOfsales));
+    const [filteredData, setFilteredData] = useState([]);
 
-    const NewProducts = mockData.filter(item => {
-        return item.new;
-    });
+    useEffect(() => {
+        const tempData = [...mockData];
+        const PopularProducts = tempData.sort((max, min) => (min.cntOfsales - max.cntOfsales));
+        const NewProducts = mockData.filter(item => item.new);
+        const DiscountedProducts = mockData.filter(item => item.discount);
 
-    const DiscountedProducts = mockData.filter(item => {
-        return item.discount;
-    });
-
-    let filteredData;
-
-    if (props[1] === 0) {
-        filteredData = NewProducts;
-    }
-    else if (props[1] === 1) {
-        filteredData = PopularProducts;
-    }
-    else {
-        filteredData = DiscountedProducts;
-    }
+        if (props[1] === 0) {
+            setFilteredData(NewProducts);
+        }
+        else if (props[1] === 1) {
+            setFilteredData(PopularProducts);
+        }
+        else {
+            setFilteredData(DiscountedProducts);
+        }
+    }, [props]);
 
     return (
         <div className="Introduce">

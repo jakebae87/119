@@ -126,11 +126,12 @@
 
 /* 삭제버튼 */
 .deleteBoard {
-  width: 150px;
-  height: 50px;
+  cursor: pointer;
+  width: 60px;
+  height: 25px;
   border: 0;
-  background-color: #fff;
-  color: black;
+  background-color: #808080;
+  color: white;
 }
 
 .pagination {
