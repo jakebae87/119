@@ -7,3 +7,6 @@
 역할분담 https://github.com/users/jakebae87/projects/6/views/1?pane=issue&itemId=30198323
 
 최종 와이어프레임 wireframe.pptx
+
+<h2>Backend Server</h2>
+Database Table Design : [119조 ERD.xlsx](https://github.com/jakebae87/119/files/13420801/119.ERD.xlsx)
