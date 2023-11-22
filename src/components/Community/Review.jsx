@@ -60,9 +60,13 @@ export default function Review() {
                             <input className="searchWord" name="searchWord" type="text" />
                             <input type="submit" value="검색" />
                         </div>
+                        {/*
+                        상품후기는 후기글 목록만 보여주는 목적이다.
+                        11월22일 회의를 통해서 상품후기 글쓰기 버튼을 마이페이지의 주문내역에 삽입하기로 함
                         <div className="board_write">
                             <a><Link to="/board/review">글쓰기</Link></a>
                         </div>
+                        */}
                     </div>
                 </form>
             </div>

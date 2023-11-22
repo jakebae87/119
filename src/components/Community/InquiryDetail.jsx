@@ -35,7 +35,7 @@ export default function InquiryDetail() {
                     <tr>
                         <th scope="row">상품명</th>
                         <td>
-                            <Link to={`/productdetail/${inquiry.id}`}>{inquiry.productName}</Link>
+                            <Link to={`/products/productdetail/${inquiry.id}`}>{inquiry.productName}</Link>
                         </td>
                     </tr>
                     <tr>

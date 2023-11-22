@@ -40,9 +40,13 @@ export default function Inquiry() {
                             <input className="searchWord" name="searchWord" type="text" />
                             <input type="submit" value="검색" />
                         </div>
+                        {/* 
+                        상품문의 리스트는 글목록만 보여주는 목적이다.
+                        11월22일 회의를 통해서 상품문의 글쓰기 버튼을 상품상세페이지에 삽입하기로 함
                         <div className="board_write">
                             <Link to="/board/inquiry">글쓰기</Link>
-                        </div>
+                        </div> 
+                        */}
                     </div>
                 </form>
             </div>

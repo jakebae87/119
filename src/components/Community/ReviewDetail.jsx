@@ -39,7 +39,7 @@ export default function ReviewDetail() {
                     <tr>
                         <th scope="row">상품명</th>
                         <td>
-                            <Link to={`/productdetail/${review.id}`}>{review.productName}</Link>
+                            <Link to={`/products/productdetail/${review.id}`}>{review.productName}</Link>
                         </td>
                         <th scope="row">평점</th>
                         <td>
