@@ -12,7 +12,7 @@
 
 <h2>Backend Server</h2>
 <h3>Database Table Design</h3>
-[119조 ERD.xlsx](https://github.com/jakebae87/119/files/13445588/119.ERD.xlsx)<br>
+[119조 ERD.xlsx](https://github.com/jakebae87/119/files/13447213/119.ERD.xlsx)<br>
 Database Account : team119<br>
 Database Account Password : 12345!<br>
 Database Name : petmily<br><br>
